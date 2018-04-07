@@ -7,3 +7,23 @@ mixin head(title)
 		link(rel="stylesheet" href="/css/style.all.min.css")
 
 		block
+
+mixin siteHeader()
+	.site-header
+		.container
+			.content-wrapper
+				.site-logo
+				ul.site-nav
+					li: a Projects
+					li: a About
+					li: a FAQ
+					li: a Contacts
+			.content-wrapper
+				.site-search
+					.avatar
+				.verification-box
+					a.btn Create idea
+					a.btn.white.no-padding Sing in
+
+
+
