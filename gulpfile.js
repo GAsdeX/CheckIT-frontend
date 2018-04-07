@@ -44,7 +44,8 @@ var paths = new function() {
 	
 	// Files to be copied to `distDir`
 	this.files = [
-		this.srcDir + '/img/**/*'
+		this.srcDir + '/img/**/*',
+		this.srcDir + '/fonts/**/*'
 		// this.srcDir + '/folder/**/*' // Copy whole folder with subfolders
 		// this.srcDir + '/file.txt'    // Copy specified file
 	];

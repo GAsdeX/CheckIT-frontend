@@ -6,30 +6,50 @@
 @gamma-green: #02bacd;
 
 .input-group-component {
-  & > * {
-    box-sizing: border-box;
-  }
-  label {
-    display: block;
-    box-sizing: border-box;
-    text-transform: uppercase;
-    color: #999;
-    font-weight: bold;
-  }
-  input, textarea {
-    color: #101010;
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 11px 13px;
-    border-radius: 3px;
-    border: 1px solid #ccc;
-    box-shadow: none;
-    margin: 8px 0 30px 0;
-  }
+	& > * {
+		box-sizing: border-box;
+	}
+	label {
+		display: block;
+		box-sizing: border-box;
+		text-transform: uppercase;
+		color: #93a0b3;
+		font-weight: bold;
+		.montserrat-medium();
+	}
+	input, textarea, select {
+		display: block;
+		width: 100%;
+		box-sizing: border-box;
+		padding: 16px 21px;
+		border-radius: 3px;
+		border: 1px solid #d5d9df;
+		box-shadow: none;
+		margin: 10px 0 40px 0;
+		letter-spacing: 0.8px;
+		text-align: left;
+		color: #2e2e2e;
+		//.montserrat-semi-bold();
+		.montserrat-medium();
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+	}
 }
 
-
+.section-title {
+	font-weight: bold;
+	font-size: 22px;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 1.3px;
+	text-align: left;
+	color: #2e2e2e;
+	.montserrat-bold();
+	margin: 40px 0;
+	box-sizing: border-box;
+}
 
 .btn {
 	border: 0;
@@ -132,6 +152,8 @@
 }
 .site-content {
   .profile-section {
+	  margin: 0 -15px;
+	  
     .profile-box {
       .profile-photo {
         position: relative;
