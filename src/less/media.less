@@ -1,3 +1,107 @@
 /*
  * Styles for different media types/devices go here
  */
+@media (max-width: 991px) {
+	div.site-header {
+		display: none;
+	}
+	.site-content {
+		display: block;
+		& > * {
+			display: block;
+			width: 100%;
+		}
+		padding: 0;
+		.profile-section {
+			margin: 0;
+			.container {
+				max-width: 100%;
+			}
+			.settings-container {
+				max-width: 100%;
+			}
+			.section-title {
+				text-align: center;
+				margin: 13px 0 15px;
+				font-size: 20px;
+			}
+			.profile-box {
+				.row {
+					padding: 0;
+					.profile-photo-wrapper {
+						margin-bottom: 15px;
+						.avatar {
+							margin-bottom: 8px;
+						}
+					}
+					div.col-lg-10 {
+						padding: 0;
+						.container {
+							padding: 0;
+							.input-group-component {
+								label {
+									margin: 0 auto 8px auto;
+									text-align: center;
+									font-size: 12px;
+								}
+								input {
+									padding: 7px 15px 6px;
+									margin-bottom: 15px;
+								}
+								&:nth-child(odd) {
+									padding-right: 7.5px;
+								}
+								&:nth-child(even) {
+									padding-left: 7.5px;
+								}
+								&:last-child {
+									input {
+										margin-bottom: 4px;
+									}
+									button.change-password {
+										margin-bottom: 15px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			.textatea-wrapper {
+				padding: 0;
+				label {
+					font-size: 12px;
+				}
+				textarea {
+					margin-bottom: 15px;
+				}
+				button.submit {
+					display: block;
+					margin: 0 auto 15px auto;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 575px) {
+	.site-content {
+		.profile-section {
+			.profile-box {
+				.row {
+					div.col-lg-10 {
+						.container {
+							.input-group-component {
+								&:nth-child(odd) {
+									padding-right: 15px;
+								}
+								&:nth-child(even) {
+									padding-left: 15px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
