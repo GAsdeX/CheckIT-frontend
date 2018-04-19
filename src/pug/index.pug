@@ -11,9 +11,23 @@ html(lang="en")
 		.site-content
 			.head-banners-section
 				.container
+					.section-title Top ideas
 					.row
-						.col-md-12
-							.slide
+						each val in [1,2,3]
+							.col-md-4
+								.idea-card
+									.top-bar
+										.avatar(style="background-image: url(../img/blank-colors-desk-370474.jpg)")
+									.bottom-bar
+										.evaluation-box
+											.categories
+												.category fasion
+											.likes
+												span 222
+										.content-box
+											.title Spelunk Jewelry: A New Collection Inspired by France
+											.description Attending La Porte Peinte artist residency will inspire a second line of timeless jewelry anchored by place and self-expression.
+
 
 			.infographics-section
 				.container
@@ -68,22 +82,29 @@ html(lang="en")
 				.container
 					.section-title Categories
 					.categories-box
-						.category Food
-						.category Craft
-						.category Arts
-						.category Publishing
-						.category Social
-						.category Business
-						.category Music
-						.category Technology
-						.category Film
-						.category Fashion
-						.category ecology
-						.category Health
-						.category Engineering
-						.category Photography
-						.category Education
-						.category Culture
-
+						a.category Food
+						a.category Craft
+						a.category Arts
+						a.category Publishing
+						a.category Social
+						a.category Business
+						a.category Music
+						a.category Technology
+						a.category Film
+						a.category Fashion
+						a.category ecology
+						a.category Health
+						a.category Engineering
+						a.category Photography
+						a.category Education
+						a.category Culture
 
 			.bring-an-idea-section
+				.container
+					.section-title Categories
+					.row
+						.col-md-7
+							.bring-an-idea-box
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut culpa minima mollitia nemo optio perspiciatis provident, sint vel vero. Aperiam eveniet id minus nisi quasi quia repellat sunt voluptates.
+								.btn create an idea
+						.col-md-5
