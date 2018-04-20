@@ -301,6 +301,122 @@
 	.new-ideas-section {
 		padding: 50px;
 	}
+	.idea-section {
+		margin-top: 45px;
+
+		.category {
+			font-size: 14px;
+			font-weight: bold;
+			letter-spacing: 2.2px;
+			color: #93a0b3;
+			text-align: center;
+			.montserrat-semi-bold();
+		}
+		.idea-title {
+			.montserrat-semi-bold();
+			font-size: 36px;
+			font-weight: bold;
+			line-height: 1.22;
+			letter-spacing: 0.7px;
+			text-align: center;
+			color: #2e2e2e;
+			max-width: 480px;
+			margin: 30px auto;
+		}
+		.avatar {
+			width: 100%;
+			margin-bottom: 30px;
+		}
+		.description-box {
+			.description {
+
+				&.bordered {
+					padding: 25px;
+					box-sizing: border-box;
+					border: solid 1px #d5d9df;
+				}
+				.likes {
+					.heart-icon {
+						height: 32px;
+						width: 32px;
+						margin: 0 auto;
+						background-size: contain;
+						background-position: center;
+						background-repeat: no-repeat;
+						background-image: url('../img/icon-like.png');
+					}
+					.likes-number {
+						font-size: 16px;
+						text-align: center;
+						margin-top: 15px;
+						color: #93a0b3;
+						letter-spacing: 2px;
+						.montserrat-regular();
+					}
+				}
+				.user-avatar {
+					width: 90%;
+					padding-bottom: 90%;
+					background-size: cover;
+					background-position: center;
+					background-repeat: no-repeat;
+					border-radius: 100%;
+					display: block;
+					text-align: center;
+					margin: 30px auto 15px;
+				}
+				.user-name {
+					margin: 0 auto 50px;
+
+					.name {
+						font-size: 14px;
+						letter-spacing: 0.8px;
+						text-align: center;
+						color: #2e2e2e;
+						text-transform: uppercase;
+						.montserrat-semi-bold();
+						line-height: 1.7;
+					}
+					.country {
+						font-size: 14px;
+						letter-spacing: 0.8px;
+						text-align: center;
+						color: #93a0b3;
+						.montserrat-semi-bold();
+						line-height: 1.7;
+					}
+				}
+				.data-published {
+					margin-top: 30px;
+
+					.title {
+						font-size: 14px;
+						letter-spacing: 0.8px;
+						text-align: center;
+						color: #101010;
+						.montserrat-semi-bold();
+						line-height: 1.7;
+
+						&.data {
+							color: #93a0b3;
+						}
+					}
+				}
+				p {
+					margin-bottom: 30px;
+					.montserrat-semi-bold();
+					font-size: 16px;
+					font-weight: normal;
+					font-style: normal;
+					font-stretch: normal;
+					line-height: 1.5;
+					letter-spacing: 1px;
+					text-align: left;
+					color: #93a0b3;
+				}
+			}
+		}
+	}
 	.categories-section {
 		.categories-box {
 			.category {
