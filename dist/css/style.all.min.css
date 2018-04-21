@@ -2180,9 +2180,6 @@ a {
 .section-title {
   font-weight: bold;
   font-size: 22px;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
   letter-spacing: 1.3px;
   text-align: left;
   color: #2e2e2e;
@@ -2300,6 +2297,45 @@ a {
 }
 .btn.no-padding {
   padding: 5px 25px;
+}
+.input-group-checkboxes {
+  margin-top: 16px;
+}
+.input-group-checkboxes > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+.input-group-checkboxes label {
+  font-size: 12px;
+  font-family: "Montserrat-Medium";
+  letter-spacing: 0.8px;
+  text-align: left;
+  color: #93a0b3;
+  margin-left: 15px;
+  text-transform: none;
+}
+.input-group-checkboxes input[type="checkbox"] {
+  height: 15px;
+  width: 15px;
+  border-radius: 2px;
+  border: solid 1px #02bacd;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+}
+.input-group-checkboxes input[type="checkbox"]:after {
+  content: '';
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+}
+.input-group-checkboxes input[type="checkbox"]:checked {
+  background-color: #02bacd;
 }
 .info-box {
   border-radius: 10px;
@@ -2682,6 +2718,22 @@ a {
   text-align: center;
   color: #ffffff;
   text-transform: uppercase;
+}
+.site-content .catalog-section .catalog-categories {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 5px 30px 0 rgba(103, 106, 135, 0.1);
+  background-color: #ffffff;
+  border: solid 1px #e9eaeb;
+}
+.site-content .catalog-section .catalog-categories .title {
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: left;
+  color: #2e2e2e;
+  text-transform: uppercase;
+  font-family: "Montserrat-bold";
 }
 /*
  * Styles for different media types/devices go here

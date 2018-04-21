@@ -41,9 +41,6 @@
 .section-title {
 	font-weight: bold;
 	font-size: 22px;
-	font-style: normal;
-	font-stretch: normal;
-	line-height: normal;
 	letter-spacing: 1.3px;
 	text-align: left;
 	color: #2e2e2e;
@@ -177,6 +174,50 @@
 	}
 	&.no-padding {
 		padding: 5px 25px;
+	}
+}
+.input-group-checkboxes {
+	margin-top: 16px;
+
+	& > * {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	label {
+		font-size: 12px;
+		.montserrat-medium();
+		letter-spacing: 0.8px;
+		text-align: left;
+		color: #93a0b3;
+		margin-left: 15px;
+		text-transform: none;
+	}
+	input[type="checkbox"] {
+		height: 15px;
+		width: 15px;
+		border-radius: 2px;
+		border: solid 1px #02bacd;
+		appearance: none;
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		position: relative;
+
+		&:after {
+			content: '';
+			position: absolute;
+			z-index: 3;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			height: 100%;
+			width: 100%;
+		}
+		&:checked {
+			background-color: #02bacd;
+		}
+	}
+	input, textarea {
+
 	}
 }
 .info-box{
@@ -552,7 +593,7 @@
       }
     }
   }
-  .faq-section {
+  	.faq-section {
     .section-title{
       h1 {
         font-weight: bold;
@@ -633,4 +674,25 @@
         }
       }
     }
-  }
+	.catalog-section {
+		.catalog-categories	{
+			padding: 20px;
+			border-radius: 8px;
+			box-shadow: 0px 5px 30px 0 rgba(103, 106, 135, 0.1);
+			background-color: #ffffff;
+			border: solid 1px #e9eaeb;
+
+			.title {
+				font-size: 16px;
+				font-weight: bold;
+				letter-spacing: 1px;
+				text-align: left;
+				color: #2e2e2e;
+				text-transform: uppercase;
+				.montserrat-bold();
+			}
+			.categories-box {
+			}
+		}
+	}
+}
