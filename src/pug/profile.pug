@@ -41,7 +41,7 @@ html(lang="en")
                                                     .col-sm-6.input-group-component
                                                         label(for="profile-last-name").profile-label Phone number
                                                         input(type="tel", name="phone",
-                                                        id="profile-phone" placeholder="+380(12)345-67-89")
+                                                        id="profile-phone" placeholder="+380(12)345-67-89") 
                                                     .col-sm-6.input-group-component
                                                         label(for="profile-url").profile-label Profile URL
                                                         input(type="text", name="profile-url",
@@ -305,15 +305,19 @@ html(lang="en")
                                                             option(data="ZMB" name="ZMB" value="Zambia")
                                                             option(data="ZWE" name="ZWE" value="Zimbabwe")
                                                     .col-sm-6.input-group-component
-                                                        label(for="profile-city").profile-label city
-                                                        input(id="profile-city" type="text", name="profile-city", placeholder="City", list="city")
-                                                        datalist(id="city")
-                                                            option(data="OD" name="Odesa" value="Odesa")
-                                                            option(data="KY" name="KY" value="Kyiv")
+                                                        label(for="profile-city").profile-label City
+                                                        .input-wrapper
+                                                            input(id="profile-city" type="text", name="profile-city", placeholder="City", list="city")
+                                                            .selector-icon
+                                                                .left-side
+                                                                .right-side
+                                                            datalist(id="city")
+                                                                option(data="OD" name="Odesa" value="Odesa")
+                                                                option(data="KY" name="KY" value="Kyiv")
                                                     .col-sm-6.input-group-component
                                                         label(for="profile-password").profile-label Password
                                                         input(type="password", name="profile-password",
-                                                        id="profile-password" placeholder="Your Password")
+                                                        id="profile-password" placeholder="Your Password" readonly)
                                                         button.change-password(name="change-password" type="button") Change password
                                                 .textatea-wrapper
                                                     .label-row
@@ -321,4 +325,7 @@ html(lang="en")
                                                         span 400
                                                     textarea(form="profile-settings" name="about-yourself" maxlength="400" wrap="soft" row="3")
                                                     button.submit(type="submit" name="submit" value="Save Changes" form="profile-settings") Save Changes
-        footer footer here
+        +uploadPhotoModal
+        +changePasswordModal
+        +siteFooter
+        +loginModals
