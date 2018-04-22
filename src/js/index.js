@@ -1,15 +1,14 @@
 'use strict';
 
-var $ = window.$ = window.jQuery = require('jquery');
 var functions = require('./functions');
-
+require('./app');
 /*
  * Exported in 'functions.js' functions can be used here:
  * functions.exportName()
  */
 
-$(function () {
+(function () {
 
 	// Code goes here
 
-});
+})();
