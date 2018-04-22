@@ -5,7 +5,7 @@
                 .site-logo
                 ul.site-nav
                     li: router-link(:to="{name: 'catalog'}") Projects
-                    li: router-link(:to="{name: 'home'}") About
+                    li: router-link(:to="{name: 'about'}") About
                     li: router-link(:to="{name: 'faq'}") FAQ
                     li: router-link(:to="{name: 'home'}") Contacts
             .content-wrapper
@@ -18,5 +18,6 @@
 
 <script>
     module.exports =  {
+
     };
 </script>

@@ -20,6 +20,11 @@ var routes = [
         name: 'faq',
         path: '/faq',
         component: require('../vue/pages/faq.vue')
+    },
+    {
+        name: 'about',
+        path: '/about',
+        component: require('../vue/pages/about.vue')
     }
 ];
 
