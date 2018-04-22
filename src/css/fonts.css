@@ -24,3 +24,15 @@
 	src: url(../fonts/Montserrat-Medium.ttf);
 	font-weight: 700;
 }
+
+@font-face {
+	font-family: 'Merengue-Script-Basic';
+	src: url(../fonts/Merengue-Script-Basic.otf);
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Merengue-Script';
+	src: url(../fonts/Merengue-Script.otf);
+	font-weight: 400;
+}
