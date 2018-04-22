@@ -158,18 +158,18 @@ $(function () {
             var pre = this.id.split('-'); pre.pop(); pre = pre.join('-');
             toPassword(pre);
         });
-    }
+    };
     document.querySelector('.btn.white.no-padding').onclick = function() {
         openModal('.sing-in-modal');
-    }
+    };
     document.getElementById('forgot-password').onclick = function() {
         closeModal(openedModalId);
         openModal('.forgot-password-modal');
-    }
+    };
     document.getElementById('sign-up-button').onclick = function() {
         closeModal(openedModalId);
         openModal('.sign-up-modal');
-    }
+    };
     document.getElementById('sign-in-button').onclick = function() {
         closeModal(openedModalId);
         openModal('.sing-in-modal');
