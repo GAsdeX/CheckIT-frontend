@@ -1,6 +1,5 @@
 'use strict';
 
-var $ = require('jquery');
 
 module.exports = {
 	/*
@@ -10,3 +9,4 @@ module.exports = {
 };
 
 // Code goes here
+

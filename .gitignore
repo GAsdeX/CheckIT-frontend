@@ -1,4 +1,13 @@
-dist/
+
+
+#IDE files
+.idea
+
+#Junk files
+*.*~
+
+#json-lock files
+*-lock.json
 
 # Dependency directories
 node_modules/
