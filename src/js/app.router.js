@@ -25,6 +25,16 @@ var routes = [
         name: 'about',
         path: '/about',
         component: require('../vue/pages/about.vue')
+    },
+    {
+        name: 'profile',
+        path: '/profile',
+        component: require('../vue/pages/profile.vue')
+    },
+    {
+        name: 'author',
+        path: '/author',
+        component: require('../vue/pages/author.vue')
     }
 ];
 
