@@ -12,13 +12,12 @@
     var forgotPassword = require('./modals/forgot-password.vue');
 
     module.exports = {
-        props: {
-            currentComponent: {
-                type: String
-            }
+        created() {
+            this.$eventBus.$on('callModal', this.onReceive);
         },
         data: function() {
             return {
+                currentComponent: null,
                 modalBoxes: [
                     {
                         slug: 'sign-in',
@@ -41,6 +40,12 @@
                         component: forgotPassword
                     }
                 ]
+            }
+        },
+        methods: {
+            onReceive(data) {
+                console.log(data);
+                this.currentComponent = data.action;
             }
         }
     }

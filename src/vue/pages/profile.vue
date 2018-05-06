@@ -13,7 +13,7 @@
                                             .avatar.user-photo
                                             button.remove-photo(@click="photoController('remove')")
                                                 span &times;
-                                            button.upload-photo(@click="photoController('add')") Upload photo
+                                            button.upload-photo(@click="callModal('upload-photo')") Upload photo
                                     .col-lg-10
                                         .container
                                             form(id="profile-settings" name="profile-settings" method="POST").row
@@ -321,6 +321,9 @@
 <script>
     module.exports =  {
         methods: {
+            callModal: function(component) {
+                this.$eventBus.$emit("callModal", {action: component})
+            },
             photoController: function(action) {
                 if (action === 'remove') {
                     console.log('Profile\'s photo has to be removed');
@@ -331,7 +334,6 @@
                     console.log('Profile\'s photo has to be uploaded to the server');
                     document.querySelector(".user-photo").classList.remove("default");
                     document.querySelector(".remove-photo").classList.remove("default");
-                    //openModal('.upload-photo-modal');
                 }
             }
         }

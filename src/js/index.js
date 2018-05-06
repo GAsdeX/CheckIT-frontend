@@ -2,10 +2,13 @@
 
 var functions = require('./functions');
 require('./app');
+require('./event-bus');
 /*
  * Exported in 'functions.js' functions can be used here:
  * functions.exportName()
  */
+
+
 
 (function () {
     functions.resetValues();
