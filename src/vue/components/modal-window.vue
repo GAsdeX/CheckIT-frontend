@@ -1,5 +1,5 @@
 <template lang="pug">
-    .modal-wrapper
+    .modal-wrapper(:class="{active: isActiveModal}" @click="closeModal($event)")
         component(v-for="modalBox in modalBoxes" :is="modalBox.component" v-if="currentComponent === modalBox.slug")
 
 </template>
@@ -17,6 +17,7 @@
         },
         data: function() {
             return {
+                isActiveModal: false,
                 currentComponent: null,
                 modalBoxes: [
                     {
@@ -43,9 +44,30 @@
             }
         },
         methods: {
+            closeModal(e) {
+                var clickOnBox = e.target.closest('.modal-wrapper .modal-box');
+
+                if (!clickOnBox) {
+
+                    this.destroyModal();
+                }
+            },
             onReceive(data) {
-                console.log(data);
-                this.currentComponent = data.action;
+                if (data && data.action && data.action === 'close') {
+                    this.destroyModal();
+                } else {
+                    console.log(data);
+                    this.currentComponent = data.action;
+                    this.isActiveModal = true;
+                }
+            },
+            destroyModal: function() {
+                var that = this;
+                that.isActiveModal = false;
+
+                setTimeout(function() {
+                    that.currentComponent = null;
+                }, 300);
             }
         }
     }

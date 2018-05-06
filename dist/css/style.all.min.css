@@ -2195,7 +2195,7 @@ a {
   -moz-appearance: none;
   appearance: none;
 }
-.overlay {
+.modal-wrapper {
   width: 100%;
   height: 100%;
   position: fixed;
@@ -2206,24 +2206,46 @@ a {
   z-index: 100;
   opacity: 0;
   background-color: rgba(0, 0, 0, 0.65);
-  transition: all 0.25s ease-in-out;
+  transition: all 0.3s ease-in-out;
   overflow-y: scroll;
 }
-.overlay::-webkit-scrollbar-thumb {
+.modal-wrapper::-webkit-scrollbar-thumb {
   width: 0px;
 }
-.overlay::-webkit-scrollbar-track {
+.modal-wrapper::-webkit-scrollbar-track {
   width: 0px;
 }
-.overlay::-webkit-scrollbar {
+.modal-wrapper::-webkit-scrollbar {
   width: 0px;
 }
-.overlay.active {
+.modal-wrapper.active {
   opacity: 1;
   visibility: visible;
 }
-.overlay.active .modal-body {
+.modal-wrapper.active .modal-body {
   transform: none;
+}
+.modal-wrapper.active {
+  opacity: 1;
+  visibility: visible;
+}
+.modal-wrapper.active .modal-box {
+  transition: all 0.3s ease-in-out;
+  transform: none;
+}
+.modal-wrapper .modal-box {
+  width: 100%;
+  max-width: 590px;
+  margin: 50px auto;
+  height: 666px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  transform: translateY(-50px);
+  transition: all 0.3s ease-in-out;
+}
+.modal-wrapper .modal-box .modal-form {
+  max-width: 270px;
+  margin: 0 auto;
 }
 .overlay .modal-body {
   transition: all 0.25s ease-in-out;
