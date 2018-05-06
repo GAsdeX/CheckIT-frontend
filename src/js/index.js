@@ -8,7 +8,7 @@ require('./app');
  */
 
 (function () {
-
+    functions.resetValues();
 	// Code goes here
 		var userPassword = "dummy-password"; //User Password must be provided by back-end
 		var openedModalId;
@@ -28,18 +28,7 @@ require('./app');
 
     	document.querySelector(selector).classList.add("active");
     }
-		document.getElementById("profile-password").value = userPassword;
-        document.querySelector(".remove-photo").onclick = function() {
-        console.log('Profile\'s photo has to be removed');
-        document.querySelector(".user-photo").classList.add("default");
-        document.querySelector(".remove-photo").classList.add("default");
-    };
-    document.querySelector(".upload-photo").onclick = function() {
-        console.log('Profile\'s photo has to be uploaded to the server');
-        document.querySelector(".user-photo").classList.remove("default");
-        document.querySelector(".remove-photo").classList.remove("default");
-        openModal('.upload-photo-modal');
-    };
+    document.getElementById("profile-password").value = userPassword;
     document.querySelector(".change-password").onclick = function() {
     	openModal(".change-password-form");
     }

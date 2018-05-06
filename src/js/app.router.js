@@ -30,11 +30,6 @@ var routes = [
         name: 'profile',
         path: '/profile',
         component: require('../vue/pages/profile.vue')
-    },
-    {
-        name: 'author',
-        path: '/author',
-        component: require('../vue/pages/author.vue')
     }
 ];
 

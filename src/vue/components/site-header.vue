@@ -17,7 +17,14 @@
 </template>
 
 <script>
-    module.exports =  {
+    var EventBus = require('../../js/event-bus').EventBus;
 
+    module.exports =  {
+        methods: {
+            callModal: function(component) {
+                console.log('here');
+                EventBus.$emit("callModal", {action: 'sign-in'})
+            }
+        }
     };
 </script>

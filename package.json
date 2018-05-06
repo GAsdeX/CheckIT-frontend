@@ -10,11 +10,12 @@
 		"build": "npm install && gulp --env production"
 	},
 	"dependencies": {
+		"bootstrap": "4.0.0",
 		"browserify": "^14.4.0",
 		"concurrently": "^3.4.0",
-		"lite-server": "^2.3.0",
-		"gulp-streamify": "^1.0.2",
-		"vinyl-source-stream": "^1.1.0",
+		"envify": "^4.1.0",
+		"eventbusjs": "^0.2.0",
+		"express": "4.16.3",
 		"gulp": "^3.9.1",
 		"gulp-cssnano": "^2.1.2",
 		"gulp-htmlmin": "^3.0.0",
@@ -22,14 +23,14 @@
 		"gulp-less": "^3.3.0",
 		"gulp-pug": "^3.3.0",
 		"gulp-rename": "^1.2.2",
+		"gulp-streamify": "^1.0.2",
 		"gulp-uglify": "^2.1.0",
 		"gulp-util": "^3.0.8",
+		"lite-server": "^2.3.0",
+		"vinyl-source-stream": "^1.1.0",
 		"vue": "^2.5.13",
-		"vueify": "^9.4.1",
-		"envify": "^4.1.0",
 		"vue-router": "^3.0.1",
-		"vuex": "^3.0.1",
-		"bootstrap": "4.0.0",
-		"express": "4.16.3"
+		"vueify": "^9.4.1",
+		"vuex": "^3.0.1"
 	}
 }
