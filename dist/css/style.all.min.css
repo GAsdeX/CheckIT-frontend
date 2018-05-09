@@ -2104,6 +2104,9 @@ body {
 body {
   overflow-x: hidden;
 }
+.global-site-wrapper {
+  overflow: hidden;
+}
 h1,
 h2,
 h3,
@@ -2715,6 +2718,7 @@ input::-webkit-calendar-picker-indicator {
   margin: auto 0;
 }
 .site-footer {
+  margin-top: 71px;
   background: #3b3b3b;
   color: #a6a6a6;
   overflow: hidden;
@@ -2723,6 +2727,7 @@ input::-webkit-calendar-picker-indicator {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0;
 }
 .site-footer .hi-row {
   padding: 60px 0;
@@ -3156,6 +3161,9 @@ input::-webkit-calendar-picker-indicator {
   div.site-header {
     display: none;
   }
+  .site-footer {
+    margin-top: 0;
+  }
   .site-footer .row {
     padding: 15px 30px;
   }
@@ -3264,6 +3272,75 @@ input::-webkit-calendar-picker-indicator {
     display: block;
     margin: 0 auto;
   }
+  .button-blue {
+    padding: 7px 15px 6px;
+    height: 33px;
+  }
+  .modal-wrapper .modal-box {
+    padding: 15px;
+  }
+  .modal-wrapper .modal-box .modal-header .header-logo {
+    font-size: 38px;
+    line-height: 38px;
+    margin: 15px auto;
+    display: block;
+    text-align: center;
+  }
+  .modal-wrapper .modal-box .modal-header .close-modal {
+    margin-top: -75px;
+    margin-right: -6px;
+  }
+  .modal-wrapper .modal-box .modal-header .modal-name {
+    font-size: 20px;
+    line-height: normal;
+    margin-bottom: 15px;
+  }
+  .modal-wrapper .modal-box .modal-form .input-group-component {
+    margin-bottom: 15px;
+  }
+  .modal-wrapper .modal-box .modal-form .input-group-component label {
+    margin: 0 auto 8px auto;
+    text-align: center;
+    font-size: 12px;
+  }
+  .modal-wrapper .modal-box .modal-form .input-group-component input {
+    padding: 7px 15px 6px;
+    margin-bottom: 15px;
+  }
+  .modal-wrapper .modal-box .modal-form .input-group-component .show-password-icon {
+    top: 33px;
+  }
+  .modal-wrapper .modal-box .modal-form .input-group-component .show-password-icon.hide {
+    top: 32px;
+  }
+  .modal-wrapper .modal-box .modal-form .input-group-component .show-password-icon.show {
+    top: 35px;
+  }
+  .modal-wrapper .modal-box .modal-form .modal-button {
+    padding: 7px 15px 6px;
+  }
+  .modal-wrapper .modal-box .modal-form .drop-field {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    margin: 0 60px 5px 60px;
+  }
+  .modal-wrapper .modal-box .modal-form .forgot-password {
+    margin: 0px auto 8px auto;
+    top: -11px;
+    font-size: 12px;
+  }
+  .modal-wrapper .modal-box .modal-form .sign-in-wrapper,
+  .modal-wrapper .modal-box .modal-form .sign-up-wrapper {
+    margin: 15px 0 0 0;
+  }
+  .modal-wrapper .modal-box .modal-form .sign-in-wrapper p,
+  .modal-wrapper .modal-box .modal-form .sign-up-wrapper p,
+  .modal-wrapper .modal-box .modal-form .sign-in-wrapper button,
+  .modal-wrapper .modal-box .modal-form .sign-up-wrapper button {
+    font-size: 14px;
+  }
 }
 @media (max-width: 767px) {
   .site-footer .hi-row {
@@ -3304,6 +3381,12 @@ input::-webkit-calendar-picker-indicator {
   }
   .site-footer .low-row .copyrights {
     text-align: center;
+  }
+}
+@media (max-width: 620px) {
+  .modal-wrapper .modal-box {
+    margin: 50px 15px;
+    width: auto;
   }
 }
 @media (max-width: 575px) {
