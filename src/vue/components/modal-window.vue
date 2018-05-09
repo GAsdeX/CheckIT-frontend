@@ -10,6 +10,8 @@
     var uploadPhoto = require('./modals/upload-photo.vue');
     var changePassword = require('./modals/change-password.vue');
     var forgotPassword = require('./modals/forgot-password.vue');
+    var resetPassword = require('./modals/reset-password.vue');
+    var notificationWindow = require('./modals/notification-window.vue');
 
     module.exports = {
         created() {
@@ -39,6 +41,14 @@
                     {
                         slug: 'forgot-password',
                         component: forgotPassword
+                    },
+                    {
+                        slug: 'reset-password',
+                        component: resetPassword
+                    },
+                    {
+                        slug: 'notification-window',
+                        component: notificationWindow
                     }
                 ]
             }

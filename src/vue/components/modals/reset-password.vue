@@ -5,13 +5,8 @@
                 router-link(@click.native="closeModal", :to="{name: 'home'}").header-logo Checkit
                 button.btn.close-modal(@click="closeModal") &times;
             .bottom-side
-                h2.modal-name Change Password
+                h2.modal-name Reset Password
         form.modal-form(v-on:submit="submitForm($event)")
-            .input-group-component
-                label(for="current-password") Current Password
-                input(type="password" id="current-password" placeholder="Current Password" required).modal-input
-                img(src="img/icons/eye-off.png" alt="Show Password Image" class="show-password-icon hide active" id="current-password-hide")
-                img(src="img/icons/eye-on.png" alt="Show Password Image" class="show-password-icon show" id="current-password-show")
             .input-group-component
                 label(for="new-password") New Password
                 input(type="password" id="new-password" placeholder="New Password" required).modal-input
@@ -30,7 +25,6 @@
     module.exports = {
         data: function(){
             return {
-                currentPassword: "",
                 newPassword: "",
                 confirmNewPassword: ""
             }
@@ -43,7 +37,6 @@
             submitForm: function(e) {
                 e.preventDefault();
                 var data = {
-                    currentPassword: this.currentPassword,
                     newPassword: this.newPassword,
                     confirmNewPassword: this.confirmNewPassword
                 }

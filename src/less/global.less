@@ -60,3 +60,17 @@ a {
     clear: both;
   }
 }
+
+.placeholder(@color) {
+  &::-webkit-input-placeholder {color: @color;}
+  &::-moz-placeholder {color: @color;}
+  &:-ms-input-placeholder {color: @color;}
+  &:-moz-placeholder {color: @color;}
+}
+
+.circle(@value) {
+  width: @value;
+  height: @value;
+  border-radius: 50%;
+  box-sizing: border-box;
+}

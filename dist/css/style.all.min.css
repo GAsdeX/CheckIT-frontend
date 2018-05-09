@@ -2182,18 +2182,55 @@ a {
   display: block;
   width: 100%;
   box-sizing: border-box;
-  padding: 16px 21px;
-  border-radius: 3px;
+  padding: 12px 21px;
+  border-radius: 4px;
   border: 1px solid #d5d9df;
   box-shadow: none;
   margin: 10px 0 40px 0;
   letter-spacing: 0.8px;
+  font-size: 14px;
+  line-height: normal;
   text-align: left;
   color: #2e2e2e;
   font-family: "Montserrat-Medium";
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+.input-group-component input:focus,
+.input-group-component textarea:focus,
+.input-group-component input:active,
+.input-group-component textarea:active {
+  box-shadow: 0 0 2px #02bacd;
+}
+input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+.button-blue {
+  color: #fff;
+  background: #02bacd;
+  text-transform: uppercase;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 270px;
+  height: 42px;
+  font-family: "Montserrat-bold";
+  font-size: 16px;
+  line-height: 17px;
+  padding: 14px 22px 10px;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+  text-align: center;
+}
+.button-blue:hover {
+  background: #02a3b4;
+}
+.button-blue:focus,
+.button-blue:active {
+  box-shadow: 0 0 2px #02bacd;
+}
+.button-blue:active {
+  background: #028c9a;
 }
 .modal-wrapper {
   width: 100%;
@@ -2237,247 +2274,183 @@ a {
   width: 100%;
   max-width: 590px;
   margin: 50px auto;
-  height: 666px;
   border-radius: 8px;
+  padding: 35px;
   background-color: #ffffff;
   transform: translateY(-50px);
   transition: all 0.3s ease-in-out;
+}
+.modal-wrapper .modal-box .modal-header .header-logo {
+  display: inline-block;
+  text-align: center;
+  font-size: 46px;
+  line-height: 46px;
+  color: #02bacd;
+  user-select: none;
+  font-family: "Merengue-Script-Basic";
+  margin: 0 0 46px 180px;
+}
+.modal-wrapper .modal-box .modal-header .close-modal {
+  font-family: "Montserrat-light";
+  font-size: 40px;
+  line-height: 30px;
+  float: right;
+  color: #93a0b3;
+  padding: 0;
+  background: 0;
+  margin-top: -20px;
+  margin-right: -20px;
+}
+.modal-wrapper .modal-box .modal-header .close-modal:focus,
+.modal-wrapper .modal-box .modal-header .close-modal:active {
+  text-shadow: 0 0 2px #b1bac8;
+}
+.modal-wrapper .modal-box .modal-header .modal-name {
+  font-family: "Montserrat-bold";
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 22px;
+  color: #2e2e2e;
+  letter-spacing: 1.3px;
+  line-height: 22px;
+  margin-bottom: 29px;
 }
 .modal-wrapper .modal-box .modal-form {
   max-width: 270px;
   margin: 0 auto;
 }
-.overlay .modal-body {
-  transition: all 0.25s ease-in-out;
-  transform: translateY(-50px);
-  margin: 50px auto;
-  z-index: 101;
-  background-color: #fff;
-  border-radius: 8px;
-  box-sizing: border-box;
-  padding: 35px 15px;
-  min-height: 290px;
-  max-height: 666px;
-  flex: none;
-  overflow-y: auto;
-  width: calc(70%);
-  min-width: 290px;
-  max-width: 590px;
-}
-.overlay .modal-body.change-password-input {
-  max-height: 518px;
-}
-.overlay .modal-body.sing-in {
-  max-height: 501px;
-}
-.overlay .modal-body.sing-in .modal-main .modal-input-wrapper input {
-  margin-bottom: 10px;
-}
-.overlay .modal-body.sing-in .modal-main .forgot-password {
-  color: #02bacd;
-  font-size: 14px;
-  text-align: left;
-  display: block;
-  margin-bottom: 27px;
-  background: transparent;
-  border: 0;
-  text-decoration: underline;
-  cursor: pointer;
-}
-.overlay .modal-body.sing-in .modal-main .modal-button {
-  margin-bottom: 27px;
-}
-.overlay .modal-body.sing-in .modal-main .sign-up-wrapper .sign-up {
-  display: inline;
-  float: left;
-  font-size: 16px;
-  color: #93a0b3;
-  letter-spacing: 1px;
-}
-.overlay .modal-body.sing-in .modal-main .sign-up-wrapper #sign-up-button {
-  float: right;
-  color: #02bacd;
-  font-size: 16px;
-  background-color: transparent;
-  text-decoration: underline;
-  cursor: pointer;
-}
-.overlay .modal-body.forgot-password {
-  max-height: 336px;
-}
-.overlay .modal-body.sign-up {
-  max-height: 654px;
-}
-.overlay .modal-body.sign-up .modal-main .modal-button {
-  margin-bottom: 27px;
-}
-.overlay .modal-body.sign-up .modal-main .sign-in-wrapper .sign-in {
-  display: inline;
-  float: left;
-  font-size: 16px;
-  color: #93a0b3;
-  letter-spacing: 1px;
-}
-.overlay .modal-body.sign-up .modal-main .sign-in-wrapper #sign-in-button {
-  float: right;
-  color: #02bacd;
-  font-size: 16px;
-  background-color: transparent;
-  text-decoration: underline;
-  cursor: pointer;
-}
-.overlay .modal-body.upload-photo {
-  max-height: 478px;
-}
-.overlay .modal-body .modal-header {
+.modal-wrapper .modal-box .modal-form .input-group-component {
+  margin-bottom: 29px;
   position: relative;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 45px;
 }
-.overlay .modal-body .modal-header .header-logo {
-  margin: 0 auto;
-  text-align: center;
-}
-.overlay .modal-body .modal-header .header-logo img {
-  margin: 0 auto;
-}
-.overlay .modal-body .modal-header .close-modal {
-  font-size: 28px;
-  line-height: 17px;
-  font-weight: 300;
-  font-family: "Montserrat-light";
-  color: #adb7c5;
-  cursor: pointer;
-  position: absolute;
-  top: -20px;
-  right: 0;
-  user-select: none;
-}
-.overlay .modal-main {
-  width: 249px;
-  margin: 0 auto;
-}
-.overlay .modal-main > * {
-  font-family: "Montserrat-Medium";
-  font-size: 14px;
-  color: #2e2e2e;
-}
-.overlay .modal-main .modal-name {
-  font-size: 22px;
-  text-transform: uppercase;
-  text-align: center;
-  color: #2e2e2e;
-  font-family: "Montserrat-bold";
-  line-height: 22px;
-  margin-bottom: 27px;
-}
-.overlay .modal-main .field-title {
+.modal-wrapper .modal-box .modal-form .input-group-component label {
   font-family: "Montserrat-Medium";
   text-transform: uppercase;
-  color: #93a0b3;
-  line-height: 14px;
+  font-size: 13px;
+  line-height: 13px;
   margin-bottom: 10px;
+  color: #93a0b3;
 }
-.overlay .modal-main .drop-field {
-  width: 132px;
-  height: 132px;
-  margin: 0 auto 27px auto;
-  text-align: center;
-  border: 1px dashed #93a0b3;
+.modal-wrapper .modal-box .modal-form .input-group-component input {
+  color: #2e2e2e;
+  font-size: 14px;
+  line-height: normal;
+  margin-bottom: 29px;
+}
+.modal-wrapper .modal-box .modal-form .input-group-component input::-webkit-input-placeholder {
+  color: #93a0b3;
+}
+.modal-wrapper .modal-box .modal-form .input-group-component input::-moz-placeholder {
+  color: #93a0b3;
+}
+.modal-wrapper .modal-box .modal-form .input-group-component input:-ms-input-placeholder {
+  color: #93a0b3;
+}
+.modal-wrapper .modal-box .modal-form .input-group-component input:-moz-placeholder {
+  color: #93a0b3;
+}
+.modal-wrapper .modal-box .modal-form .input-group-component input[type="password"] {
+  padding-right: 50px;
+}
+.modal-wrapper .modal-box .modal-form .input-group-component .show-password-icon {
+  position: absolute;
+  top: 40px;
+  right: 16px;
+  cursor: pointer;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.modal-wrapper .modal-box .modal-form .input-group-component .show-password-icon.show {
+  top: 41px;
+}
+.modal-wrapper .modal-box .modal-form .input-group-component .show-password-icon.hide {
+  top: 39px;
+}
+.modal-wrapper .modal-box .modal-form .input-group-component .show-password-icon.active {
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+.modal-wrapper .modal-box .modal-form .input-group-component:last-child {
+  margin-bottom: 30px;
+}
+.modal-wrapper .modal-box .modal-form .modal-button {
+  padding: 13px 22px 11px 22px;
+}
+.modal-wrapper .modal-box .modal-form .drop-field {
+  width: 216px;
+  height: 216px;
   border-radius: 50%;
-  background: center center url("../img/icons/icon-user-default.png") no-repeat;
-  background-size: 58.5%;
+  box-sizing: border-box;
+  border: 1px solid #d5d9df;
+  margin: 0 37px 29px 37px;
+  display: inline-table;
+  background: center center url('../img/icons/icon-user-default.png') no-repeat #d4d9e1;
+  background-size: 50%;
+  cursor: pointer;
 }
-.overlay .modal-main .drop-field p {
+.modal-wrapper .modal-box .modal-form .drop-field p {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  color: #2e2e2e;
   font-size: 16px;
-  color: #93a0b3;
-  margin-top: 32%;
+  font-family: "Montserrat-regular";
   user-select: none;
 }
-.overlay .modal-main .modal-input {
-  max-width: 249px;
-  margin: 0 0 27px 0;
-  line-height: 15px;
-  padding: 13px 21px 10px;
-  border-radius: 4px;
-  border: 1px solid #d5d9df;
-  color: #2e2e2e;
+.modal-wrapper .modal-box .modal-form .forgot-password {
+  margin: 0px auto 10px auto;
   font-size: 14px;
-  font-family: "Montserrat-Medium";
-}
-.overlay .modal-main .modal-input::-webkit-input-placeholder {
-  color: #93a0b3;
-}
-.overlay .modal-main .modal-input::-moz-placeholder {
-  color: #93a0b3;
-}
-.overlay .modal-main .modal-input:-moz-placeholder {
-  color: #93a0b3;
-}
-.overlay .modal-main .modal-input:-ms-input-placeholder {
-  color: #93a0b3;
-}
-.overlay .modal-main .modal-input:focus {
-  box-shadow: 0 0 2px 1px #02bacd;
-}
-.overlay .modal-main .modal-input-wrapper {
+  line-height: normal;
+  text-decoration: underline;
+  color: #02bacd;
+  cursor: pointer;
   position: relative;
+  top: -19px;
+  letter-spacing: 0.8px;
+  background: none;
+  font-family: "Montserrat-SemiBold";
 }
-.overlay .modal-main .modal-input-wrapper input[type="password"].modal-input,
-.overlay .modal-main .modal-input-wrapper input[type="text"].modal-input {
-  padding: 13px 48px 10px 21px;
-  box-sizing: border-box;
-  width: 249px;
-  display: none;
+.modal-wrapper .modal-box .modal-form .forgot-password:focus,
+.modal-wrapper .modal-box .modal-form .forgot-password:active {
+  text-shadow: 0 0 2px #b1bac8;
 }
-.overlay .modal-main .modal-input-wrapper input[type="password"].modal-input.active,
-.overlay .modal-main .modal-input-wrapper input[type="text"].modal-input.active {
-  display: block;
+.modal-wrapper .modal-box .modal-form .forgot-password:active {
+  color: #028c9a;
 }
-.overlay .modal-main .modal-input-wrapper .show-password-icon {
-  position: absolute;
-  top: 14px;
-  right: 15px;
-  cursor: pointer;
-}
-.overlay .modal-main .modal-input-wrapper .show-password-icon.show {
-  top: 16px;
-}
-.overlay .modal-main .modal-input-wrapper .show-password-icon.show,
-.overlay .modal-main .modal-input-wrapper .show-password-icon.hide {
-  display: none;
-}
-.overlay .modal-main .modal-input-wrapper .show-password-icon.show.active,
-.overlay .modal-main .modal-input-wrapper .show-password-icon.hide.active {
-  display: block;
-}
-.overlay .modal-main .modal-button {
-  text-align: center;
-  box-sizing: border-box;
-  text-transform: uppercase;
-  color: #fff;
+.modal-wrapper .modal-box .modal-form .sign-up-wrapper,
+.modal-wrapper .modal-box .modal-form .sign-in-wrapper {
+  margin: 29px 0 0 0;
   width: 100%;
-  padding: 12px 0 11px;
-  border-radius: 4px;
+}
+.modal-wrapper .modal-box .modal-form .sign-up-wrapper p,
+.modal-wrapper .modal-box .modal-form .sign-in-wrapper p,
+.modal-wrapper .modal-box .modal-form .sign-up-wrapper button,
+.modal-wrapper .modal-box .modal-form .sign-in-wrapper button {
   font-size: 16px;
-  background-color: #02bacd;
-  margin: 0 auto;
+  color: #93a0b3;
   font-family: "Montserrat-Medium";
+}
+.modal-wrapper .modal-box .modal-form .sign-up-wrapper button,
+.modal-wrapper .modal-box .modal-form .sign-in-wrapper button {
+  background: none;
+  color: #02bacd;
+  float: right;
   cursor: pointer;
+  margin-top: -19px;
+  text-decoration: underline;
+  font-family: "Montserrat-SemiBold";
 }
-.overlay .modal-main .modal-button:hover {
-  background: #02a3b4;
+.modal-wrapper .modal-box .modal-form .sign-up-wrapper button:focus,
+.modal-wrapper .modal-box .modal-form .sign-in-wrapper button:focus,
+.modal-wrapper .modal-box .modal-form .sign-up-wrapper button:active,
+.modal-wrapper .modal-box .modal-form .sign-in-wrapper button:active {
+  text-shadow: 0 0 2px #b1bac8;
 }
-.overlay .modal-main .modal-button:active {
-  background: #028c9a;
-}
-.overlay .modal-main .modal-button:focus {
-  box-shadow: 0 0 2px 1px #93a0b3;
-}
-.overlay .modal-main button[type="submit"] {
-  cursor: pointer;
-  display: block;
+.modal-wrapper .modal-box .modal-form .sign-up-wrapper button:active,
+.modal-wrapper .modal-box .modal-form .sign-in-wrapper button:active {
+  color: #028c9a;
 }
 .section-title {
   font-weight: bold;
@@ -3290,31 +3263,6 @@ a {
   .site-content .profile-section .textatea-wrapper button.submit {
     display: block;
     margin: 0 auto;
-  }
-  .overlay .modal-body {
-    padding: 15px;
-  }
-  .overlay .modal-body.sing-in {
-    max-height: 438px;
-  }
-  .overlay .modal-body.sign-up {
-    max-height: 588px;
-  }
-  .overlay .modal-body.forgot-password {
-    max-height: 260px;
-    min-height: 260px;
-  }
-  .overlay .modal-body.change-password-input {
-    max-height: 442px;
-  }
-  .overlay .modal-body .modal-header {
-    margin-bottom: 15px;
-  }
-  .overlay .modal-body .modal-header img {
-    height: 30px;
-  }
-  .overlay .modal-body .modal-header .close-modal {
-    top: 0px;
   }
 }
 @media (max-width: 767px) {

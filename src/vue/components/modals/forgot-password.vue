@@ -1,19 +1,40 @@
 <template lang="pug">
-    .forgot-password-modal.overlay
-        div(id="forgot-password-modal").modal-body.forgot-password
-            .modal-header
-                a(href="index.html").header-logo
-                    img(src="img/checkit.svg" alt="CheckIT Logo")
-                span.close-modal &times;
-            form(id="forgot-password-form").modal-main
-                h2.modal-name Re-send password
-                h3.field-title Enter your email
-                input(type="email" id="forgot-password-email" placeholder="Email" required).modal-input
-                button.modal-button(type="submit" name="forgot-password" value="re-send password" id="re-send-password" form="forgot-password-form") Re-send Password
+    .modal-box
+        .modal-header
+            .top-side
+                router-link(@click.native="closeModal", :to="{name: 'home'}").header-logo Checkit
+                button.btn.close-modal(@click="closeModal") &times;
+            .bottom-side
+                h2.modal-name Forgot Password
+        form.modal-form(v-on:submit="submitForm($event)")
+            .input-group-component
+                label(for="email") Your Email
+                input(type="email" id="email" placeholder="Email" required).modal-input
+            .btn-box
+                button(type="submit" id="save-password-changes").modal-button.button-blue Reset Password
 </template>
 
 <script>
     module.exports = {
+        data: function(){
+            return {
 
+            }
+        },
+        methods: {
+            closeModal: function(){
+                console.log(22);
+                this.$eventBus.$emit('callModal', {action: 'close'});
+            },
+            submitForm: function(e) {
+                e.preventDefault();
+                var data = {
+                    currentPassword: this.currentPassword,
+                    newPassword: this.newPassword,
+                    confirmNewPassword: this.confirmNewPassword
+                }
+                console.log(data);
+            }
+        }
     }
 </script>

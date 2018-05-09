@@ -309,22 +309,22 @@
                                                     label(for="profile-password").profile-label Password
                                                     input(type="password", name="profile-password",
                                                     id="profile-password" placeholder="Your Password" readonly)
-                                                    button.change-password(name="change-password" type="button") Change password
+                                                    button.change-password(name="change-password" type="button" @click="callModal('change-password')") Change password
                                             .textatea-wrapper
                                                 .label-row
                                                     label(for="about-yourself").profile-label About yourself
                                                     span 400
                                                 textarea(form="profile-settings" name="about-yourself" maxlength="400" wrap="soft" row="3" id="about-yourself")
-                                                button.submit(type="submit" name="submit" value="Save Changes" form="profile-settings") Save Changes
+                                                button.submit.button-blue(type="submit" name="submit" value="Save Changes" form="profile-settings") Save Changes
 </template>
 
 <script>
     module.exports =  {
+        created: function() {
+            // this.$eventBus.$on('callModal', this.receiveModalData);
+        },
         methods: {
-            callModal: function(component) {
-                this.$eventBus.$emit("callModal", {action: component})
-            },
-            photoController: function(action) {
+              photoController: function(action) {
                 if (action === 'remove') {
                     console.log('Profile\'s photo has to be removed');
                     document.querySelector(".user-photo").classList.add("default");
@@ -335,6 +335,12 @@
                     document.querySelector(".user-photo").classList.remove("default");
                     document.querySelector(".remove-photo").classList.remove("default");
                 }
+            },
+            callModal: function(component) {
+                this.$eventBus.$emit("callModal", {action: component})
+            },
+            receiveModalData: function(data) {
+                console.log(data);
             }
         }
     }
