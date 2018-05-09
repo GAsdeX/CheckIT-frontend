@@ -2365,10 +2365,10 @@ input::-webkit-calendar-picker-indicator {
   transition: opacity 0.3s ease-in-out;
 }
 .modal-wrapper .modal-box .modal-form .input-group-component .show-password-icon.show {
-  top: 41px;
+  top: 38px;
 }
 .modal-wrapper .modal-box .modal-form .input-group-component .show-password-icon.hide {
-  top: 39px;
+  top: 36px;
 }
 .modal-wrapper .modal-box .modal-form .input-group-component .show-password-icon.active {
   z-index: 2;
@@ -3311,10 +3311,10 @@ input::-webkit-calendar-picker-indicator {
     top: 33px;
   }
   .modal-wrapper .modal-box .modal-form .input-group-component .show-password-icon.hide {
-    top: 32px;
+    top: 31px;
   }
   .modal-wrapper .modal-box .modal-form .input-group-component .show-password-icon.show {
-    top: 35px;
+    top: 33px;
   }
   .modal-wrapper .modal-box .modal-form .modal-button {
     padding: 7px 15px 6px;
