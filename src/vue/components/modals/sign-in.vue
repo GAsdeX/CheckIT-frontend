@@ -9,10 +9,10 @@
         form.modal-form(v-on:submit="submitForm($event)")
             .input-group-component
                 label(for="email") Email
-                input(type="email" id="email" placeholder="Email" required).modal-input
+                input(type="email" v-model="email" id="email" placeholder="Email" required).modal-input
             .input-group-component
                 label(for="password") Password
-                input(type="password" id="password" placeholder="Password" required).modal-input
+                input(type="password" v-model="password" id="password" placeholder="Password" required).modal-input
                 img(src="img/icons/eye-off.png" alt="Show Password Image" class="show-password-icon hide active" id="password-hide")
                 img(src="img/icons/eye-on.png" alt="Show Password Image" class="show-password-icon show" id="password-show")
             button(@click.prevent.self="closeModal, callModal('forgot-password')").forgot-password Forgot password?
@@ -27,7 +27,8 @@
     module.exports = {
         data: function(){
             return {
-
+                email:    '',
+                password: ''
             }
         },
         methods: {
@@ -41,11 +42,11 @@
             submitForm: function(e) {
                 e.preventDefault();
                 var data = {
-                    currentPassword: this.currentPassword,
-                    newPassword: this.newPassword,
-                    confirmNewPassword: this.confirmNewPassword
-                }
-                console.log(data);
+                    email:    this.email,
+                    password: this.password
+                };
+
+                this.$store.dispatch('user/logIn', data);
             }
         }
     }

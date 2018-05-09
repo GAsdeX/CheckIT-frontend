@@ -7,7 +7,7 @@ Vue.use(Vuex);
 
 module.exports = new Vuex.Store({
 	modules: {
-		module: require('./store/module.store')
+		user: require('./store/user.store')
 	},
 	actions: {
 		getData: function (context) {

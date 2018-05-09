@@ -10,6 +10,7 @@
 		"build": "npm install && gulp --env production"
 	},
 	"dependencies": {
+		"axios": "^0.18.0",
 		"bootstrap": "4.0.0",
 		"browserify": "^14.4.0",
 		"concurrently": "^3.4.0",
