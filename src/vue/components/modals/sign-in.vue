@@ -12,7 +12,7 @@
                 input(type="email" id="email" placeholder="Email" required).modal-input
             .input-group-component
                 label(for="password") Password
-                input(type="password" id="password" placeholder="Password" required).modal-input
+                input(type="password" id="password" placeholder="Password" pattern=".{8,}" required).modal-input
                 img(src="img/icons/eye-off.png" alt="Show Password Image" class="show-password-icon hide active" id="password-hide")
                 img(src="img/icons/eye-on.png" alt="Show Password Image" class="show-password-icon show" id="password-show")
             button(@click.prevent.self="closeModal, callModal('forgot-password')").forgot-password Forgot password?

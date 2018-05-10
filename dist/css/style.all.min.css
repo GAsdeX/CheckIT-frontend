@@ -2357,7 +2357,8 @@ input::-webkit-calendar-picker-indicator {
 }
 .modal-wrapper .modal-box .modal-form .input-group-component .show-password-icon {
   position: absolute;
-  top: 40px;
+  top: 50%;
+  transform: translateY(calc(-50% + 11px));
   right: 16px;
   cursor: pointer;
   z-index: -1;
@@ -2365,10 +2366,10 @@ input::-webkit-calendar-picker-indicator {
   transition: opacity 0.3s ease-in-out;
 }
 .modal-wrapper .modal-box .modal-form .input-group-component .show-password-icon.show {
-  top: 41px;
+  /*top: 38px;*/
 }
 .modal-wrapper .modal-box .modal-form .input-group-component .show-password-icon.hide {
-  top: 39px;
+  /*top: 36px;*/
 }
 .modal-wrapper .modal-box .modal-form .input-group-component .show-password-icon.active {
   z-index: 2;
@@ -3308,13 +3309,7 @@ input::-webkit-calendar-picker-indicator {
     margin-bottom: 15px;
   }
   .modal-wrapper .modal-box .modal-form .input-group-component .show-password-icon {
-    top: 33px;
-  }
-  .modal-wrapper .modal-box .modal-form .input-group-component .show-password-icon.hide {
-    top: 32px;
-  }
-  .modal-wrapper .modal-box .modal-form .input-group-component .show-password-icon.show {
-    top: 35px;
+    transform: translateY(calc(-50% + 12px));
   }
   .modal-wrapper .modal-box .modal-form .modal-button {
     padding: 7px 15px 6px;
