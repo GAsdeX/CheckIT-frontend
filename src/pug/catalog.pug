@@ -1,0 +1,44 @@
+include includes/mixins
+
+doctype html
+html(lang="en")
+    +head('FAQ')
+    body
+        //- weinre
+
+        // Code goes here
+        +siteHeader
+        .site-content
+            .catalog-section
+                .container
+                    h1.section-title Ideas
+
+                    .row
+                        .col-md-3
+                            .catalog-categories
+                                .title Category
+                                 .categories-box
+                                     +catalogInputComponent
+                                     +catalogInputComponent
+                                     +catalogInputComponent
+                                     +catalogInputComponent
+                                     +catalogInputComponent
+
+                        .col-md-9
+                            .catalog-ideas-block
+                                .row
+                                    each val in [1,2,3,4,5,6,7,8, 9, 10, 11, 12]
+                                        .col-md-4
+                                            .idea-card
+                                                .top-bar
+                                                    .avatar(style="background-image: url(../img/blank-colors-desk-370474.jpg)")
+                                                .bottom-bar
+                                                    .evaluation-box
+                                                        .categories
+                                                            .category fasion
+                                                        .likes
+                                                            span 222
+                                                    .content-box
+                                                        .title Spelunk Jewelry: A New Collection Inspired by France
+                                                        .description Attending La Porte Peinte artist residency will inspire a second line of timeless jewelry anchored by place and self-expression.
+

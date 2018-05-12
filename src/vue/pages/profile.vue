@@ -1,0 +1,348 @@
+<template lang="pug">
+    article.site-content
+        .profile-section
+            .container
+                h1.section-title My Profile
+                .row
+                    .col-xl-9.settings-container
+                        .profile-box
+                            .container
+                                .row
+                                    .col-lg-2.profile-photo-wrapper
+                                        .profile-photo
+                                            .avatar.user-photo
+                                            button.remove-photo(@click="photoController('remove')")
+                                                span &times;
+                                            button.upload-photo(@click="callModal('upload-photo')") Upload photo
+                                    .col-lg-10
+                                        .container
+                                            form(id="profile-settings" name="profile-settings" method="POST").row
+                                                .col-sm-6.input-group-component
+                                                    label(for="profile-first-name").profile-label First Name
+                                                    input(type="text", name="first-name",
+                                                    id="profile-first-name", placeholder="First Name" required)
+                                                .col-sm-6.input-group-component
+                                                    label(for="profile-last-name").profile-label Last Name
+                                                    input(type="text", name="last-name",
+                                                    id="profile-last-name" placeholder="Last Name" required)
+                                                .col-sm-6.input-group-component
+                                                    label(for="profile-email").profile-label Email
+                                                    input(type="email", name="email",
+                                                    id="profile-email", placeholder="user@example.com" required)
+                                                .col-sm-6.input-group-component
+                                                    label(for="profile-last-name").profile-label Phone number
+                                                    input(type="tel", name="phone",
+                                                    id="profile-phone" placeholder="+380(12)345-67-89")
+                                                .col-sm-6.input-group-component
+                                                    label(for="profile-url").profile-label Profile URL
+                                                    input(type="text", name="profile-url",
+                                                    id="profile-url", placeholder="userprofile")
+                                                .col-sm-6.input-group-component
+                                                    label(for="profile-website").profile-label Website
+                                                    input(type="url", name="profile-website",
+                                                    id="profile-website" placeholder="https://www.instagram.com/kerry_shark/")
+                                                .col-sm-6.input-group-component
+                                                    label(for="profile-country").profile-label Country
+                                                    input(type="text", name="profile-country",
+                                                    id="profile-country", placeholder="Country", list="country")
+                                                    datalist(id="country")
+                                                        option(data="AFG" name="AFG" value="Afghanistan")
+                                                        option(data="ALA" name="ALA" value="Aland Islands")
+                                                        option(data="ALB" name="ALB" value="Albania")
+                                                        option(data="ALG" name="ALG" value="Algeria")
+                                                        option(data="ASM" name="ASM" value="American Samoa")
+                                                        option(data="AND" name="AND" value="Andorra")
+                                                        option(data="AGO" name="AGO" value="Angola")
+                                                        option(data="AIA" name="AIA" value="Anguilla")
+                                                        option(data="ATA" name="ATA" value="Antarctica")
+                                                        option(data="ATG" name="ATG" value="Antigua and Barbuda")
+                                                        option(data="ARG" name="ARG" value="Argentina")
+                                                        option(data="ARM" name="ARM" value="Armenia")
+                                                        option(data="ABW" name="ABW" value="Aruba")
+                                                        option(data="AUS" name="AUS" value="Australia")
+                                                        option(data="AUT" name="AUT" value="Austria")
+                                                        option(data="AZE" name="AZE" value="Azerbaijan")
+                                                        option(data="BHS" name="BHS" value="Bahamas")
+                                                        option(data="BHR" name="BHR" value="Bahrain")
+                                                        option(data="BGD" name="BGD" value="Bangladesh")
+                                                        option(data="BRB" name="BRB" value="Barbados")
+                                                        option(data="BLR" name="BLR" value="Belarus")
+                                                        option(data="BEL" name="BEL" value="Belgium")
+                                                        option(data="BLZ" name="BLZ" value="Belize")
+                                                        option(data="BEN" name="BEN" value="Benin")
+                                                        option(data="BMU" name="BMU" value="Bermuda")
+                                                        option(data="BTN" name="BTN" value="Bhutan")
+                                                        option(data="BOL" name="BOL" value="Bolivia, Plurinational State of")
+                                                        option(data="BES" name="BES" value="Bonaire, Sint Eustatius and Saba")
+                                                        option(data="BIH" name="BIH" value="Bosnia and Herzegovina")
+                                                        option(data="BWA" name="BWA" value="Botswana")
+                                                        option(data="BVT" name="BVT" value="Bouvet Island")
+                                                        option(data="BRA" name="BRA" value="Brazil")
+                                                        option(data="IOT" name="IOT" value="British Indian Ocean Territory")
+                                                        option(data="BRN" name="BRN" value="Brunei Darussalam")
+                                                        option(data="BGR" name="BGR" value="Bulgaria")
+                                                        option(data="BFA" name="BFA" value="Burkina Faso")
+                                                        option(data="BDI" name="BDI" value="Burundi")
+                                                        option(data="KHM" name="KHM" value="Cambodia")
+                                                        option(data="CMR" name="CMR" value="Cameroon")
+                                                        option(data="CAN" name="CAN" value="Canada")
+                                                        option(data="CPV" name="CPV" value="Cape Verde")
+                                                        option(data="CYM" name="CYM" value="Cayman Islands")
+                                                        option(data="CAF" name="CAF" value="Central African Republic")
+                                                        option(data="TCD" name="TCD" value="Chad")
+                                                        option(data="CHL" name="CHL" value="Chile")
+                                                        option(data="CHN" name="CHN" value="China")
+                                                        option(data="CXR" name="CXR" value="Christmas Island")
+                                                        option(data="CCK" name="CCK" value="Cocos (Keeling) Islands")
+                                                        option(data="COL" name="COL" value="Colombia")
+                                                        option(data="COM" name="COM" value="Comoros")
+                                                        option(data="COG" name="COG" value="Congo")
+                                                        option(data="COD" name="COD" value="Congo, the Democratic Republic of the")
+                                                        option(data="COK" name="COK" value="Cook Islands")
+                                                        option(data="CRI" name="CRI" value="Costa Rica")
+                                                        option(data="CIV" name="CIV" value="Cote d'Ivoire")
+                                                        option(data="HRV" name="HRV" value="Croatia")
+                                                        option(data="CUB" name="CUB" value="Cuba")
+                                                        option(data="CUW" name="CUW" value="Curacao")
+                                                        option(data="CYP" name="CYP" value="Cyprus")
+                                                        option(data="CZE" name="CZE" value="Czech Republic")
+                                                        option(data="DNK" name="DNK" value="Denmark")
+                                                        option(data="DJI" name="DJI" value="Djibouti")
+                                                        option(data="DMA" name="DMA" value="Dominica")
+                                                        option(data="DOM" name="DOM" value="Dominican Republic")
+                                                        option(data="ECU" name="ECU" value="Ecuador")
+                                                        option(data="EGY" name="EGY" value="Egypt")
+                                                        option(data="SLV" name="SLV" value="El Salvador")
+                                                        option(data="GNQ" name="GNQ" value="Equatorial Guinea")
+                                                        option(data="ERI" name="ERI" value="Eritrea")
+                                                        option(data="EST" name="EST" value="Estonia")
+                                                        option(data="ETH" name="ETH" value="Ethiopia")
+                                                        option(data="FLK" name="FLK" value="Falkland Islands (Malvinas)")
+                                                        option(data="FRO" name="FRO" value="Faroe Islands")
+                                                        option(data="FJI" name="FJI" value="Fiji")
+                                                        option(data="FIN" name="FIN" value="Finland")
+                                                        option(data="FRA" name="FRA" value="France")
+                                                        option(data="GUF" name="GUF" value="French Guiana")
+                                                        option(data="PYF" name="PYF" value="French Polynesia")
+                                                        option(data="ATF" name="ATF" value="French Southern Territories")
+                                                        option(data="GAB" name="GAB" value="Gabon")
+                                                        option(data="GMB" name="GMB" value="Gambia")
+                                                        option(data="GEO" name="GEO" value="Georgia")
+                                                        option(data="DEU" name="DEU" value="Germany")
+                                                        option(data="GHA" name="GHA" value="Ghana")
+                                                        option(data="GIB" name="GIB" value="Gibraltar")
+                                                        option(data="GRC" name="GRC" value="Greece")
+                                                        option(data="GRL" name="GRL" value="Greenland")
+                                                        option(data="GRD" name="GRD" value="Grenada")
+                                                        option(data="GLP" name="GLP" value="Guadeloupe")
+                                                        option(data="GUM" name="GUM" value="Guam")
+                                                        option(data="GTM" name="GTM" value="Guatemala")
+                                                        option(data="GGY" name="GGY" value="Guernsey")
+                                                        option(data="GIN" name="GIN" value="Guinea")
+                                                        option(data="GNB" name="GNB" value="Guinea-Bissau")
+                                                        option(data="GUY" name="GUY" value="Guyana")
+                                                        option(data="HTI" name="HTI" value="Haiti")
+                                                        option(data="HMD" name="HMD" value="Heard Island and McDonald Islands")
+                                                        option(data="VAT" name="VAT" value="Holy See (Vatican City State)")
+                                                        option(data="HND" name="HND" value="Honduras")
+                                                        option(data="HKG" name="HKG" value="Hong Kong")
+                                                        option(data="HUN" name="HUN" value="Hungary")
+                                                        option(data="ISL" name="ISL" value="Iceland")
+                                                        option(data="IND" name="IND" value="India")
+                                                        option(data="IDN" name="IDN" value="Indonesia")
+                                                        option(data="IRN" name="IRN" value="Iran, Islamic Republic of")
+                                                        option(data="IRQ" name="IRQ" value="Iraq")
+                                                        option(data="IRL" name="IRL" value="Ireland")
+                                                        option(data="IMN" name="IMN" value="Isle of Man")
+                                                        option(data="ISR" name="ISR" value="Israel")
+                                                        option(data="ITA" name="ITA" value="Italy")
+                                                        option(data="JAM" name="JAM" value="Jamaica")
+                                                        option(data="JPN" name="JPN" value="Japan")
+                                                        option(data="JEY" name="JEY" value="Jersey")
+                                                        option(data="JOR" name="JOR" value="Jordan")
+                                                        option(data="KAZ" name="KAZ" value="Kazakhstan")
+                                                        option(data="KEN" name="KEN" value="Kenya")
+                                                        option(data="KIR" name="KIR" value="Kiribati")
+                                                        option(data="PRK" name="PRK" value="Korea, Democratic People's Republic of")
+                                                        option(data="KOR" name="KOR" value="Korea, Republic of")
+                                                        option(data="KWT" name="KWT" value="Kuwait")
+                                                        option(data="KGZ" name="KGZ" value="Kyrgyzstan")
+                                                        option(data="LAO" name="LAO" value="Lao People's Democratic Republic")
+                                                        option(data="LVA" name="LVA" value="Latvia")
+                                                        option(data="LBN" name="LBN" value="Lebanon")
+                                                        option(data="LSO" name="LSO" value="Lesotho")
+                                                        option(data="LBR" name="LBR" value="Liberia")
+                                                        option(data="LBY" name="LBY" value="Libya")
+                                                        option(data="LIE" name="LIE" value="Liechtenstein")
+                                                        option(data="LTU" name="LTU" value="Lithuania")
+                                                        option(data="LUX" name="LUX" value="Luxembourg")
+                                                        option(data="MAC" name="MAC" value="Macao")
+                                                        option(data="MKD" name="MKD" value="Macedonia, the former Yugoslav Republic of")
+                                                        option(data="MDG" name="MDG" value="Madagascar")
+                                                        option(data="MWI" name="MWI" value="Malawi")
+                                                        option(data="MYS" name="MYS" value="Malaysia")
+                                                        option(data="MDV" name="MDV" value="Maldives")
+                                                        option(data="MLI" name="MLI" value="Mali")
+                                                        option(data="MLT" name="MLT" value="Malta")
+                                                        option(data="MHL" name="MHL" value="Marshall Islands")
+                                                        option(data="MTQ" name="MTQ" value="Martinique")
+                                                        option(data="MRT" name="MRT" value="Mauritania")
+                                                        option(data="MUS" name="MUS" value="Mauritius")
+                                                        option(data="MYT" name="MYT" value="Mayotte")
+                                                        option(data="MEX" name="MEX" value="Mexico")
+                                                        option(data="FSM" name="FSM" value="Micronesia, Federated States of")
+                                                        option(data="MDA" name="MDA" value="Moldova, Republic of")
+                                                        option(data="MCO" name="MCO" value="Monaco")
+                                                        option(data="MNG" name="MNG" value="Mongolia")
+                                                        option(data="MNE" name="MNE" value="Montenegro")
+                                                        option(data="MSR" name="MSR" value="Montserrat")
+                                                        option(data="MAR" name="MAR" value="Morocco")
+                                                        option(data="MOZ" name="MOZ" value="Mozambique")
+                                                        option(data="MMR" name="MMR" value="Myanmar")
+                                                        option(data="NAM" name="NAM" value="Namibia")
+                                                        option(data="NRU" name="NRU" value="Nauru")
+                                                        option(data="NPL" name="NPL" value="Nepal")
+                                                        option(data="NLD" name="NLD" value="Netherlands")
+                                                        option(data="NCL" name="NCL" value="New Caledonia")
+                                                        option(data="NZL" name="NZL" value="New Zealand")
+                                                        option(data="NIC" name="NIC" value="Nicaragua")
+                                                        option(data="NER" name="NER" value="Niger")
+                                                        option(data="NGA" name="NGA" value="Nigeria")
+                                                        option(data="NIU" name="NIU" value="Niue")
+                                                        option(data="NFK" name="NFK" value="Norfolk Island")
+                                                        option(data="MNP" name="MNP" value="Northern Mariana Islands")
+                                                        option(data="NOR" name="NOR" value="Norway")
+                                                        option(data="OMN" name="OMN" value="Oman")
+                                                        option(data="PAK" name="PAK" value="Pakistan")
+                                                        option(data="PLW" name="PLW" value="Palau")
+                                                        option(data="PSE" name="PSE" value="Palestinian Territory, Occupied")
+                                                        option(data="PAN" name="PAN" value="Panama")
+                                                        option(data="PNG" name="PNG" value="Papua New Guinea")
+                                                        option(data="PRY" name="PRY" value="Paraguay")
+                                                        option(data="PER" name="PER" value="Peru")
+                                                        option(data="PHL" name="PHL" value="Philippines")
+                                                        option(data="PCN" name="PCN" value="Pitcairn")
+                                                        option(data="POL" name="POL" value="Poland")
+                                                        option(data="PRT" name="PRT" value="Portugal")
+                                                        option(data="PRI" name="PRI" value="Puerto Rico")
+                                                        option(data="QAT" name="QAT" value="Qatar")
+                                                        option(data="REU" name="REU" value="Reunion")
+                                                        option(data="ROU" name="ROU" value="Romania")
+                                                        option(data="RUS" name="RUS" value="Russian Federation")
+                                                        option(data="RWA" name="RWA" value="Rwanda")
+                                                        option(data="BLM" name="BLM" value="Saint Barthelemy")
+                                                        option(data="SHN" name="SHN" value="Saint Helena, Ascension and Tristan da Cunha")
+                                                        option(data="KNA" name="KNA" value="Saint Kitts and Nevis")
+                                                        option(data="LCA" name="LCA" value="Saint Lucia")
+                                                        option(data="MAF" name="MAF" value="Saint Martin (French part)")
+                                                        option(data="SPM" name="SPM" value="Saint Pierre and Miquelon")
+                                                        option(data="VCT" name="VCT" value="Saint Vincent and the Grenadines")
+                                                        option(data="WSM" name="WSM" value="Samoa")
+                                                        option(data="SMR" name="SMR" value="San Marino")
+                                                        option(data="STP" name="STP" value="Sao Tome and Principe")
+                                                        option(data="SAU" name="SAU" value="Saudi Arabia")
+                                                        option(data="SEN" name="SEN" value="Senegal")
+                                                        option(data="SRB" name="SRB" value="Serbia")
+                                                        option(data="SYC" name="SYC" value="Seychelles")
+                                                        option(data="SLE" name="SLE" value="Sierra Leone")
+                                                        option(data="SGP" name="SGP" value="Singapore")
+                                                        option(data="SXM" name="SXM" value="Sint Maarten (Dutch part)")
+                                                        option(data="SVK" name="SVK" value="Slovakia")
+                                                        option(data="SVN" name="SVN" value="Slovenia")
+                                                        option(data="SLB" name="SLB" value="Solomon Islands")
+                                                        option(data="SOM" name="SOM" value="Somalia")
+                                                        option(data="ZAF" name="ZAF" value="South Africa")
+                                                        option(data="SGS" name="SGS" value="South Georgia and the South Sandwich Islands")
+                                                        option(data="SSD" name="SSD" value="South Sudan")
+                                                        option(data="ESP" name="ESP" value="Spain")
+                                                        option(data="LKA" name="LKA" value="Sri Lanka")
+                                                        option(data="SDN" name="SDN" value="Sudan")
+                                                        option(data="SUR" name="SUR" value="Suriname")
+                                                        option(data="SJM" name="SJM" value="Svalbard and Jan Mayen")
+                                                        option(data="SWZ" name="SWZ" value="Swaziland")
+                                                        option(data="SWE" name="SWE" value="Sweden")
+                                                        option(data="CHE" name="CHE" value="Switzerland")
+                                                        option(data="SYR" name="SYR" value="Syrian Arab Republic")
+                                                        option(data="TWN" name="TWN" value="Taiwan, Province of China")
+                                                        option(data="TJK" name="TJK" value="Tajikistan")
+                                                        option(data="TZA" name="TZA" value="Tanzania, United Republic of")
+                                                        option(data="THA" name="THA" value="Thailand")
+                                                        option(data="TLS" name="TLS" value="Timor-Leste")
+                                                        option(data="TGO" name="TGO" value="Togo")
+                                                        option(data="TKL" name="TKL" value="Tokelau")
+                                                        option(data="TON" name="TON" value="Tonga")
+                                                        option(data="TTO" name="TTO" value="Trinidad and Tobago")
+                                                        option(data="TUN" name="TUN" value="Tunisia")
+                                                        option(data="TUR" name="TUR" value="Turkey")
+                                                        option(data="TKM" name="TKM" value="Turkmenistan")
+                                                        option(data="TCA" name="TCA" value="Turks and Caicos Islands")
+                                                        option(data="TUV" name="TUV" value="Tuvalu")
+                                                        option(data="UGA" name="UGA" value="Uganda")
+                                                        option(data="UKR" name="UKR" value="Ukraine")
+                                                        option(data="ARE" name="ARE" value="United Arab Emirates")
+                                                        option(data="GBR" name="GBR" value="United Kingdom")
+                                                        option(data="USA" name="USA" value="United States")
+                                                        option(data="UMI" name="UMI" value="United States Minor Outlying Islands")
+                                                        option(data="URY" name="URY" value="Uruguay")
+                                                        option(data="UZB" name="UZB" value="Uzbekistan")
+                                                        option(data="VUT" name="VUT" value="Vanuatu")
+                                                        option(data="VEN" name="VEN" value="Venezuela, Bolivarian Republic of")
+                                                        option(data="VNM" name="VNM" value="Viet Nam")
+                                                        option(data="VGB" name="VGB" value="Virgin Islands, British")
+                                                        option(data="VIR" name="VIR" value="Virgin Islands, U.S.")
+                                                        option(data="WLF" name="WLF" value="Wallis and Futuna")
+                                                        option(data="ESH" name="ESH" value="Western Sahara")
+                                                        option(data="YEM" name="YEM" value="Yemen")
+                                                        option(data="ZMB" name="ZMB" value="Zambia")
+                                                        option(data="ZWE" name="ZWE" value="Zimbabwe")
+                                                .col-sm-6.input-group-component
+                                                    label(for="profile-city").profile-label City
+                                                    .input-wrapper
+                                                        input(id="profile-city" type="text", name="profile-city", placeholder="City", list="city")
+                                                        .selector-icon
+                                                            .left-side
+                                                            .right-side
+                                                        datalist(id="city")
+                                                            option(data="OD" name="Odesa" value="Odesa")
+                                                            option(data="KY" name="KY" value="Kyiv")
+                                                .col-sm-6.input-group-component
+                                                    label(for="profile-password").profile-label Password
+                                                    input(type="password", name="profile-password",
+                                                    id="profile-password" placeholder="Your Password" readonly)
+                                                    button.change-password(name="change-password" type="button" @click="callModal('change-password')") Change password
+                                            .textatea-wrapper
+                                                .label-row
+                                                    label(for="about-yourself").profile-label About yourself
+                                                    span 400
+                                                textarea(form="profile-settings" name="about-yourself" maxlength="400" wrap="soft" row="3" id="about-yourself")
+                                                button.submit.button-blue(type="submit" name="submit" value="Save Changes" form="profile-settings") Save Changes
+</template>
+
+<script>
+    module.exports =  {
+        created: function() {
+            // this.$eventBus.$on('callModal', this.receiveModalData);
+        },
+        methods: {
+              photoController: function(action) {
+                if (action === 'remove') {
+                    console.log('Profile\'s photo has to be removed');
+                    document.querySelector(".user-photo").classList.add("default");
+                    document.querySelector(".remove-photo").classList.add("default");
+                }
+                if (action === 'add') {
+                    console.log('Profile\'s photo has to be uploaded to the server');
+                    document.querySelector(".user-photo").classList.remove("default");
+                    document.querySelector(".remove-photo").classList.remove("default");
+                }
+            },
+            callModal: function(component) {
+                this.$eventBus.$emit("callModal", {action: component})
+            },
+            receiveModalData: function(data) {
+                console.log(data);
+            }
+        }
+    }
+
+</script>

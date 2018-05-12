@@ -1,3 +1,76 @@
 /*
  * Global styles go here
  */
+html, body  {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: sans-serif;
+  background: #fff;
+}
+body {
+  overflow-x: hidden;
+}
+h1, h2, h3, h4, h5, h6, ul, li, a, span, div, input, textarea, p, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 13px;
+  text-decoration: none;
+  list-style: none;
+  color: #101010;
+  font-weight: normal;
+  font-family: sans-serif;
+  .montserrat-regular();
+}
+* {
+  outline: none;
+}
+a {
+  cursor: pointer;
+}
+
+
+.montserrat-bold  {
+  font-family: "Montserrat-bold";
+}
+.montserrat-regular  {
+  font-family: "Montserrat-regular";
+}
+.montserrat-light  {
+  font-family: "Montserrat-light";
+}
+.montserrat-semi-bold  {
+  font-family: "Montserrat-SemiBold";
+}
+.montserrat-medium  {
+  font-family: "Montserrat-Medium";
+}
+.meregue-basic {
+  font-family: "Merengue-Script-Basic";
+}
+.meregue {
+  font-family: "Merengue-Script";
+}
+
+.overflow {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.placeholder(@color) {
+  &::-webkit-input-placeholder {color: @color;}
+  &::-moz-placeholder {color: @color;}
+  &:-ms-input-placeholder {color: @color;}
+  &:-moz-placeholder {color: @color;}
+}
+
+.circle(@value) {
+  width: @value;
+  height: @value;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
