@@ -627,6 +627,7 @@ input {
 	&.white {
 		background: transparent;
 		color: @gamma-green;
+		box-shadow: none;
 	}
 	&.no-padding {
 		padding: 5px 25px;
@@ -1045,6 +1046,40 @@ input {
 	}
 	.new-ideas-section {
 		padding: 50px;
+		.section-title {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			h1 {
+				font-weight: bold;
+				font-size: 22px;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: normal;
+				letter-spacing: 1.3px;
+				text-align: left;
+				color: #2e2e2e;
+				font-family: "Montserrat-bold";
+				margin: 0;
+				box-sizing: border-box;
+			}
+			.view-all {
+				background: none;
+				color: @blue;
+				cursor: pointer;
+				.montserrat-semi-bold();
+				text-decoration: underline;
+				text-transform: none;
+				font-size: 18px;
+				line-height: 1.22;
+				&:focus, &:active {
+					text-shadow: 0 0 2px lighten(@grey, 10%);
+				}
+				&:active {
+					color: darken(@blue, 10%);
+				}
+			}
+		}
 	}
 
 	.idea-section {

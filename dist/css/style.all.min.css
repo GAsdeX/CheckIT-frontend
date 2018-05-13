@@ -3181,6 +3181,7 @@ input::-webkit-calendar-picker-indicator {
 .btn.white {
   background: transparent;
   color: #02bacd;
+  box-shadow: none;
 }
 .btn.no-padding {
   padding: 5px 25px;
@@ -3569,6 +3570,41 @@ input::-webkit-calendar-picker-indicator {
 }
 .site-content .new-ideas-section {
   padding: 50px;
+}
+.site-content .new-ideas-section .section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-content .new-ideas-section .section-title h1 {
+  font-weight: bold;
+  font-size: 22px;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1.3px;
+  text-align: left;
+  color: #2e2e2e;
+  font-family: "Montserrat-bold";
+  margin: 0;
+  box-sizing: border-box;
+}
+.site-content .new-ideas-section .section-title .view-all {
+  background: none;
+  color: #02bacd;
+  cursor: pointer;
+  font-family: "Montserrat-SemiBold";
+  text-decoration: underline;
+  text-transform: none;
+  font-size: 18px;
+  line-height: 1.22;
+}
+.site-content .new-ideas-section .section-title .view-all:focus,
+.site-content .new-ideas-section .section-title .view-all:active {
+  text-shadow: 0 0 2px #b1bac8;
+}
+.site-content .new-ideas-section .section-title .view-all:active {
+  color: #028c9a;
 }
 .site-content .idea-section {
   margin-top: 45px;

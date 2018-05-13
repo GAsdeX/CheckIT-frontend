@@ -58,7 +58,9 @@
 
         .new-ideas-section
             .container
-                .section-title New ideas
+                .section-title
+                    h1 New ideas
+                    router-link(:to="{name: 'catalog'}").sub-button.view-all View all
                 .row
                     each val in [1,2,3,4,5,6,7,8]
                         .col-md-3
