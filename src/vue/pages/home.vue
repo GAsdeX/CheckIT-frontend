@@ -2,22 +2,29 @@
     .site-content
         .head-banners-section
             .container
-                .section-title Top ideas
-                .row
-                    each val in [1,2,3]
-                        .col-md-4
-                            .idea-card
-                                .top-bar
-                                    .avatar(style="background-image: url(../img/blank-colors-desk-370474.jpg)")
-                                .bottom-bar
-                                    .evaluation-box
-                                        .categories
-                                            .category fasion
-                                        .likes
-                                            span 222
-                                    .content-box
-                                        .title Spelunk Jewelry: A New Collection Inspired by France
-                                        .description Attending La Porte Peinte artist residency will inspire a second line of timeless jewelry anchored by place and self-expression.
+                .section-title
+                    h1 Top ideas
+                    .buttons-wrapper
+                        button.prev
+                            span.top
+                            span.bottom
+                        button.next
+                            span.top
+                            span.bottom
+                .row(id="top-ideas-slide")
+                    each val in [1,2,3,4,5,6,7,8,9,10]
+                        .idea-card
+                            .top-bar
+                                .avatar(style="background-image: url(../img/blank-colors-desk-370474.jpg)")
+                            .bottom-bar
+                                .evaluation-box
+                                    .categories
+                                        .category fasion
+                                    .likes
+                                        span 222
+                                .content-box
+                                    .title Spelunk Jewelry: A New Collection Inspired by France
+                                    .description Attending La Porte Peinte artist residency will inspire a second line of timeless jewelry anchored by place and self-expression.
 
         .infographics-section
             .container
@@ -26,7 +33,7 @@
                     .col-md-4
                         .infographics-item
                             .top-bar
-                                .icon(style="background-image: url(../img/icons/icon-heart.png)")
+                                .icon
                             .bottom-bar
                                 .infographics-title Create an idea
                                 .infographics-description Lorem Ipsum is simply dummy text of the printing
@@ -35,7 +42,7 @@
                     .col-md-4
                         .infographics-item
                             .top-bar
-                                .icon(style="background-image: url(../img/icons/icon-heart.png)")
+                                .icon
                             .bottom-bar
                                 .infographics-title Collect likes
                                 .infographics-description Lorem Ipsum is simply dummy text of the printing
@@ -43,7 +50,7 @@
                     .col-md-4
                         .infographics-item
                             .top-bar
-                                .icon(style="background-image: url(../img/icons/icon-heart.png)")
+                                .icon
                             .bottom-bar
                                 .infographics-title Find investors
                                 .infographics-description Lorem Ipsum is simply dummy text of the printing
@@ -51,7 +58,7 @@
 
         .new-ideas-section
             .container
-                .section-title Top ideas
+                .section-title New ideas
                 .row
                     each val in [1,2,3,4,5,6,7,8]
                         .col-md-3
@@ -91,17 +98,32 @@
 
         .bring-an-idea-section
             .container
-                .section-title Categories
+                .section-title Bring your idea to life
                 .row
                     .col-md-7
                         .bring-an-idea-box
                             p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut culpa minima mollitia nemo optio perspiciatis provident, sint vel vero. Aperiam eveniet id minus nisi quasi quia repellat sunt voluptates.
-                            .btn create an idea
-                    .col-md-5
+                            router-link(:to="{name: 'create-idea'}").btn create idea
+                    .col-md-5.image
 </template>
 
 <script>
+    var $ = require('jquery');
+    var slick = require('slick-carousel');
+
 	module.exports = {
+	    created: function() {
+
+        },
+        mounted: function() {
+            $('#top-ideas-slide').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                prevArrow: $('.head-banners-section .prev'),
+                nextArrow: $('.head-banners-section .next')
+            });
+        },
 	    components: {
             'site-header': require('../components/site-header.vue')
         }

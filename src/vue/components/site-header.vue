@@ -12,7 +12,7 @@
                 .site-search
                     .avatar
                 .verification-box
-                    a.btn(@click="callModal('create-idea')") Create idea
+                    router-link(:to="{name: 'create-idea'}").btn Create idea
                     a.btn.white.no-padding(@click="callModal('sign-in')") Sing in
 </template>
 
