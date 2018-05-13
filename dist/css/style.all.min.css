@@ -3711,6 +3711,41 @@ input::-webkit-calendar-picker-indicator {
   text-align: left;
   color: #93a0b3;
 }
+.site-content .categories-section .categories-box {
+  /*display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;*/
+  margin-bottom: 55px;
+}
+.site-content .categories-section .categories-box .category {
+  font-family: "Montserrat-SemiBold";
+  color: #02bacd;
+  display: inline-block;
+  padding: 15px 36px 14px 36px;
+  border: 2px solid #02bacd;
+  border-radius: 26px;
+  margin: 0 36px 24px 0;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+.site-content .categories-section .categories-box .category:hover,
+.site-content .categories-section .categories-box .category:focus,
+.site-content .categories-section .categories-box .category:active {
+  background: rgba(2, 186, 205, 0.5);
+  color: #fff;
+}
+.site-content .categories-section .categories-box .category:focus,
+.site-content .categories-section .categories-box .category:active {
+  box-shadow: 0 0 2px #02bacd;
+}
+.site-content .categories-section .categories-box .category:active {
+  background: rgba(2, 186, 205, 0.75);
+}
 .site-content .about-section .about-box p {
   font-size: 14px;
   margin-bottom: 30px;
@@ -3739,6 +3774,9 @@ input::-webkit-calendar-picker-indicator {
   padding: 50px;
   background: 90% 50% url("../img/bring-idea-picture.png") no-repeat;
   background-size: contain;
+}
+.site-content .bring-an-idea-section .section-title {
+  margin-top: -15px;
 }
 .site-content .bring-an-idea-section .bring-an-idea-box p {
   font-size: 18px;
