@@ -812,7 +812,7 @@ input {
 	background: #3b3b3b;
 	color: #a6a6a6;
 	overflow: hidden;
-	margin-top: 115px;
+	margin-top: 70px;
 	.row .container {
 		display: flex;
 		justify-content: space-between;
@@ -1267,6 +1267,7 @@ input {
 		padding: 50px;
 		background: 90% 50% url("../img/bring-idea-picture.png") no-repeat;
 		background-size: contain;
+		margin-bottom: 115px;
 		.section-title {
 			margin-top: -15px;
 		}
@@ -1335,6 +1336,68 @@ input {
       }
     }
   }
+	.contact-box {
+		.top {
+			margin-bottom: 62px;
+		}
+		.icon {
+			.circle(95px);
+			background-color: #ffffff;
+			box-shadow: 0px 1px 10px 0 rgba(214, 219, 226, 0.8);
+			background-position: center;
+			background-repeat: no-repeat;
+			display: inline-block;
+			margin-right: 26px;
+		}
+		.description {
+			display: inline-block;
+			&-title {
+				.montserrat-medium();
+				color: @black;
+				font-size: 18px;
+				line-height: 1.33;
+				margin: 14px 0 9px 0;
+			}
+			&-text {
+				color: @grey;
+				.montserrat-semi-bold();
+				font-size: 16px;
+				line-height: 1.33;
+				margin-bottom: 8px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+			a {
+				display: block;
+			}
+		}
+		&-item {
+			display: flex;
+			align-items: flex-start;
+			&.address {
+				.icon {
+					background-image: url("../img/icons/icon-pin.png");
+				}
+				.description {
+					&-text {
+						margin-top: -2px;
+						line-height: 1.75;
+					}
+				}
+			}
+			&.mail {
+				.icon {
+					background-image: url("../img/icons/icon-mail.png");
+				}
+			}
+			&.phone {
+				.icon {
+					background-image: url("../img/icons/icon-phone.png");
+				}
+			}
+		}
+	}
   	.faq-section {
     .section-title{
       h1 {

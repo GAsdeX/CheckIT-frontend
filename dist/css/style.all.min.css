@@ -3328,7 +3328,7 @@ input::-webkit-calendar-picker-indicator {
   background: #3b3b3b;
   color: #a6a6a6;
   overflow: hidden;
-  margin-top: 115px;
+  margin-top: 70px;
 }
 .site-footer .row .container {
   display: flex;
@@ -3774,6 +3774,7 @@ input::-webkit-calendar-picker-indicator {
   padding: 50px;
   background: 90% 50% url("../img/bring-idea-picture.png") no-repeat;
   background-size: contain;
+  margin-bottom: 115px;
 }
 .site-content .bring-an-idea-section .section-title {
   margin-top: -15px;
@@ -3833,6 +3834,61 @@ input::-webkit-calendar-picker-indicator {
   font-weight: bold;
   color: #bbb;
   border-radius: 3px;
+}
+.site-content .contact-box .top {
+  margin-bottom: 62px;
+}
+.site-content .contact-box .icon {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 10px 0 rgba(214, 219, 226, 0.8);
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  margin-right: 26px;
+}
+.site-content .contact-box .description {
+  display: inline-block;
+}
+.site-content .contact-box .description-title {
+  font-family: "Montserrat-Medium";
+  color: #2e2e2e;
+  font-size: 18px;
+  line-height: 1.33;
+  margin: 14px 0 9px 0;
+}
+.site-content .contact-box .description-text {
+  color: #93a0b3;
+  font-family: "Montserrat-SemiBold";
+  font-size: 16px;
+  line-height: 1.33;
+  margin-bottom: 8px;
+}
+.site-content .contact-box .description-text:last-child {
+  margin-bottom: 0;
+}
+.site-content .contact-box .description a {
+  display: block;
+}
+.site-content .contact-box-item {
+  display: flex;
+  align-items: flex-start;
+}
+.site-content .contact-box-item.address .icon {
+  background-image: url("../img/icons/icon-pin.png");
+}
+.site-content .contact-box-item.address .description-text {
+  margin-top: -2px;
+  line-height: 1.75;
+}
+.site-content .contact-box-item.mail .icon {
+  background-image: url("../img/icons/icon-mail.png");
+}
+.site-content .contact-box-item.phone .icon {
+  background-image: url("../img/icons/icon-phone.png");
 }
 .site-content .faq-section .section-title h1 {
   font-weight: bold;

@@ -7,7 +7,7 @@
                     li: router-link(:to="{name: 'catalog'}") Ideas
                     li: router-link(:to="{name: 'about'}") About
                     li: router-link(:to="{name: 'faq'}") FAQ
-                    li: router-link(:to="{name: 'home'}") Contacts
+                    li: router-link(:to="{name: 'contacts'}") Contacts
             .content-wrapper
                 .site-search
                     .avatar
