@@ -8,21 +8,17 @@
                 h2.modal-name Sign Up
         form.modal-form(v-on:submit="submitForm($event)")
             .input-group-component
-                label(for="first-name") First Name
+                //-label(for="first-name") First Name
                 input(type="text" id="first-name" placeholder="First Name" required).modal-input
             .input-group-component
-                label(for="last-name") Last Name
+                //-label(for="last-name") Last Name
                 input(type="text" id="last-name" placeholder="Last Name" required).modal-input
             .input-group-component
-                label(for="email") Email
+                //-label(for="email") Email
                 input(type="email" id="email" placeholder="Email" required).modal-input
             .input-group-component
-                label(for="password") Password
-<<<<<<< Updated upstream
-                input(type="password" id="password" placeholder="Password" required).modal-input
-=======
-                input(type="password" id="password" placeholder="Password" pattern=".{8,}" required).modal-input
->>>>>>> Stashed changes
+                //-label(for="password") Password
+                input(type="password" id="password" placeholder="Password, 8+ symbols" pattern=".{8,}" required).modal-input
                 img(src="img/icons/eye-off.png" alt="Show Password Image" class="show-password-icon hide active" id="password-hide")
                 img(src="img/icons/eye-on.png" alt="Show Password Image" class="show-password-icon show" id="password-show")
             .btn-box
