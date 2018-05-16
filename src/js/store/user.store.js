@@ -25,7 +25,7 @@ module.exports = {
             console.log(data);
 
 
-            axios({
+            return axios({
                 method: 'post',
                 url: API + '/api/signin',
                 data: {
@@ -35,12 +35,7 @@ module.exports = {
                 headers: {
                     "Access-Control-Allow-Origin": "*"
                 }
-            }).then(function (response) {
-                console.log("Heade With Authentication :" + response);
-            })
-                .catch(function (error) {
-                    console.log("Post Error : " +error);
-                });
+            });
 
             // axios.post(API + '/api/signin', data);
             //     .then(function (serverData) {

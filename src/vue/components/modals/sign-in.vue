@@ -12,11 +12,7 @@
                 input(type="email" v-model="email" id="email" placeholder="Email" required).modal-input
             .input-group-component
                 label(for="password") Password
-                input(type="password" v-model="password" id="password" placeholder="Password" required).modal-input
-<<<<<<< Updated upstream
-=======
-                input(type="password" id="password" placeholder="Password" pattern=".{8,}" required).modal-input
->>>>>>> Stashed changes
+                input(type="password" v-model="password" user_greg_frontend id="password" placeholder="Password" pattern=".{8,}" required).modal-input
                 img(src="img/icons/eye-off.png" alt="Show Password Image" class="show-password-icon hide active" id="password-hide")
                 img(src="img/icons/eye-on.png" alt="Show Password Image" class="show-password-icon show" id="password-show")
             button(@click.prevent.self="closeModal, callModal('forgot-password')").forgot-password Forgot password?
@@ -50,7 +46,15 @@
                     password: this.password
                 };
 
-                this.$store.dispatch('user/logIn', data);
+                var that = this;
+                this.$store.dispatch('user/logIn', data)
+                    .then(function(data) {
+                        that.$eventBus.$emit('callModal', {action: 'close'});
+                        that.$router.push('/profile');
+                    })
+                    .catch(function (err) {
+                        console.log(err);
+                    });
             }
         }
     }

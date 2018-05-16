@@ -9,20 +9,13 @@
         form.modal-form(v-on:submit="submitForm($event)")
             .input-group-component
                 label(for="new-password") New Password
-<<<<<<< Updated upstream
                 input(type="password" id="new-password" placeholder="New Password" required).modal-input
-=======
                 input(type="password" id="new-password" placeholder="New Password" pattern=".{8,}" required).modal-input
->>>>>>> Stashed changes
                 img(src="img/icons/eye-off.png" alt="Show Password Image" class="show-password-icon hide active" id="new-password-hide")
                 img(src="img/icons/eye-on.png" alt="Show Password Image" class="show-password-icon show" id="new-password-show")
             .input-group-component
                 label(for="new-password") Confirm New Password
-<<<<<<< Updated upstream
-                input(type="password" id="confirm-new-password" placeholder="Confirm New Password" required).modal-input
-=======
                 input(type="password" id="confirm-new-password" placeholder="Confirm New Password" pattern=".{8,}" required).modal-input
->>>>>>> Stashed changes
                 img(src="img/icons/eye-off.png" alt="Show Password Image" class="show-password-icon hide active" id="confirm-new-password-hide")
                 img(src="img/icons/eye-on.png" alt="Show Password Image" class="show-password-icon show" id="confirm-new-password-show")
             .btn-box
