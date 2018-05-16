@@ -13,6 +13,7 @@ var EventBus = new Vue();
     }
 });
 
+
 var app = new Vue({
 	el: '#app',
 	render: function (h) { return h(require('../vue/index.vue')); },

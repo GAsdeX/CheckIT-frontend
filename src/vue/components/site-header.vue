@@ -2,17 +2,17 @@
     .site-header
         .container
             .content-wrapper
-                .site-logo
+                router-link(:to="{name: 'home'}").site-logo Checkit
                 ul.site-nav
-                    li: router-link(:to="{name: 'catalog'}") Projects
+                    li: router-link(:to="{name: 'catalog'}") Ideas
                     li: router-link(:to="{name: 'about'}") About
                     li: router-link(:to="{name: 'faq'}") FAQ
-                    li: router-link(:to="{name: 'home'}") Contacts
+                    li: router-link(:to="{name: 'contacts'}") Contacts
             .content-wrapper
                 .site-search
                     .avatar
                 .verification-box
-                    a.btn(@click="callModal('create-idea')") Create idea
+                    router-link(:to="{name: 'create-idea'}").btn Create idea
                     a.btn.white.no-padding(@click="callModal('sign-in')") Sing in
 </template>
 

@@ -77,3 +77,27 @@ a {
   border-radius: 50%;
   box-sizing: border-box;
 }
+
+.blue-button {
+  background: @blue;
+  text-transform: uppercase;
+  .montserrat-bold();
+  font-size: 16px;
+  line-height: 17px;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 4px;
+  color: #fff;
+  background: @blue;
+  box-sizing: border-box;
+  &:hover {
+    background: darken(@blue, 5%);
+  }
+  &:focus, &:active {
+    box-shadow: 0 0 2px @blue;;
+  }
+  &:active {
+    background: darken(@blue, 10%);
+  }
+}

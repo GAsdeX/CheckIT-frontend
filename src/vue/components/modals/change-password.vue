@@ -37,7 +37,6 @@
         },
         methods: {
             closeModal: function(){
-                console.log(22);
                 this.$eventBus.$emit('callModal', {action: 'close'});
             },
             submitForm: function(e) {

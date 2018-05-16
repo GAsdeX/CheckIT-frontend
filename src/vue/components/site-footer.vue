@@ -4,9 +4,9 @@
             .hi-row.row
                 .container
                     .nav-menu
-                        router-link(:to="{name: 'index'}").logo Checkit
+                        router-link(:to="{name: 'home'}").logo Checkit
                         .sub-links
-                            router-link(:to="{name: 'catalog'}").sub-links-item projects
+                            router-link(:to="{name: 'catalog'}").sub-links-item ideas
                             router-link(:to="{name: 'about'}").sub-links-item about
                             router-link(:to="{name: 'faq'}").sub-links-item faq
                             router-link(:to="{name: 'contacts'}").sub-links-item contacts

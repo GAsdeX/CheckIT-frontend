@@ -8,7 +8,7 @@
                 h2.modal-name Forgot Password
         form.modal-form(v-on:submit="submitForm($event)")
             .input-group-component
-                label(for="email") Your Email
+                //-label(for="email") Your Email
                 input(type="email" id="email" placeholder="Email" required).modal-input
             .btn-box
                 button(type="submit" id="save-password-changes").modal-button.button-blue Reset Password
@@ -23,7 +23,6 @@
         },
         methods: {
             closeModal: function(){
-                console.log(22);
                 this.$eventBus.$emit('callModal', {action: 'close'});
             },
             submitForm: function(e) {

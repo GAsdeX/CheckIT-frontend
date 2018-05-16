@@ -30,6 +30,11 @@ var routes = [
         name: 'profile',
         path: '/profile',
         component: require('../vue/pages/profile.vue')
+    },
+    {
+        name: 'contacts',
+        path: '/contacts',
+        component: require('../vue/pages/contacts.vue')
     }
 ];
 
