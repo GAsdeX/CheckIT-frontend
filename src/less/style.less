@@ -1398,7 +1398,31 @@ input {
 			}
 		}
 	}
-  	.faq-section {
+	.author-ideas-section {
+		.authors-nav-links {
+			border-bottom: 1px solid #93a0b3;
+			&-item {
+				display:inline-block;
+				margin-right: 60px;
+				margin-top: -1px;
+				&:last-child {
+					margin-right: 0;
+				}
+				a {
+					color:#93a0b3;
+					text-transform: uppercase;
+					border-bottom: 1px solid #93a0b3;
+				}
+				&.active {
+					a {
+						color: #02bacd;
+						border-bottom: 1px solid #02bacd;
+					}
+				}
+			}
+		}
+	}
+  .faq-section {
     .section-title{
       h1 {
         font-weight: bold;
