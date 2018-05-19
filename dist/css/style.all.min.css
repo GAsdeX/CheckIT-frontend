@@ -2583,6 +2583,59 @@ input::-webkit-calendar-picker-indicator {
 .button-blue:active {
   background: #028c9a;
 }
+.pagination {
+  text-align: center;
+  padding: 20px 0 30px;
+}
+.pagination li {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 2px 8px;
+}
+.pagination li.current {
+  background: #02bacd;
+}
+.pagination li.current span {
+  color: #fff;
+}
+.pagination a,
+.pagination span {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 14px;
+  font-family: "Montserrat-Medium";
+}
+.pagination a {
+  color: #93a0b3;
+}
+.pagination-navigation {
+  width: 20px;
+  height: 20px;
+}
+.pagination-navigation a,
+.pagination-navigation span {
+  padding: 2px 8px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 40%;
+}
+.pagination-navigation span {
+  background-image: none;
+}
+.pagination-navigation.prev {
+  margin: 0;
+}
+.pagination-navigation.prev a {
+  background-image: url("../img/icons/arrow-left.png");
+}
+.pagination-navigation.next {
+  margin: 0;
+}
+.pagination-navigation.next a {
+  background-image: url("../img/icons/arrow-right.png");
+}
 .modal-wrapper {
   width: 100%;
   height: 100%;
@@ -2655,6 +2708,7 @@ input::-webkit-calendar-picker-indicator {
 .modal-wrapper .modal-box .modal-header .close-modal:focus,
 .modal-wrapper .modal-box .modal-header .close-modal:active {
   text-shadow: 0 0 2px #b1bac8;
+  box-shadow: none;
 }
 .modal-wrapper .modal-box .modal-header .modal-name {
   font-family: "Montserrat-bold";
@@ -3183,6 +3237,13 @@ input::-webkit-calendar-picker-indicator {
   color: #02bacd;
   box-shadow: none;
 }
+.btn.white:focus,
+.btn.white:active {
+  text-shadow: 0 0 2px #b1bac8;
+}
+.btn.white:active {
+  color: #028c9a;
+}
 .btn.no-padding {
   padding: 5px 25px;
 }
@@ -3201,6 +3262,7 @@ input::-webkit-calendar-picker-indicator {
   color: #93a0b3;
   margin-left: 15px;
   text-transform: none;
+  cursor: pointer;
 }
 .input-group-checkboxes input[type="checkbox"] {
   height: 15px;
@@ -3211,6 +3273,7 @@ input::-webkit-calendar-picker-indicator {
   -moz-appearance: none;
   -webkit-appearance: none;
   position: relative;
+  cursor: pointer;
 }
 .input-group-checkboxes input[type="checkbox"]:after {
   content: '';
@@ -3223,6 +3286,8 @@ input::-webkit-calendar-picker-indicator {
   width: 100%;
 }
 .input-group-checkboxes input[type="checkbox"]:checked {
+  background: center center url('../img/icons/tick.svg') no-repeat;
+  background-size: 80%;
   background-color: #02bacd;
 }
 .info-box {
@@ -3770,6 +3835,91 @@ input::-webkit-calendar-picker-indicator {
   text-transform: uppercase;
   font-family: "Montserrat-bold";
 }
+.site-content .catalog-section .catalog-categories .more {
+  cursor: pointer;
+  color: #02bacd;
+  margin: 16px 0 35px 0;
+  font-family: "Montserrat-Medium";
+  font-size: 14px;
+  line-height: normal;
+  letter-spacing: 0.8px;
+  background: none;
+  font-family: "Montserrat-SemiBold";
+}
+.site-content .catalog-section .catalog-categories .more:focus,
+.site-content .catalog-section .catalog-categories .more:active {
+  text-shadow: 0 0 2px #b1bac8;
+}
+.site-content .catalog-section .catalog-categories .more:active {
+  color: #028c9a;
+}
+.site-content .catalog-section .country-select {
+  margin: 20px 0 10px;
+  border: 1px solid #93a0b3;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 20px;
+  font-family: "Montserrat-Medium";
+  font-size: 14px;
+  line-height: normal;
+  color: #93a0b3;
+}
+.site-content .catalog-section .country-select::-webkit-input-placeholder {
+  color: #93a0b3;
+}
+.site-content .catalog-section .country-select::-moz-placeholder {
+  color: #93a0b3;
+}
+.site-content .catalog-section .country-select:-ms-input-placeholder {
+  color: #93a0b3;
+}
+.site-content .catalog-section .country-select:-moz-placeholder {
+  color: #93a0b3;
+}
+.site-content .catalog-section .selectors-box {
+  position: absolute;
+  right: 15px;
+  top: -30px;
+}
+.site-content .catalog-section .selectors-wrapper {
+  width: 110px;
+  display: inline-block;
+  margin-right: 32px;
+  position: relative;
+}
+.site-content .catalog-section .selectors-wrapper:last-child {
+  margin-right: 0px;
+}
+.site-content .catalog-section .selectors-wrapper button {
+  width: 100%;
+  text-align: left;
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  font-family: "Montserrat-Medium";
+  color: #93a0b3;
+  font-size: 14px;
+  z-index: 1;
+  background-size: 10%;
+  background-position: center right;
+  background-repeat: no-repeat;
+}
+.site-content .catalog-section .selectors-wrapper button.more {
+  background-image: url("../img/icons/arrow-up.png");
+}
+.site-content .catalog-section .selectors-wrapper button.less {
+  background-image: url("../img/icons/arrow-down.png");
+}
+.site-content .catalog-section .selectors-wrapper button:focus,
+.site-content .catalog-section .selectors-wrapper button:active {
+  text-shadow: 0 0 2px #b1bac8;
+  box-shadow: none;
+}
+.site-content .catalog-section .selectors-wrapper button:visited {
+  text-shadow: none;
+  box-shadow: none;
+}
 .site-content .bring-an-idea-section {
   padding: 50px;
   background: 90% 50% url("../img/bring-idea-picture.png") no-repeat;
@@ -3889,6 +4039,26 @@ input::-webkit-calendar-picker-indicator {
 }
 .site-content .contact-box-item.phone .icon {
   background-image: url("../img/icons/icon-phone.png");
+}
+.site-content .author-ideas-section .authors-nav-links {
+  border-bottom: 1px solid #93a0b3;
+}
+.site-content .author-ideas-section .authors-nav-links-item {
+  display: inline-block;
+  margin-right: 60px;
+  margin-top: -1px;
+}
+.site-content .author-ideas-section .authors-nav-links-item:last-child {
+  margin-right: 0;
+}
+.site-content .author-ideas-section .authors-nav-links-item a {
+  color: #93a0b3;
+  text-transform: uppercase;
+  border-bottom: 1px solid #93a0b3;
+}
+.site-content .author-ideas-section .authors-nav-links-item.active a {
+  color: #02bacd;
+  border-bottom: 1px solid #02bacd;
 }
 .site-content .faq-section .section-title h1 {
   font-weight: bold;
