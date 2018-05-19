@@ -8,11 +8,9 @@
                 h2.modal-name Sign In
         form.modal-form(v-on:submit="submitForm($event)")
             .input-group-component
-                label(for="email") Email
                 input(type="email" v-model="email" id="email" placeholder="Email" required).modal-input
             .input-group-component
-                label(for="password") Password
-                input(type="password" v-model="password" user_greg_frontend id="password" placeholder="Password" pattern=".{8,}" required).modal-input
+                input(type="password" v-model="password" user_greg_frontend id="password" placeholder="Password" required).modal-input
                 img(src="img/icons/eye-off.png" alt="Show Password Image" class="show-password-icon hide active" id="password-hide")
                 img(src="img/icons/eye-on.png" alt="Show Password Image" class="show-password-icon show" id="password-show")
             button(@click.prevent.self="closeModal, callModal('forgot-password')").forgot-password Forgot password?
