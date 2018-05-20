@@ -2554,6 +2554,11 @@ a {
 .input-group-component textarea:active {
   box-shadow: 0 0 2px #02bacd;
 }
+.input-group-component textarea {
+  resize: none;
+  height: 150px;
+  box-sizing: border-box;
+}
 input::-webkit-calendar-picker-indicator {
   display: none;
 }
@@ -4111,41 +4116,79 @@ input::-webkit-calendar-picker-indicator {
   height: 108px;
   border-radius: 100%;
   border: 1px solid #ddd;
-  /*background: red;*/
+  background-image: url('../img/IMG_0009.JPG');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: #d4d9e1;
+}
+.site-content .profile-section .profile-box .profile-photo .avatar.default {
+  background-size: 65%;
+  background-image: url('../img/icons/icon-user-default.png');
 }
 .site-content .profile-section .profile-box .profile-photo .remove-photo {
-  background: #02bacd;
-  border-radius: 100%;
-  height: 22px;
-  width: 22px;
-  display: flex;
+  background: center center url('../img/icons/icon-close.png') no-repeat #02bacd;
+  background-size: 37%;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  box-sizing: border-box;
   position: absolute;
   top: -1px;
   right: 14px;
   /* height: 19px; */
   /* width: 19px; */
   cursor: pointer;
+  outline: none;
+  box-shadow: none;
 }
-.site-content .profile-section .profile-box .profile-photo .remove-photo > * {
-  margin: auto;
-  font-size: 16px;
-  line-height: 16px;
-  color: #fff;
+.site-content .profile-section .profile-box .profile-photo .remove-photo:focus,
+.site-content .profile-section .profile-box .profile-photo .remove-photo:active {
+  box-shadow: 0 0 2px #02bacd;
 }
-.site-content .profile-section .profile-box .profile-photo .upload {
+.site-content .profile-section .profile-box .profile-photo .upload-photo {
   cursor: pointer;
   display: block;
   border: 1px dashed #aaa;
   width: 100%;
   box-sizing: border-box;
   text-align: center;
-  padding: 6px 10px 7px;
+  padding: 6px 7px 7px;
   font-weight: bold;
   color: #bbb;
-  border-radius: 3px;
+  border-radius: 4px;
+  font-family: "Montserrat-Medium";
+  background: transparent;
+}
+.site-content .profile-section .profile-box .profile-photo .upload-photo:focus,
+.site-content .profile-section .profile-box .profile-photo .upload-photo:active {
+  box-shadow: 0 0 2px #02bacd;
+}
+.site-content .profile-section .profile-box .input-group-component .change-password {
+  font-size: 14px;
+  line-height: normal;
+  text-decoration: underline;
+  color: #02bacd;
+  cursor: pointer;
+  letter-spacing: 0.8px;
+  background: none;
+  margin: 0px 0 38px 0;
+  font-family: "Montserrat-SemiBold";
+}
+.site-content .profile-section .profile-box .input-group-component .change-password:focus,
+.site-content .profile-section .profile-box .input-group-component .change-password:active {
+  text-shadow: 0 0 2px #b1bac8;
+}
+.site-content .profile-section .profile-box .input-group-component .change-password:active {
+  color: #028c9a;
+}
+.site-content .profile-section .profile-box .input-group-component:nth-child(9) input {
+  margin-bottom: 9px;
+}
+.site-content .profile-section .profile-box .textarea-wrapper span {
+  float: right;
+  font-family: "Montserrat-Medium";
+  color: #93a0b3;
 }
 .site-content .contact-box .top {
   margin-bottom: 62px;
@@ -4395,7 +4438,9 @@ input::-webkit-calendar-picker-indicator {
     padding: 0;
   }
   .site-content .profile-section .profile-box .row .profile-photo-wrapper {
-    margin-bottom: 15px;
+    padding: 0;
+    max-width: 108px;
+    margin: 0 auto 15px auto;
   }
   .site-content .profile-section .profile-box .row .profile-photo-wrapper .avatar {
     margin-bottom: 8px;
@@ -4427,16 +4472,16 @@ input::-webkit-calendar-picker-indicator {
   .site-content .profile-section .profile-box .row div.col-lg-10 .container .input-group-component:last-child button.change-password {
     margin-bottom: 15px;
   }
-  .site-content .profile-section .textatea-wrapper {
-    padding: 0;
+  .site-content .profile-section .input-group-component.textarea-wrapper {
+    padding: 0 !important;
   }
-  .site-content .profile-section .textatea-wrapper label {
+  .site-content .profile-section .input-group-component.textarea-wrapper label {
     font-size: 12px;
   }
-  .site-content .profile-section .textatea-wrapper textarea {
+  .site-content .profile-section .input-group-component.textarea-wrapper textarea {
     margin-bottom: 15px;
   }
-  .site-content .profile-section .textatea-wrapper button.submit {
+  .site-content .profile-section .input-group-component.textarea-wrapper button.submit {
     display: block;
     margin: 0 auto;
   }
@@ -4483,6 +4528,7 @@ input::-webkit-calendar-picker-indicator {
   }
   .modal-wrapper .modal-box .modal-form .modal-button {
     padding: 7px 15px 6px;
+    width: 100%;
   }
   .modal-wrapper .modal-box .modal-form .drop-field {
     width: 150px;

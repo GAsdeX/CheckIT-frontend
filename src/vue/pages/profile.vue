@@ -12,7 +12,8 @@
                                         .profile-photo
                                             .avatar.user-photo
                                             button.remove-photo(@click="photoController('remove')")
-                                                span &times;
+                                                span.top
+                                                span.bottom
                                             button.upload-photo(@click="callModal('upload-photo')") Upload photo
                                     .col-lg-10
                                         .container
@@ -310,11 +311,11 @@
                                                     input(type="password", name="profile-password",
                                                     id="profile-password" placeholder="Your Password" readonly)
                                                     button.change-password(name="change-password" type="button" @click="callModal('change-password')") Change password
-                                            .textatea-wrapper
+                                            .input-group-component.textarea-wrapper
                                                 .label-row
                                                     label(for="about-yourself").profile-label About yourself
-                                                    span 400
-                                                textarea(form="profile-settings" name="about-yourself" maxlength="400" wrap="soft" row="3" id="about-yourself")
+                                                        span 400
+                                                textarea(form="profile-settings" name="about-yourself" maxlength="400" wrap="soft" id="about-yourself")
                                                 button.submit.button-blue(type="submit" name="submit" value="Save Changes" form="profile-settings") Save Changes
 </template>
 
