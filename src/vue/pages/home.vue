@@ -13,18 +13,18 @@
                             span.bottom
                 .row(id="top-ideas-slide")
                     each val in [1,2,3,4,5,6,7,8,9,10]
-                        .idea-card
-                            .top-bar
-                                .avatar(style="background-image: url(../img/blank-colors-desk-370474.jpg)")
-                            .bottom-bar
-                                .evaluation-box
-                                    .categories
-                                        .category fasion
-                                    .likes
-                                        span 222
-                                .content-box
-                                    .title Spelunk Jewelry: A New Collection Inspired by France
-                                    .description Attending La Porte Peinte artist residency will inspire a second line of timeless jewelry anchored by place and self-expression.
+                        .idea-banner
+                            .evaluation-box
+                                .categories
+                                    .category photography
+                                .likes
+                                    span 242
+                            .content-box
+                                h2.title
+                                    |   Urban Decay &ndash; The St.Louis Story
+                                    br
+                                    |   limited photobook
+                                a(href="#").button-blue.to-idea View idea
 
         .infographics-section
             .container
@@ -120,7 +120,7 @@
         mounted: function() {
             $('#top-ideas-slide').slick({
                 infinite: true,
-                slidesToShow: 3,
+                slidesToShow: 1,
                 slidesToScroll: 1,
                 prevArrow: $('.head-banners-section .prev'),
                 nextArrow: $('.head-banners-section .next')

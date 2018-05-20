@@ -2630,11 +2630,29 @@ input::-webkit-calendar-picker-indicator {
 .pagination-navigation.prev a {
   background-image: url("../img/icons/arrow-left.png");
 }
+.pagination-navigation.prev:active a {
+  background-image: url("../img/icons/arrow-active-left.png");
+}
 .pagination-navigation.next {
   margin: 0;
 }
 .pagination-navigation.next a {
   background-image: url("../img/icons/arrow-right.png");
+}
+.pagination-navigation.next:active a {
+  background-image: url("../img/icons/arrow-active-right.png");
+}
+.pagination-page {
+  margin-right: 7px;
+}
+.pagination-page:hover {
+  background: #02bacd;
+}
+.pagination-page:hover a {
+  color: white;
+}
+.pagination-page:last-child {
+  margin-right: 0px;
 }
 .modal-wrapper {
   width: 100%;
@@ -3582,12 +3600,66 @@ input::-webkit-calendar-picker-indicator {
   top: 20px;
   transform: rotate(-45deg);
 }
-.site-content .head-banners-section #top-ideas-slide .slick-slide .idea-card {
+.site-content .head-banners-section #top-ideas-slide .slick-slide .idea-banner {
   width: calc(100% - 30px) !important;
-  margin: 15px;
+  margin: 0 15px;
+  background: center center url('../img/idea-banner.jpg') no-repeat;
+  background-size: 100%;
+  border-radius: 8px;
+  transition: background-size 5s ease-out;
+  padding: 48px 51px;
+  box-sizing: border-box;
 }
-.site-content .infographics-section .section-title {
-  margin-top: 25px;
+.site-content .head-banners-section #top-ideas-slide .slick-slide .idea-banner:hover {
+  background-size: 130%;
+  transition: background-size 5s ease-out;
+}
+.site-content .head-banners-section #top-ideas-slide .slick-slide .evaluation-box {
+  display: block;
+  margin-top: 202px;
+}
+.site-content .head-banners-section #top-ideas-slide .slick-slide .evaluation-box div {
+  display: inline-block;
+}
+.site-content .head-banners-section #top-ideas-slide .slick-slide .evaluation-box .category {
+  font-family: "Montserrat-Medium";
+  color: #fff;
+  font-size: 17px;
+  line-height: 1.41;
+  letter-spacing: 1px;
+  border: 2px solid #fff;
+  border-radius: 24px;
+  text-transform: uppercase;
+  padding: 11px 24px 9px;
+  margin: 0 82px 0 0;
+}
+.site-content .head-banners-section #top-ideas-slide .slick-slide .evaluation-box .likes {
+  padding-left: 40px;
+  background: left 65% url(../img/heart.png) no-repeat;
+  background-size: 26%;
+}
+.site-content .head-banners-section #top-ideas-slide .slick-slide .evaluation-box .likes span {
+  font-size: 23px;
+  font-family: "Montserrat-Medium";
+  letter-spacing: 1.6px;
+  line-height: 30px;
+  color: #fff;
+}
+.site-content .head-banners-section #top-ideas-slide .slick-slide .content-box {
+  display: block;
+}
+.site-content .head-banners-section #top-ideas-slide .slick-slide .content-box .title {
+  font-family: "Montserrat-Medium";
+  font-size: 32px;
+  line-height: 1.44;
+  text-align: left;
+  color: #fff;
+  margin: 15px 0;
+}
+.site-content .head-banners-section #top-ideas-slide .slick-slide .content-box .to-idea {
+  padding: 14px 45px 10px;
+  display: inline-block;
+  width: 200px;
 }
 .site-content .infographics-section .infographics-item .top-bar {
   height: 95px;
