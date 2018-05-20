@@ -3883,13 +3883,103 @@ input::-webkit-calendar-picker-indicator {
 .site-content .categories-section .categories-box .category:active {
   background: rgba(2, 186, 205, 0.75);
 }
+.site-content .about-section .container:first-child {
+  background: right 30px url('../img/Picture.png') no-repeat transparent;
+}
 .site-content .about-section .about-box p {
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 30px;
-  line-height: 1.57;
+  line-height: 1.67;
   text-align: left;
   color: #93a0b3;
   font-family: "Montserrat-Medium";
+}
+.site-content .about-section .member-photo {
+  height: 173px;
+  background: center center url('../img/IMG_0009.JPG') no-repeat #cad3e1;
+  background-size: contain;
+}
+.site-content .about-section .member-card {
+  border-radius: 8px;
+  box-shadow: 0px 5px 30px 0 rgba(103, 106, 135, 0.1);
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+.site-content .about-section .member-card.chaikovskyi .member-photo {
+  background-image: url("../img/team/chaikovskyi.jpg");
+}
+.site-content .about-section .member-card.dovzhenko .member-photo {
+  background-image: url("../img/team/dovzhenko.jpg");
+}
+.site-content .about-section .member-card.kravchenko .member-photo {
+  background-image: url("../img/team/kravchenko.jpg");
+}
+.site-content .about-section .member-card.rybko .member-photo {
+  background-image: url("../img/team/rybko.jpg");
+}
+.site-content .about-section .member-card.shevchenko .member-photo {
+  background-image: url("../img/team/shevchenko.jpg");
+}
+.site-content .about-section .member-card.smorodskiy .member-photo {
+  background-image: url("../img/team/smorodskiy.jpg");
+}
+.site-content .about-section .member-card.tkach .member-photo {
+  background-image: url("../img/team/tkach.jpg");
+}
+.site-content .about-section .member-info {
+  text-align: center;
+}
+.site-content .about-section .member-rank,
+.site-content .about-section .member-email {
+  font-family: "Montserrat-Medium";
+}
+.site-content .about-section .member-name {
+  font-family: "Montserrat-SemiBold";
+  color: #2e2e2e;
+  font-size: 18px;
+  line-height: 1.33;
+  margin-top: 14px;
+  margin-bottom: 4px;
+}
+.site-content .about-section .member-rank,
+.site-content .about-section .member-email {
+  color: #93a0b3;
+}
+.site-content .about-section .member-rank {
+  font-size: 16px;
+  line-height: 1.38;
+}
+.site-content .about-section .member-email {
+  font-size: 14px;
+  line-height: 1.57;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+.site-content .about-section .member-email:hover,
+.site-content .about-section .member-email:focus,
+.site-content .about-section .member-email:active {
+  text-decoration: underline;
+}
+.site-content .about-section .member-social {
+  padding-bottom: 17px;
+}
+.site-content .about-section .member-social-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0 9px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.site-content .about-section .member-social-link.facebook {
+  background-image: url("../img/icons/facebook.png");
+}
+.site-content .about-section .member-social-link.linkedin {
+  background-image: url("../img/icons/linkedin.png");
 }
 .site-content .catalog-section .catalog-categories {
   padding: 20px;

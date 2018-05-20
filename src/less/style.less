@@ -1371,14 +1371,115 @@ input {
 		}
 	}
 	.about-section {
+		.container {
+			&:first-child {
+				background: right 30px url('../img/Picture.png') no-repeat transparent;
+			}
+		}
 		.about-box {
 			p {
-				font-size: 14px;
+				font-size: 16px;
 				margin-bottom: 30px;
-				line-height: 1.57;
+				line-height: 1.67;
 				text-align: left;
-				color: #93a0b3;
+				color: @grey;
 				.montserrat-medium();
+			}
+		}
+		.member {
+			&-photo {
+				height: 173px;
+				background: center center url('../img/IMG_0009.JPG') no-repeat #cad3e1;
+				background-size: contain;
+			}
+			&-card {
+				border-radius: 8px;
+				box-shadow: 0px 5px 30px 0 rgba(103, 106, 135, 0.1);
+				overflow: hidden;
+				margin-bottom: 40px;
+				&.chaikovskyi {
+					.member-photo {
+						background-image: url("../img/team/chaikovskyi.jpg");
+					}
+				}
+				&.dovzhenko {
+					.member-photo {
+						background-image: url("../img/team/dovzhenko.jpg");
+					}
+				}
+				&.kravchenko {
+					.member-photo {
+						background-image: url("../img/team/kravchenko.jpg");
+					}
+				}
+				&.rybko {
+					.member-photo {
+						background-image: url("../img/team/rybko.jpg");
+					}
+				}
+				&.shevchenko {
+					.member-photo {
+						background-image: url("../img/team/shevchenko.jpg");
+					}
+				}
+				&.smorodskiy {
+					.member-photo {
+						background-image: url("../img/team/smorodskiy.jpg");
+					}
+				}
+				&.tkach {
+					.member-photo {
+						background-image: url("../img/team/tkach.jpg");
+					}
+				}
+			}
+			&-info {
+				text-align: center;
+			}
+			&-rank, &-email {
+				.montserrat-medium();
+			}
+			&-name {
+				.montserrat-semi-bold();
+				color: @black;
+				font-size: 18px;
+				line-height: 1.33;
+				margin-top: 14px;
+				margin-bottom: 4px;
+			}
+			&-rank, &-email {
+				color: @grey;
+			}
+			&-rank {
+				font-size: 16px;
+				line-height: 1.38;
+			}
+			&-email {
+				font-size: 14px;
+				line-height: 1.57;
+				margin-bottom: 12px;
+				display: inline-block;
+				&:hover, &:focus, &:active {
+					text-decoration: underline;
+				}
+			}
+			&-social {
+				padding-bottom: 17px;
+				&-link {
+					.circle(40px);
+					display: inline-block;
+					padding: 10px 20px;
+					margin: 0 9px;
+					background-size: cover;
+					background-position: center;
+					background-repeat: no-repeat;
+					&.facebook {
+						background-image: url("../img/icons/facebook.png");
+					}
+					&.linkedin {
+						background-image: url("../img/icons/linkedin.png");
+					}
+				}
 			}
 		}
 	}
