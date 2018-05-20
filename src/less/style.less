@@ -120,15 +120,36 @@ input {
         a {
           background-image: url("../img/icons/arrow-left.png");
         }
+		  &:active {
+			  a {
+				  background-image: url("../img/icons/arrow-active-left.png");
+			  }
+		  }
       }
       &.next {
         margin: 0;
         a {
           background-image: url("../img/icons/arrow-right.png");
         }
+		  &:active {
+			  a {
+				  background-image: url("../img/icons/arrow-active-right.png");
+			  }
+		  }
       }
     }
-
+	&-page {
+		margin-right: 7px;
+		&:hover {
+			background: @blue;
+			a {
+				color: white;
+			}
+		}
+		&:last-child {
+			margin-right: 0px;
+		}
+	}
 }
 
 //modal windows
@@ -1287,7 +1308,7 @@ input {
 					color: #fff;
 				}
 				&:focus, &:active {
-					box-shadow: 0 0 2px @blue;;
+					box-shadow: 0 0 2px @blue;
 				}
 				&:active {
 					background: fade(@blue, 75%);
