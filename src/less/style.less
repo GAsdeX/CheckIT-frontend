@@ -1759,18 +1759,21 @@ input {
 	}
 	.author-ideas-section {
 		.authors-nav-links {
-			border-bottom: 1px solid #93a0b3;
+			border-bottom: 1px solid @border;
 			&-item {
 				display:inline-block;
 				margin-right: 60px;
 				margin-top: -1px;
+				padding-bottom: 8px;
 				&:last-child {
 					margin-right: 0;
 				}
 				a {
-					color:#93a0b3;
+					color: @grey;
 					text-transform: uppercase;
-					border-bottom: 1px solid #93a0b3;
+					border-bottom: 1px solid @border;
+					padding-bottom: 8px;
+					.montserrat-medium();
 				}
 				&.active {
 					a {
