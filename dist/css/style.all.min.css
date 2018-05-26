@@ -3377,6 +3377,15 @@ input::-webkit-calendar-picker-indicator {
 .info-box.support:after {
   background-image: url('../img/icon-like.png');
 }
+.info-box.info:after {
+  background-image: url('../img/icons/info.svg');
+}
+.info-box.danger:after {
+  background-image: url('../img/icons/round-error-symbol.svg');
+}
+.info-box.success:after {
+  background-image: url('../img/icons/success.svg');
+}
 .info-box:after {
   content: '';
   top: 10px;

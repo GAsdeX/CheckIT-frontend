@@ -10,6 +10,13 @@
 @border: #d5d9df;
 @bkg: #d4d9e1;
 
+// info colors
+@danger : #e74c3c;
+@info   : #3498db;
+@success: #2ecc71;
+
+
+
 .input-group-component {
 	& > * {
 		box-sizing: border-box;
@@ -845,18 +852,21 @@ input {
 	}
 	&.info {
 		&:after {
+			background-image: url('../img/icons/info.svg');
 
 		}
 
 	}
 	&.danger {
 		&:after {
+			background-image: url('../img/icons/round-error-symbol.svg');
 
 		}
 
 	}
 	&.success {
 		&:after {
+			background-image: url('../img/icons/success.svg');
 
 		}
 

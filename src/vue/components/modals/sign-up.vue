@@ -17,8 +17,17 @@
                 input(type="password" v-model="password"  id="password" placeholder="Password, 8+ symbols" pattern=".{8,}" required).modal-input
                 img(src="img/icons/eye-off.png" alt="Show Password Image" class="show-password-icon hide active" id="password-hide")
                 img(src="img/icons/eye-on.png" alt="Show Password Image" class="show-password-icon show" id="password-show")
+
+            .input-group-component(v-if="singUpStatus === 'error'")
+                info-box(danger  message="An error occurred while registration. Please reload the page.")
+            .input-group-component(v-if="singUpStatus === 'exists'")
+                info-box(danger  message="This user already exists.")
+            .input-group-component(v-if="singUpStatus === 'success'")
+                info-box(success message="The new user had been created!")
+
             .btn-box
                 button(type="submit" id="sign-up-button").modal-button.button-blue Sign Up
+
             .sign-in-wrapper
                 p.sign-in Have an account?
                 button(type="button" id="sign-in-button" @click="closeModal, callModal('sign-in')").sub-button Sign in
@@ -28,7 +37,7 @@
     module.exports = {
         data: function(){
             return {
-
+                singUpStatus: null
             }
         },
         methods: {
@@ -52,11 +61,28 @@
 
                 this.$store.dispatch('user/signUp', data)
                     .then(function(res){
-                        that.$store.dispatch('user/setLogin', res);
                         console.log(res);
+                        console.log(res.status);
+                        console.log(res.status == 201);
+
+                        if (res.status == 201) {
+                            that.singUpStatus = 'success';
+                        }
+
+                        if (res.status == 409) {
+                            that.singUpStatus = 'exists';
+                        }
+
+                    })
+                    .catch(function(res) {
+                        console.log(res);
+
+                        that.singUpStatus = 'error';
                     });
-                console.log(data);
             }
+        },
+        components : {
+            'info-box': require('../info-box.vue')
         }
     }
 </script>
