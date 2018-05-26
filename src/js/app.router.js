@@ -2,6 +2,7 @@
 
 var Vue       = require('vue/dist/vue.common');
 var VueRouter = require('vue-router');
+var store     = require('./app.store');
 
 Vue.use(VueRouter);
 
@@ -29,7 +30,16 @@ var routes = [
     {
         name: 'profile',
         path: '/profile',
-        component: require('../vue/pages/profile.vue')
+        component: require('../vue/pages/profile.vue'),
+        beforeEnter: function(to, from, next) {
+            console.log(store.getters['user/getLoginStatus']);
+
+            if (store.getters['user/getLoginStatus']) {
+                next();
+            } else {
+                next(from);
+            }
+        }
     },
     {
         name: 'contacts',
