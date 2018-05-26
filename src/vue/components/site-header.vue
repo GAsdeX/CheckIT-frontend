@@ -19,9 +19,9 @@
                             .top-bar
                                 | name
                             ul.bottom-bar
-                                li: a My Profile
-                                li: a My Projects
-                                li: a My Profile
+                                li: router-link(:to="{name: 'profile'}") My Profile
+                                li: router-link(:to="{name: 'projects'}") My Projects
+                                li: router-link(:to="{name: 'notifications'}") Notifications
                                 li: a(@click="logOut") Sign Out
 
 
