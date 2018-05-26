@@ -13,6 +13,10 @@
                 input(type="password" v-model="password" user_greg_frontend id="password" placeholder="Password" required).modal-input
                 img(src="img/icons/eye-off.png" alt="Show Password Image" class="show-password-icon hide active" id="password-hide")
                 img(src="img/icons/eye-on.png" alt="Show Password Image" class="show-password-icon show" id="password-show")
+            .input-group-component(v-if="signInStatus == 'exists'")
+                info-box(danger)
+            .input-group-component(v-if="signInStatus == 'error'")
+                info-box(danger message="An error occurred while creating of user. Please Reload the page.")
             button(@click.prevent.self="closeModal, callModal('forgot-password')").forgot-password Forgot password?
             .btn-box
                 button(type="submit" id="sign-in-button").modal-button.button-blue Sign In
@@ -26,7 +30,8 @@
         data: function(){
             return {
                 email:    '',
-                password: ''
+                password: '',
+                signInStatus: null
             }
         },
         methods: {
@@ -49,15 +54,18 @@
                 this.$store.dispatch('user/logIn', data)
                     .then(function(res) {
                         that.$store.dispatch('user/setLogin', res.data);
-                        console.log(res.data);
+                        console.log(res);
 
                         that.$eventBus.$emit('callModal', {action: 'close'});
                         that.$router.push('/profile');
                     })
                     .catch(function (err) {
-                        console.log(err);
+                        that.signInStatus = 'error';
                     });
             }
+        },
+        components: {
+            'info-box' : require('../info-box.vue')
         }
     }
 </script>
