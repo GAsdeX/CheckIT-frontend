@@ -3255,6 +3255,61 @@ input::-webkit-calendar-picker-indicator {
 .btn:active {
   background: #028c9a;
 }
+.btn.user-round {
+  margin-left: 30px !important;
+  width: 41px;
+  height: 41px;
+  padding: 0 !important;
+  border-radius: 100%;
+  border: 1px solid #ddd;
+  background-color: transparent;
+  position: relative;
+}
+.btn.user-round.no-user-photo {
+  background-image: url(../img/users/man-5.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.btn.user-round:hover .profile-nav {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+.btn.user-round .profile-nav {
+  min-width: 180px;
+  position: absolute;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0px 5px 30px 0 rgba(103, 106, 135, 0.1);
+  right: -100%;
+  top: 50%;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(20px);
+}
+.btn.user-round .profile-nav .top-bar {
+  padding: 10px 20px;
+  display: block;
+  border-bottom: 1px solid #d5d9df;
+}
+.btn.user-round .profile-nav .top-bar,
+.btn.user-round .profile-nav .top-bar > * {
+  text-align: left;
+}
+.btn.user-round .profile-nav .bottom-bar li {
+  display: block;
+  text-align: left;
+}
+.btn.user-round .profile-nav .bottom-bar li a {
+  display: inline-block;
+  padding: 8px 20px;
+}
+.btn.user-round .profile-nav .bottom-bar li a:hover {
+  color: #02bacd;
+}
 .btn.white {
   background: transparent;
   color: #02bacd;

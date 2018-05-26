@@ -703,6 +703,72 @@ input {
 	display: inline-block;
 	.blue-button();
 
+	&.user-round {
+		margin-left: 30px !important;
+		width: 41px;
+		height: 41px;
+		padding: 0 !important;
+		border-radius: 100%;
+		border: 1px solid #ddd;
+		background-color: transparent;
+		position: relative;
+
+		&.user-photo {
+
+		}
+		&.no-user-photo {
+			background-image: url(../img/users/man-5.svg);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		&:hover {
+			.profile-nav {
+				opacity: 1;
+				visibility: visible;
+				transform: none;
+			}
+		}
+		.profile-nav {
+			min-width: 180px;
+			position: absolute;
+			border-radius: 4px;
+			background-color: #ffffff;
+			box-shadow: 0px 5px 30px 0 rgba(103, 106, 135, 0.1);
+			right: -100%;
+			top: 50%;
+			z-index: 10;
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.3s ease-in-out;
+			transform: translateY(20px);
+
+			.top-bar {
+				padding: 10px 20px;
+				display: block;
+				border-bottom: 1px solid @border;
+
+				&, & > * {
+					text-align: left;
+				}
+			}
+			.bottom-bar {
+				li {
+					display: block;
+					text-align: left;
+
+					a {
+						display: inline-block;
+						padding: 8px 20px;
+
+						&:hover {
+							color: @gamma-green;
+						}
+					}
+				}
+			}
+		}
+	}
 	&.white {
 		background: transparent;
 		color: @gamma-green;

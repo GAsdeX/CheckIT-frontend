@@ -13,16 +13,29 @@
                     .avatar
                 .verification-box
                     router-link(:to="{name: 'create-idea'}").btn Create idea
-                    a.btn.white.no-padding(@click="callModal('sign-in')") Sing in
+                    a.btn.white.no-padding(@click="callModal('sign-in')" v-if="!isloggedIn") Sing in
+                    a.btn.user-round.no-padding.no-user-photo(v-if="isloggedIn")
+                        nav.profile-nav
+                            .top-bar
+                                | name
+                            ul.bottom-bar
+                                li: a My Profile
+                                li: a My Projects
+                                li: a My Profile
+                                li: a(@click="logOut") Sign Out
+
+
 </template>
 
 <script>
-    var EventBus = require('../../js/event-bus').EventBus;
-
-    console.log(EventBus);
     module.exports =  {
         created: function() {
             // this.$eventBus.$on('callModal', this.receiveModalData);
+        },
+        computed: {
+            isloggedIn: function() {
+                return this.$store.getters['user/getLoginStatus'];
+            }
         },
         methods: {
             callModal: function(component) {
@@ -30,6 +43,12 @@
             },
             receiveModalData: function(data) {
                 console.log(data);
+            },
+            logOut: function() {
+                var that = this;
+
+                this.$router.push({name: 'home'});
+                this.$store.dispatch('user/logOut');
             }
         }
     };

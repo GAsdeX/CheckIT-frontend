@@ -8,13 +8,13 @@
                 h2.modal-name Sign Up
         form.modal-form(v-on:submit="submitForm($event)")
             .input-group-component
-                input(type="text" id="first-name" placeholder="First Name" required).modal-input
+                input(type="text" v-model="firstName"  id="first-name" placeholder="First Name" required).modal-input
             .input-group-component
-                input(type="text" id="last-name" placeholder="Last Name" required).modal-input
+                input(type="text" v-model="lastName"  id="last-name" placeholder="Last Name" required).modal-input
             .input-group-component
-                input(type="email" id="email" placeholder="Email" required).modal-input
+                input(type="email" v-model="email"  id="email" placeholder="Email" required).modal-input
             .input-group-component
-                input(type="password" id="password" placeholder="Password, 8+ symbols" pattern=".{8,}" required).modal-input
+                input(type="password" v-model="password"  id="password" placeholder="Password, 8+ symbols" pattern=".{8,}" required).modal-input
                 img(src="img/icons/eye-off.png" alt="Show Password Image" class="show-password-icon hide active" id="password-hide")
                 img(src="img/icons/eye-on.png" alt="Show Password Image" class="show-password-icon show" id="password-show")
             .btn-box
@@ -41,11 +41,20 @@
             },
             submitForm: function(e) {
                 e.preventDefault();
+
+                var that = this;
                 var data = {
-                    currentPassword: this.currentPassword,
-                    newPassword: this.newPassword,
-                    confirmNewPassword: this.confirmNewPassword
-                }
+                    email: this.email,
+                    password: this.password,
+                    firstName: this.firstName,
+                    lastName: this.lastName,
+                };
+
+                this.$store.dispatch('user/signUp', data)
+                    .then(function(res){
+                        that.$store.dispatch('user/setLogin', res);
+                        console.log(res);
+                    });
                 console.log(data);
             }
         }

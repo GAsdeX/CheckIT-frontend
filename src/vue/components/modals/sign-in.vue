@@ -45,8 +45,12 @@
                 };
 
                 var that = this;
+
                 this.$store.dispatch('user/logIn', data)
-                    .then(function(data) {
+                    .then(function(res) {
+                        that.$store.dispatch('user/setLogin', res.data);
+                        console.log(res.data);
+
                         that.$eventBus.$emit('callModal', {action: 'close'});
                         that.$router.push('/profile');
                     })

@@ -20,6 +20,6 @@ var app = new Vue({
 	router: require('./app.router'),
 	store:  require('./app.store'),
 	created: function () {
-
+		this.$store.dispatch('user/userAutoLogin');
 	}
 });
