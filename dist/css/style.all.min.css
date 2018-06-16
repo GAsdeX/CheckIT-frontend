@@ -3789,6 +3789,32 @@ input::-webkit-calendar-picker-indicator {
 .site-content .infographics-section .col-md-4:last-child .top-bar .icon {
   background-image: url("../img/icons/icon-money.png");
 }
+.site-content .not-found-section {
+  min-height: calc(100vh - 580px);
+}
+.site-content .not-found-title {
+  font-family: "Merengue-Script-Basic";
+  color: #02bacd;
+  font-size: 190px;
+  text-align: center;
+  line-height: 190px;
+  margin: 160px auto 40px auto;
+}
+.site-content .not-found-title-sub {
+  color: #2e2e2e;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Montserrat-bold";
+  font-size: 22px;
+  line-height: 22px;
+  margin-bottom: 10px;
+}
+.site-content .not-found-description {
+  text-align: center;
+  color: #93a0b3;
+  font-size: 16px;
+  line-height: 20px;
+}
 .site-content .new-ideas-section {
   padding: 50px;
 }

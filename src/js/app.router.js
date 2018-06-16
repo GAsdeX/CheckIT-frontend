@@ -40,6 +40,14 @@ var routes = [
         name: 'author-ideas',
         path: '/author-ideas',
         component: require('../vue/pages/author-ideas.vue')
+    },
+    {
+        name: 'not-found',
+        path: '/404',
+        component: require('../vue/pages/404.vue')
+    },
+    {   path: '*',
+        redirect: '/404'
     }
 ];
 
