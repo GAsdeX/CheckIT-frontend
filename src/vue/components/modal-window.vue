@@ -12,6 +12,7 @@
     var forgotPassword = require('./modals/forgot-password.vue');
     var resetPassword = require('./modals/reset-password.vue');
     var notificationWindow = require('./modals/notification-window.vue');
+    var deleteIdea = require('./modals/delete-idea.vue');
 
     module.exports = {
         created() {
@@ -49,6 +50,10 @@
                     {
                         slug: 'notification-window',
                         component: notificationWindow
+                    },
+                    {
+                        slug: 'delete-idea',
+                        component: deleteIdea
                     }
                 ]
             }

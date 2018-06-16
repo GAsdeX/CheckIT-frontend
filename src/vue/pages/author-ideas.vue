@@ -32,7 +32,7 @@
                                     li.editor-list-item.edit
                                         a.edit-idea(href="#") Edit Idea
                                     li.editor-list-item.delete
-                                        button(@click="callModal('delete')").editor-item.more-button.delete-idea Delete idea
+                                        button(@click="callModal('delete-idea')").editor-item.more-button.delete-idea Delete idea
                     .col-md-3(v-if="tab == 'published'")
                         idea-item()
                         ul.editor-section
@@ -43,7 +43,7 @@
                                     li.editor-list-item.edit
                                         a.edit-idea(href="#") Edit Idea
                                     li.editor-list-item.delete
-                                        button(@click="callModal('delete')").editor-item.more-button.delete-idea Delete idea
+                                        button(@click="callModal('delete-idea')").editor-item.more-button.delete-idea Delete idea
                     .col-md-3(v-if="tab == 'published'")
                         idea-item()
                         ul.editor-section
@@ -54,7 +54,7 @@
                                     li.editor-list-item.edit
                                         a.edit-idea(href="#") Edit Idea
                                     li.editor-list-item.delete
-                                        button(@click="callModal('delete')").editor-item.more-button.delete-idea Delete idea
+                                        button(@click="callModal('delete-idea')").editor-item.more-button.delete-idea Delete idea
                     .col-md-3(v-if="tab == 'liked'")
                         idea-item()
                     .col-md-3(v-if="tab == 'liked'")
@@ -73,7 +73,7 @@
                                     li.editor-list-item.edit
                                         a.edit-idea(href="#") Edit Idea
                                     li.editor-list-item.delete
-                                        button(@click="callModal('delete')").editor-item.more-button.delete-idea Delete idea
+                                        button(@click="callModal('delete-idea')").editor-item.more-button.delete-idea Delete idea
                     .col-md-3(v-if="tab == 'drafts'")
                         idea-item()
                         ul.editor-section
@@ -84,7 +84,7 @@
                                     li.editor-list-item.edit
                                         a.edit-idea(href="#") Edit Idea
                                     li.editor-list-item.delete
-                                        button(@click="callModal('delete')").editor-item.more-button.delete-idea Delete idea
+                                        button(@click="callModal('delete-idea')").editor-item.more-button.delete-idea Delete idea
                     .col-md-3(v-if="tab == 'drafts'")
                         idea-item()
                         ul.editor-section
@@ -95,7 +95,7 @@
                                     li.editor-list-item.edit
                                         a.edit-idea(href="#") Edit Idea
                                     li.editor-list-item.delete
-                                        button(@click="callModal('delete')").editor-item.more-button.delete-idea Delete idea
+                                        button(@click="callModal('delete-idea')").editor-item.more-button.delete-idea Delete idea
                     .col-md-3(v-if="tab == 'drafts'")
                         idea-item()
                         ul.editor-section
@@ -106,7 +106,7 @@
                                     li.editor-list-item.edit
                                         a.edit-idea(href="#") Edit Idea
                                     li.editor-list-item.delete
-                                        button(@click="callModal('delete')").editor-item.more-button.delete-idea Delete idea
+                                        button(@click="callModal('delete-idea')").editor-item.more-button.delete-idea Delete idea
                     .col-md-3(v-if="tab == 'drafts'")
                         idea-item()
                         ul.editor-section
@@ -117,7 +117,7 @@
                                     li.editor-list-item.edit
                                         a.edit-idea(href="#") Edit Idea
                                     li.editor-list-item.delete
-                                        button(@click="callModal('delete')").editor-item.more-button.delete-idea Delete idea
+                                        button(@click="callModal('delete-idea')").editor-item.more-button.delete-idea Delete idea
 
 
 </template>

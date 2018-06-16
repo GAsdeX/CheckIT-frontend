@@ -295,6 +295,9 @@ input {
 			}
 			.modal-button {
 				padding: 13px 22px 11px 22px;
+				&.cancel, &.confirm {
+					width: 100%;
+				}
 			}
 			.drop-field {
 				.circle(216px);
@@ -357,6 +360,28 @@ input {
 					}
 				}
 			}
+			.notification-text {
+				color: @black;
+				text-align: center;
+				font-size: 16px;
+				line-height: 24px;
+				.montserrat-semi-bold;
+				&.alert {
+					color: red;
+				}
+			}
+			.btn-box {
+				max-width: 270px;
+				margin: 26px auto 0px auto;
+				.modal-button-wrapper {
+					&:first-child {
+						padding: 0 7.5px 0 0;
+					}
+					&:last-child {
+						padding: 0 0 0 7.5px;
+					}
+				}
+			}
 		}
 	}
 }
@@ -365,11 +390,16 @@ input {
 		display: none;
 	}
 }
-.button-blue {
+.button-blue, .button-grey {
 	width: 270px;
 	height: 42px;
 	padding: 14px 22px 10px;
+}
+.button-blue {
 	.blue-button();
+}
+.button-grey {
+	.grey-button();
 }
 
 //modal windows

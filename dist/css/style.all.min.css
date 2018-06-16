@@ -2490,7 +2490,8 @@ a {
   display: table;
   clear: both;
 }
-.blue-button {
+.blue-button,
+.grey-button {
   text-transform: uppercase;
   font-family: "Montserrat-bold";
   font-size: 16px;
@@ -2503,15 +2504,32 @@ a {
   background: #02bacd;
   box-sizing: border-box;
 }
-.blue-button:hover {
+.blue-button:hover,
+.grey-button:hover {
   background: #02a3b4;
 }
 .blue-button:focus,
-.blue-button:active {
+.grey-button:focus,
+.blue-button:active,
+.grey-button:active {
   box-shadow: 0 0 2px #02bacd;
 }
-.blue-button:active {
+.blue-button:active,
+.grey-button:active {
   background: #028c9a;
+}
+.grey-button {
+  background: #93a0b3;
+}
+.grey-button:hover {
+  background: #8493a8;
+}
+.grey-button:focus,
+.grey-button:active {
+  box-shadow: 0 0 2px #93a0b3;
+}
+.grey-button:active {
+  background: #75869e;
 }
 /*
  * Styles go here
@@ -2806,6 +2824,10 @@ input::-webkit-calendar-picker-indicator {
 .modal-wrapper .modal-box .modal-form .modal-button {
   padding: 13px 22px 11px 22px;
 }
+.modal-wrapper .modal-box .modal-form .modal-button.cancel,
+.modal-wrapper .modal-box .modal-form .modal-button.confirm {
+  width: 100%;
+}
 .modal-wrapper .modal-box .modal-form .drop-field {
   width: 216px;
   height: 216px;
@@ -2880,13 +2902,36 @@ input::-webkit-calendar-picker-indicator {
 .modal-wrapper .modal-box .modal-form .sign-in-wrapper button:active {
   color: #028c9a;
 }
+.modal-wrapper .modal-box .modal-form .notification-text {
+  color: #2e2e2e;
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Montserrat-SemiBold";
+}
+.modal-wrapper .modal-box .modal-form .notification-text.alert {
+  color: red;
+}
+.modal-wrapper .modal-box .modal-form .btn-box {
+  max-width: 270px;
+  margin: 26px auto 0px auto;
+}
+.modal-wrapper .modal-box .modal-form .btn-box .modal-button-wrapper:first-child {
+  padding: 0 7.5px 0 0;
+}
+.modal-wrapper .modal-box .modal-form .btn-box .modal-button-wrapper:last-child {
+  padding: 0 0 0 7.5px;
+}
 input::-webkit-calendar-picker-indicator {
   display: none;
 }
-.button-blue {
+.button-blue,
+.button-grey {
   width: 270px;
   height: 42px;
   padding: 14px 22px 10px;
+}
+.button-blue {
   text-transform: uppercase;
   font-family: "Montserrat-bold";
   font-size: 16px;
@@ -2908,6 +2953,40 @@ input::-webkit-calendar-picker-indicator {
 }
 .button-blue:active {
   background: #028c9a;
+}
+.button-grey {
+  text-transform: uppercase;
+  font-family: "Montserrat-bold";
+  font-size: 16px;
+  line-height: 17px;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 4px;
+  color: #fff;
+  background: #02bacd;
+  box-sizing: border-box;
+  background: #93a0b3;
+}
+.button-grey:hover {
+  background: #02a3b4;
+}
+.button-grey:focus,
+.button-grey:active {
+  box-shadow: 0 0 2px #02bacd;
+}
+.button-grey:active {
+  background: #028c9a;
+}
+.button-grey:hover {
+  background: #8493a8;
+}
+.button-grey:focus,
+.button-grey:active {
+  box-shadow: 0 0 2px #93a0b3;
+}
+.button-grey:active {
+  background: #75869e;
 }
 .modal-wrapper {
   width: 100%;
@@ -4245,13 +4324,19 @@ input::-webkit-calendar-picker-indicator {
 .site-content .contact-box-item.phone .icon {
   background-image: url("../img/icons/icon-phone.png");
 }
+.site-content .author-ideas-section .section-title {
+  margin-bottom: 78px;
+}
 .site-content .author-ideas-section .authors-nav-links {
-  border-bottom: 1px solid #93a0b3;
+  border-bottom: 1px solid #d5d9df;
 }
 .site-content .author-ideas-section .authors-nav-links-item {
   display: inline-block;
   margin-right: 60px;
-  margin-top: -1px;
+  position: relative;
+  top: 1px;
+  padding-bottom: 8px;
+  font-size: 16px;
 }
 .site-content .author-ideas-section .authors-nav-links-item:last-child {
   margin-right: 0;
@@ -4259,14 +4344,130 @@ input::-webkit-calendar-picker-indicator {
 .site-content .author-ideas-section .authors-nav-links-item a {
   color: #93a0b3;
   text-transform: uppercase;
-  border-bottom: 1px solid #93a0b3;
+  border-bottom: 1px solid #d5d9df;
+  padding-bottom: 8px;
+  font-family: "Montserrat-Medium";
 }
 .site-content .author-ideas-section .authors-nav-links-item.active a {
   color: #02bacd;
   border-bottom: 1px solid #02bacd;
 }
+.site-content .author-ideas-section .section-description,
+.site-content .author-ideas-section .section-description span {
+  font-family: "Montserrat-SemiBold";
+  color: #2e2e2e;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 36px 0 37px 0;
+}
+.site-content .author-ideas-section .editor-section {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  height: 43px;
+  border-radius: 8px 8px 0 0;
+  background: rgba(42, 42, 42, 0.5);
+  box-shadow: 0px 5px 30px 0 rgba(103, 106, 135, 0.1);
+  width: calc(100% - 30px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 11px 15px 10px 15px;
+}
+.site-content .author-ideas-section .editor-item {
+  height: 22px;
+  background-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+.site-content .author-ideas-section .editor-item:first-child {
+  width: 22px;
+}
+.site-content .author-ideas-section .editor-item:first-child:after {
+  position: absolute;
+  top: 0px;
+  left: 32px;
+  text-transform: capitalize;
+  color: white;
+  font-family: "Montserrat-Medium";
+  font-size: 14px;
+  line-height: 1.5;
+}
+.site-content .author-ideas-section .editor-item.more {
+  width: 6px;
+  position: relative;
+}
+.site-content .author-ideas-section .editor-item.more-button {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-image: url("../img/icons/icon-more.png");
+}
+.site-content .author-ideas-section .editor-item.approved {
+  background-image: url('../img/icons/icon-approved.png');
+}
+.site-content .author-ideas-section .editor-item.approved:after {
+  content: 'approved';
+}
+.site-content .author-ideas-section .editor-item.rejected {
+  background-image: url('../img/icons/icon-rejected.png');
+}
+.site-content .author-ideas-section .editor-item.rejected:after {
+  content: 'rejected';
+}
+.site-content .author-ideas-section .editor-item.draft {
+  background-image: url('../img/icons/icon-draft.png');
+}
+.site-content .author-ideas-section .editor-item.draft:after {
+  content: 'draft';
+}
+.site-content .author-ideas-section .editor-list {
+  position: absolute;
+  top: 27px;
+  right: -9px;
+  background: #fff;
+  border-radius: 4px;
+  padding: 12px 16px 16px 16px;
+  width: 132px;
+  box-sizing: border-box;
+  box-shadow: 0px 5px 15px 0 rgba(103, 106, 135, 0.3);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s ease-in-out, z-index 0.01s 0.29s;
+}
+.site-content .author-ideas-section .editor-list-item .edit-idea,
+.site-content .author-ideas-section .editor-list-item .delete-idea {
+  font-family: "Montserrat-Medium";
+  color: #93a0b3;
+  font-size: 14px;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+  background: transparent;
+  outline: none;
+  text-align: left;
+}
+.site-content .author-ideas-section .editor-list-item .edit-idea:focus,
+.site-content .author-ideas-section .editor-list-item .delete-idea:focus,
+.site-content .author-ideas-section .editor-list-item .edit-idea:active,
+.site-content .author-ideas-section .editor-list-item .delete-idea:active {
+  text-shadow: 0 0 2px #b1bac8;
+  box-shadow: none;
+}
+.site-content .author-ideas-section .editor-list-item:first-child {
+  margin-bottom: 6px;
+}
+.site-content .author-ideas-section .editor-list.active {
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
 .site-content .faq-section .section-title h1 {
-  font-weight: bold;
+  font-family: "Montserrat-SemiBold";
   width: 48px;
   height: 20px;
   font-size: 22px;
@@ -4282,7 +4483,7 @@ input::-webkit-calendar-picker-indicator {
 }
 .site-content .faq-section .faq-box .faq-item .faq-title {
   font-size: 16px;
-  font-weight: bold;
+  font-family: "Montserrat-SemiBold";
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
@@ -4331,10 +4532,22 @@ input::-webkit-calendar-picker-indicator {
   margin-top: 20px;
   background-color: #02bacd;
   font-size: 16px;
+  font-family: "Montserrat-bold";
   letter-spacing: 1px;
   text-align: center;
   color: #ffffff;
   text-transform: uppercase;
+  cursor: pointer;
+}
+.site-content .faq-section .support .support-button:hover {
+  background: #02a3b4;
+}
+.site-content .faq-section .support .support-button:focus,
+.site-content .faq-section .support .support-button:active {
+  box-shadow: 0 0 2px #02bacd;
+}
+.site-content .faq-section .support .support-button:active {
+  background: #028c9a;
 }
 /*
  * Styles for different media types/devices go here

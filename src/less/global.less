@@ -78,7 +78,7 @@ a {
   box-sizing: border-box;
 }
 
-.blue-button {
+.blue-button, .grey-button {
   background: @blue;
   text-transform: uppercase;
   .montserrat-bold();
@@ -99,5 +99,17 @@ a {
   }
   &:active {
     background: darken(@blue, 10%);
+  }
+}
+.grey-button {
+  background: @grey;
+  &:hover {
+    background: darken(@grey, 5%);
+  }
+  &:focus, &:active {
+    box-shadow: 0 0 2px @grey;;
+  }
+  &:active {
+    background: darken(@grey, 10%);
   }
 }
