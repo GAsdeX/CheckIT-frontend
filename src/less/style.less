@@ -1246,6 +1246,96 @@ input {
 
 		}
 	}
+	.author-section {
+		.author {
+			&-photo {
+				.circle(130px);
+				background: center center url("../img/profile-photo.jpg") no-repeat;
+				background-size: cover;
+				&-wrapper {
+					margin-left: -15px;
+					margin-right: 15px;
+				}
+			}
+			&-name {
+				.montserrat-semi-bold();
+				color: @black;
+				text-transform: uppercase;
+				font-size: 16px;
+				letter-spacing: 1px;
+				margin-bottom: 9px;
+			}
+			&-location {
+				color: @grey;
+				.montserrat-medium();
+				letter-spacing: 0.8px;
+				margin-bottom: 10px;
+				font-size: 14px;
+				line-height: 18px;
+			}
+			&-email, &-phone, &-website {
+				margin-bottom: 10px;
+				font-size: 14px;
+				line-height: 18px;
+				a {
+					color: @grey;
+					.montserrat-medium();
+					letter-spacing: 0.8px;
+					&:focus, &:active {
+						text-shadow: 0 0 2px lighten(@grey, 10%);
+					}
+					&:active {
+						color: darken(@grey, 10%);
+						text-decoration: underline;
+					}
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+			&-website {
+				margin-bottom: 0px;
+				a {
+					color: @blue;
+					text-decoration: underline;
+					&:focus, &:active {
+						text-shadow: 0 0 2px lighten(@grey, 10%);
+					}
+					&:active {
+						color: darken(@blue, 10%);
+					}
+				}
+			}
+			&-about {
+				color: @grey;
+				.montserrat-medium();
+				letter-spacing: 0.8px;
+				font-size: 14px;
+				line-height: 1.57;
+			}
+			&-first-name {
+				.montserrat-semi-bold();
+				font-size: 16px;
+				line-height: 1.5;
+				color: @black;
+			}
+			&-ideas {
+				&-title, &-quantity {
+					.montserrat-semi-bold();
+					font-size: 16px;
+					line-height: 1.5;
+					color: @black;
+				}
+				&-title {
+					margin: 72px 0 20px 0;
+					text-align: left;
+				}
+				&-container {
+					padding: 0;
+				}
+			}
+		}
+	}
 	.new-ideas-section {
 		padding: 50px;
 		.section-title {

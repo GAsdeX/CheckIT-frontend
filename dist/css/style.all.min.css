@@ -3815,6 +3815,229 @@ input::-webkit-calendar-picker-indicator {
   font-size: 16px;
   line-height: 20px;
 }
+.site-content .author-section .author-photo {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  background: center center url("../img/profile-photo.jpg") no-repeat;
+  background-size: cover;
+}
+.site-content .author-section .author-photo-wrapper {
+  margin-left: -15px;
+  margin-right: 15px;
+}
+.site-content .author-section .author-name {
+  font-family: "Montserrat-SemiBold";
+  color: #2e2e2e;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-bottom: 9px;
+}
+.site-content .author-section .author-location {
+  color: #93a0b3;
+  font-family: "Montserrat-Medium";
+  letter-spacing: 0.8px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 18px;
+}
+.site-content .author-section .author-email,
+.site-content .author-section .author-phone,
+.site-content .author-section .author-website {
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 18px;
+}
+.site-content .author-section .author-email a,
+.site-content .author-section .author-phone a,
+.site-content .author-section .author-website a {
+  color: #93a0b3;
+  font-family: "Montserrat-Medium";
+  letter-spacing: 0.8px;
+}
+.site-content .author-section .author-email a:focus,
+.site-content .author-section .author-phone a:focus,
+.site-content .author-section .author-website a:focus,
+.site-content .author-section .author-email a:active,
+.site-content .author-section .author-phone a:active,
+.site-content .author-section .author-website a:active {
+  text-shadow: 0 0 2px #b1bac8;
+}
+.site-content .author-section .author-email a:active,
+.site-content .author-section .author-phone a:active,
+.site-content .author-section .author-website a:active {
+  color: #75869e;
+  text-decoration: underline;
+}
+.site-content .author-section .author-email a:hover,
+.site-content .author-section .author-phone a:hover,
+.site-content .author-section .author-website a:hover {
+  text-decoration: underline;
+}
+.site-content .author-section .author-website {
+  margin-bottom: 0px;
+}
+.site-content .author-section .author-website a {
+  color: #02bacd;
+  text-decoration: underline;
+}
+.site-content .author-section .author-website a:focus,
+.site-content .author-section .author-website a:active {
+  text-shadow: 0 0 2px #b1bac8;
+}
+.site-content .author-section .author-website a:active {
+  color: #028c9a;
+}
+.site-content .author-section .author-about {
+  color: #93a0b3;
+  font-family: "Montserrat-Medium";
+  letter-spacing: 0.8px;
+  font-size: 14px;
+  line-height: 1.57;
+}
+.site-content .author-section .author-first-name {
+  font-family: "Montserrat-SemiBold";
+  font-size: 16px;
+  line-height: 1.5;
+  color: #2e2e2e;
+}
+.site-content .author-section .author-ideas {
+  /*&-item {
+					&:nth-child(3n+1) {
+						padding-left: 0px;
+						padding-right: 22.5px;
+					}
+					&:nth-child(3n) {
+						padding-right: 0px;
+						padding-left: 22.5px;
+					}
+					&:nth-child(3n+2) {
+						padding: 0 11px;
+					}
+				}*/
+}
+.site-content .author-section .author-ideas-title,
+.site-content .author-section .author-ideas-quantity {
+  font-family: "Montserrat-SemiBold";
+  font-size: 16px;
+  line-height: 1.5;
+  color: #2e2e2e;
+}
+.site-content .author-section .author-ideas-title {
+  margin: 72px 0 20px 0;
+  text-align: left;
+}
+.site-content .author-section .author-ideas-container {
+  padding: 0;
+}
+.site-content .author-section .editor-section {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  height: 43px;
+  border-radius: 8px 8px 0 0;
+  background: rgba(42, 42, 42, 0.5);
+  box-shadow: 0px 5px 30px 0 rgba(103, 106, 135, 0.1);
+  width: calc(100% - 30px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 11px 15px 10px 15px;
+}
+.site-content .author-section .editor-item {
+  height: 22px;
+  background-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+.site-content .author-section .editor-item:first-child {
+  width: 22px;
+}
+.site-content .author-section .editor-item:first-child:after {
+  position: absolute;
+  top: 0px;
+  left: 32px;
+  text-transform: capitalize;
+  color: white;
+  font-family: "Montserrat-Medium";
+  font-size: 14px;
+  line-height: 1.5;
+}
+.site-content .author-section .editor-item.more {
+  width: 6px;
+  position: relative;
+}
+.site-content .author-section .editor-item.more-button {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-image: url("../img/icons/icon-more.png");
+}
+.site-content .author-section .editor-item.approved {
+  background-image: url('../img/icons/icon-approved.png');
+}
+.site-content .author-section .editor-item.approved:after {
+  content: 'approved';
+}
+.site-content .author-section .editor-item.rejected {
+  background-image: url('../img/icons/icon-rejected.png');
+}
+.site-content .author-section .editor-item.rejected:after {
+  content: 'rejected';
+}
+.site-content .author-section .editor-item.draft {
+  background-image: url('../img/icons/icon-draft.png');
+}
+.site-content .author-section .editor-item.draft:after {
+  content: 'draft';
+}
+.site-content .author-section .editor-list {
+  position: absolute;
+  top: 27px;
+  right: -9px;
+  background: #fff;
+  border-radius: 4px;
+  padding: 12px 16px 16px 16px;
+  width: 132px;
+  box-sizing: border-box;
+  box-shadow: 0px 5px 15px 0 rgba(103, 106, 135, 0.3);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s ease-in-out, z-index 0.01s 0.29s;
+}
+.site-content .author-section .editor-list-item .edit-idea,
+.site-content .author-section .editor-list-item .delete-idea {
+  font-family: "Montserrat-Medium";
+  color: #93a0b3;
+  font-size: 14px;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+  background: transparent;
+  outline: none;
+  text-align: left;
+}
+.site-content .author-section .editor-list-item .edit-idea:focus,
+.site-content .author-section .editor-list-item .delete-idea:focus,
+.site-content .author-section .editor-list-item .edit-idea:active,
+.site-content .author-section .editor-list-item .delete-idea:active {
+  text-shadow: 0 0 2px #b1bac8;
+  box-shadow: none;
+}
+.site-content .author-section .editor-list-item:first-child {
+  margin-bottom: 6px;
+}
+.site-content .author-section .editor-list.active {
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
 .site-content .new-ideas-section {
   padding: 50px;
 }

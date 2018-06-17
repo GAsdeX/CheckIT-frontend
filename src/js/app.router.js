@@ -42,6 +42,11 @@ var routes = [
         component: require('../vue/pages/author-ideas.vue')
     },
     {
+        name: 'author',
+        path: '/author',
+        component: require('../vue/pages/author.vue')
+    },
+    {
         name: 'not-found',
         path: '/404',
         component: require('../vue/pages/404.vue')
