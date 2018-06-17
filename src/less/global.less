@@ -78,7 +78,7 @@ a {
   box-sizing: border-box;
 }
 
-.blue-button, .grey-button {
+.blue-button, .grey-button, .transparent-button {
   background: @blue;
   text-transform: uppercase;
   .montserrat-bold();
@@ -107,9 +107,23 @@ a {
     background: darken(@grey, 5%);
   }
   &:focus, &:active {
-    box-shadow: 0 0 2px @grey;;
+    box-shadow: 0 0 2px @grey;
   }
   &:active {
     background: darken(@grey, 10%);
+  }
+}
+.transparent-button {
+  background: #fff;
+  color: @blue;
+  border: 1px solid @blue;
+  &:hover {
+    background: darken(#fff, 5%);
+  }
+  &:focus, &:active {
+    box-shadow: 0 0 2px #fff;
+  }
+  &:active {
+    background: darken(#fff, 10%);
   }
 }

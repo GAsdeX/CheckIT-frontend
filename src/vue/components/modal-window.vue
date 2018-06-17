@@ -8,6 +8,7 @@
     var signIn = require('./modals/sign-in.vue');
     var signUp = require('./modals/sign-up.vue');
     var uploadPhoto = require('./modals/upload-photo.vue');
+    var uploadVideo = require('./modals/upload-video.vue');
     var changePassword = require('./modals/change-password.vue');
     var forgotPassword = require('./modals/forgot-password.vue');
     var resetPassword = require('./modals/reset-password.vue');
@@ -30,6 +31,10 @@
                     {
                         slug: 'sign-up',
                         component: signUp
+                    },
+                    {
+                        slug: 'upload-video',
+                        component: uploadVideo
                     },
                     {
                         slug: 'upload-photo',

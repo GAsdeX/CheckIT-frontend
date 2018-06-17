@@ -1373,7 +1373,182 @@ input {
 			}
 		}
 	}
-
+	.create-idea-section {
+		.inputs-wrapper {
+			margin-bottom: 60px;
+			div {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				.idea-step {
+					display: none;
+				}
+				.input-label {
+					.circle(26px);
+					border-width: 1px;
+					border-style: solid;
+					padding: 4px 0px;
+					position: relative;
+					box-sizing: border-box;
+					cursor: pointer;
+					&:after {
+						width: 57px;
+						position: absolute;
+						top: 30px;
+						.montserrat-medium();
+						color: @grey;
+						font-size: 16px;
+						letter-spacing: 1px;
+					}
+					&.label-1, &.label-2 {
+						&.empty {
+							border-color: @grey;
+							background-image: none;
+							background-color: transparent;
+							box-shadow: none;
+						}
+						&.done {
+							border-color: @blue;
+							background: @blue url('../img/icons/tick.svg') center center no-repeat;
+							background-size: 50%;
+							box-shadow: 0 0 0 2px fade(@blue, 40%);
+							&:after {
+								color: @black;
+							}
+						}
+					}
+					&.label-1 {
+						left: 15px;
+						&:after {
+							content: 'Step 1';
+							left: -15px;
+						}
+					}
+					&.label-2 {
+						right: 15px;
+						&:after {
+							content: 'Step 2';
+							right: -15px;
+						}
+					}
+				}
+				.path {
+					border-top: 1px dashed @grey;
+					height: 0px;
+					width: calc(~'100% - 82px');
+					&.done {
+						border-top: 1px solid @blue;
+					}
+				}
+			}
+		}
+		.create-idea-label {
+			display: block;
+			.montserrat-medium();
+			color: @grey;
+			text-transform: uppercase;
+			font-size: 14px;
+			line-height: 14px;
+			letter-spacing: 0.8px;
+			margin-bottom: 10px;
+			&-sub {
+				display: block;
+				.montserrat-medium();
+				color: @grey;
+				text-transform: none;
+				font-size: 14px;
+				line-height: 14px;
+				margin: 14px 0 26px 0;
+				letter-spacing: 0.8px;
+			}
+		}
+		.create-idea-input {
+			border-radius: 4px;
+			border: 1px solid @border;
+			width: 100%;
+			box-sizing: border-box;
+			padding: 12px 21px;
+			color: @black;
+			.placeholder(@grey);
+			.montserrat-medium();
+			font-size: 14px;
+			line-height: 14px;
+			letter-spacing: 0.8px;
+			margin-bottom: 39px;
+		}
+		.idea-short-description {
+			.create-idea-input {
+				height: 146px;
+				resize: none;
+			}
+		}
+		.idea-full-description {
+			.create-idea-input {
+				height: 344px;
+				resize: none;
+			}
+		}
+		.buttons-wrapper {
+			.button-transparent {
+				margin-right: 30px;
+				.transparent-button();
+				padding: 13px 22px 10px 22px;
+			}
+			.create-idea-button {
+				width: 200px;
+			}
+		}
+		.attached-item {
+			&-row {
+				padding: 0 15px;
+				margin-bottom: 39px;
+			}
+			height: 120px;
+			box-sizing: border-box;
+			background: @bkg url('../img/idea-photo-background.jpg') center center no-repeat;
+			background-size: cover;
+			margin-right: 29px;
+			border-radius: 4px;
+			border: 1px solid @border;
+			&:after {
+				content: "";
+				.circle(24px);
+				background: @blue url("../img/icons/icon-close.png") center center no-repeat;
+				background-size: 37%;
+				border: 0;
+				position: absolute;
+				top: -8px;
+				right: -10px;
+				cursor: pointer;
+				outline: none;
+				box-shadow: none;
+			}
+			&:last-child {
+				margin-right: 0px;
+			}
+			&:focus, &:active {
+				&:after {
+					box-shadow: 0 0 2px @blue;
+				}
+			}
+		}
+		.attach-item {
+			height: 120px;
+			background: #fff url('../img/icons/icon-plus.png') center center no-repeat;
+			background-size: 26px;
+			border: 1px dashed @border;
+			box-sizing: border-box;
+			width: 117px;
+			cursor: pointer;
+			border-radius: 4px;
+			&:hover {
+				background-color: darken(#fff, 5%);
+			}
+			&:focus, &:active {
+				box-shadow: 0 0 2px @blue;
+			}
+		}
+	}
 	.idea-section {
 		margin-top: 45px;
 
@@ -1543,7 +1718,7 @@ input {
 		.member {
 			&-photo {
 				height: 173px;
-				background: center center url('../img/IMG_0009.JPG') no-repeat #cad3e1;
+				background: center center url('../img/profile-photo.jpg') no-repeat #cad3e1;
 				background-size: contain;
 			}
 			&-card {
@@ -1765,7 +1940,7 @@ input {
           height: 108px;
           border-radius: 100%;
           border: 1px solid #ddd;
-          background-image: url('../img/IMG_0009.JPG');
+          background-image: url('../img/profile-photo.jpg');
           background-size: cover;
           background-position: center;
           background-repeat: no-repeat;
