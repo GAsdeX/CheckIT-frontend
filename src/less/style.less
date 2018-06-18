@@ -1217,6 +1217,46 @@ input {
 			background-image: url("../img/icons/icon-money.png");
 		}
 	}
+	.search-result {
+		&-section {
+			min-height: calc(~'100vh - 460px');
+		}
+		&-name {
+			.montserrat-bold();
+			font-size: 22px;
+			line-height: normal;
+			letter-spacing: 1.3px;
+			color: #2e2e2e;
+		}
+		&-item {
+			margin-bottom: 40px;
+			height: 94px;
+			&-title {
+				.montserrat-bold();
+				font-size: 16px;
+				line-height: 1.5;
+				color: @black;
+				margin-bottom: 10px;
+			}
+			&-image {
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-clip: padding-box;
+				background-image: url("../img/search-result-image.jpg");
+				border-radius: 4px;
+				max-width: 94px;
+			}
+			&-text {
+				overflow: hidden;
+				text-overflow: ellipsis;
+				color: @grey;
+				font-size: 14px;
+				line-height: 1.57;
+				.montserrat-semi-bold();
+			}
+		}
+	}
 	.no-found {
 		&-section {
 			text-align: center;

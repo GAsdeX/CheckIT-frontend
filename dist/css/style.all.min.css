@@ -3809,6 +3809,44 @@ input::-webkit-calendar-picker-indicator {
 .site-content .infographics-section .col-md-4:last-child .top-bar .icon {
   background-image: url("../img/icons/icon-money.png");
 }
+.site-content .search-result-section {
+  min-height: calc(100vh - 460px);
+}
+.site-content .search-result-name {
+  font-family: "Montserrat-bold";
+  font-size: 22px;
+  line-height: normal;
+  letter-spacing: 1.3px;
+  color: #2e2e2e;
+}
+.site-content .search-result-item {
+  margin-bottom: 40px;
+  height: 94px;
+}
+.site-content .search-result-item-title {
+  font-family: "Montserrat-bold";
+  font-size: 16px;
+  line-height: 1.5;
+  color: #2e2e2e;
+  margin-bottom: 10px;
+}
+.site-content .search-result-item-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-clip: padding-box;
+  background-image: url("../img/search-result-image.jpg");
+  border-radius: 4px;
+  max-width: 94px;
+}
+.site-content .search-result-item-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #93a0b3;
+  font-size: 14px;
+  line-height: 1.57;
+  font-family: "Montserrat-SemiBold";
+}
 .site-content .no-found-section {
   text-align: center;
   min-height: calc(100vh - 489px);

@@ -57,6 +57,11 @@ var routes = [
         component: require('../vue/pages/no-found.vue')
     },
     {
+        name: 'search-result',
+        path: '/search-result',
+        component: require('../vue/pages/search-result.vue')
+    },
+    {
         name: 'not-found',
         path: '/404',
         component: require('../vue/pages/404.vue')
