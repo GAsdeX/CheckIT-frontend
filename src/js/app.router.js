@@ -66,6 +66,11 @@ var routes = [
         path: '/404',
         component: require('../vue/pages/404.vue')
     },
+    {
+        name: 'notifications-page',
+        path: '/notifications-page',
+        component: require('../vue/pages/notifications-page.vue')
+    },
     {   path: '*',
         redirect: '/404'
     }

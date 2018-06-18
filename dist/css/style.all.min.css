@@ -3899,6 +3899,67 @@ input::-webkit-calendar-picker-indicator {
   font-size: 16px;
   line-height: 20px;
 }
+.site-content .notification-section {
+  min-height: calc(100vh - 460px);
+}
+.site-content .notification-item {
+  background-color: #f7f7f7;
+  box-sizing: border-box;
+  border: 1px solid #d5d9df;
+  border-radius: 10px;
+  padding: 21px 30px;
+  margin-bottom: 21px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.site-content .notification-item-logo {
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px;
+  margin-right: 27px;
+}
+.site-content .notification-item.like .notification-item-logo {
+  background-image: url('../img/icons/notif-like.png');
+}
+.site-content .notification-item.approved .notification-item-logo {
+  background-image: url('../img/icons/notif-approved.png');
+}
+.site-content .notification-item.rejected .notification-item-logo {
+  background-image: url('../img/icons/notif-rejected.png');
+}
+.site-content .notification-item-description {
+  width: calc(100% - 51px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.site-content .notification-item-title,
+.site-content .notification-item-event,
+.site-content .notification-item-time,
+.site-content .notification-item-name {
+  font-family: "Montserrat-SemiBold";
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1px;
+}
+.site-content .notification-item-title,
+.site-content .notification-item-event,
+.site-content .notification-item-time {
+  color: #93a0b3;
+}
+.site-content .notification-item-name {
+  color: #2e2e2e;
+}
+.site-content .notification-item-name:hover,
+.site-content .notification-item-name:focus,
+.site-content .notification-item-name:active {
+  text-decoration: underline;
+}
 .site-content .author-section .author-photo {
   width: 130px;
   height: 130px;
