@@ -6,8 +6,7 @@
                 .inputs-wrapper.row
                     .col-7
                         label(@click="setTab('step-1')", :class="{done: tab === 'step-2'}", for="step-1").input-label.label-1.empty
-                        input(type="checkbox" id="step-1").idea-step.step-1
-                        //- dummy text for commit
+                        input(type="checkbox" id="step-1").idea-step.step-1gulp
                         .path
                         label(:class="{empty: tab === 'step-1'}", for="step-2").input-label.label-2.empty
                         input(type="checkbox" id="step-2").idea-step.step-2

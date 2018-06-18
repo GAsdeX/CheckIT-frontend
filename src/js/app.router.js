@@ -52,6 +52,11 @@ var routes = [
         component: require('../vue/pages/create-idea.vue')
     },
     {
+        name: 'no-found',
+        path: '/no-found',
+        component: require('../vue/pages/no-found.vue')
+    },
+    {
         name: 'not-found',
         path: '/404',
         component: require('../vue/pages/404.vue')
