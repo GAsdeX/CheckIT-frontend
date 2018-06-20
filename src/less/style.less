@@ -1503,6 +1503,227 @@ input {
 			}
 		}
 	}
+	.idea-page {
+		&-category {
+			color: @grey;
+			.montserrat-bold();
+			letter-spacing: 2.2px;
+			font-size: 14px;
+			line-height: 14px;
+			text-transform: uppercase;
+			text-align: center;
+			margin: 45px auto 25px auto;
+		}
+		&-title {
+			margin: 25px auto 32px auto;
+			text-align: center;
+			color: @black;
+			.montserrat-bold();
+			line-height: 1.22;
+			letter-spacing: 0.7px;
+			font-size: 36px;
+		}
+		&-banner {
+			width: 100%;
+			height: auto;
+			margin: 0 auto 49px auto;
+		}
+		&-sub-box {
+			.author-box {
+				overflow: hidden;
+				border-radius: 4px;
+				border: solid 1px #d5d9df;
+				height: 340px;
+				box-sizing: border-box;
+				padding: 24px 15px 15px 15px;
+				text-align: center;
+				&-wrapper {
+					min-width: 200px;
+				}
+				&-likes {
+					.montserrat-medium();
+					font-size: 16px;
+					line-height: 16px;
+					letter-spacing: 1px;
+					color: @grey;
+					margin: 11px auto 31px auto;
+					&-amount {
+						.montserrat-medium();
+						font-size: 16px;
+						line-height: 16px;
+						letter-spacing: 1px;
+						color: @grey;
+					}
+					&-logo {
+						width: 32px;
+						height: 29px;
+						background: transparent url('../img/icon-like.png') center center no-repeat;
+						background-size: contain;
+						display: inline-block;
+						margin: 0 auto;
+					}
+				}
+				&-info {
+					&-wrapper {
+						margin-bottom: 40px;
+					}
+					&-photo {
+						.circle(82px);
+						margin: 0 auto 15px auto;
+					}
+					&-first-name, &-location {
+						.montserrat-semi-bold();
+						color: @black;
+						text-transform: uppercase;
+						font-size: 14px;
+						line-height: 14px;
+						letter-spacing: 0.8px;
+						margin-bottom: 6px;
+					}
+					&-location {
+						.montserrat-medium();
+						color: @grey;
+						text-transform: none;
+						margin-bottom: 0px;
+					}
+				}
+				&-published {
+					.montserrat-semi-bold();
+					color: @black;
+					font-size: 14px;
+					line-height: 14px;
+					letter-spacing: 0.8px;
+					margin-bottom: 6px;
+					&-datetime, &-date, &-time {
+						.montserrat-medium();
+						color: @grey;
+						text-transform: none;
+						margin-bottom: 0px;
+						font-size: 14px;
+						line-height: 14px;
+						letter-spacing: 0.8px;
+					}
+				}
+			}
+			.description {
+				.montserrat-medium();
+				font-size: 16px;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: 1.5;
+				letter-spacing: 1px;
+				text-align: left;
+				color: @grey;
+				margin-bottom: 32px;
+				&-video {
+					margin: 0 0 32px 0;
+					display: block;
+				}
+				&-like {
+					&-wrapper {
+						display: flex;
+						align-items: center;
+						justify-content: flex-start;
+						flex-direction: row;
+						border-radius: 10px;
+						background-color: #f7f7f7;
+						border: solid 1px #ecebeb;
+						width: 100%;
+						margin-top: 36px;
+						padding: 21.5px 30px;
+					}
+					&-icon {
+						width: 32px;
+						height: 29px;
+						background: #f7f7f7 url('../img/icon-like.png') center center no-repeat;
+						background-size: contain;
+						outline: 0;
+						border: 0px;
+						cursor: pointer;
+						margin-right: 19px;
+						&.disabled {
+							background-image: url('../img/heart.png');
+							cursor: default;
+							pointer-events: none;
+						}
+					}
+					&-paragraph {
+						.futura();
+						font-size: 16px;
+						font-weight: 400;
+						font-style: italic;
+						line-height: 1.33;
+						color: @grey;
+					}
+				}
+				&-slider {
+					&-wrapper {
+						position: relative;
+					}
+					&-buttons {
+						&-wrapper {
+							display: flex;
+							justify-content: space-between;
+							align-items: center;
+							position: absolute;
+							bottom: 10px;
+							right: 10px;
+							z-index: 1;
+							width: 79px;
+							.prev, .next {
+								width: 39px;
+								height: 39px;
+								cursor: pointer;
+								background-color: rgba(255,255,255,0.9);
+								outline: 0;
+								position: relative;
+								&:hover, &:focus {
+									background-color: darken(rgba(255,255,255,0.9), 5%);
+								}
+								&:active {
+									background-color: darken(rgba(255,255,255,0.9), 10%);
+								}
+								span {
+									width: 12px;
+									height: 2px;
+									background: @blue;
+									position: absolute;
+									cursor: pointer;
+									border-radius: 2px;
+								}
+							}
+							.prev {
+								span {
+									left: 13px;
+								}
+								.top {
+									top: 16px;
+									transform: rotate(-45deg);
+								}
+								.bottom {
+									top: 23px;
+									transform: rotate(45deg);
+								}
+							}
+							.next {
+								span {
+									right: 13px;
+								}
+								.top {
+									top: 16px;
+									transform: rotate(45deg);
+								}
+								.bottom {
+									top: 23px;
+									transform: rotate(-45deg);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 	.create-idea-section {
 		.inputs-wrapper {
 			margin-bottom: 60px;

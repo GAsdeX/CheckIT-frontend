@@ -36,3 +36,9 @@
 	src: url(../fonts/Merengue-Script.otf);
 	font-weight: 400;
 }
+
+@font-face {
+	font-family: 'Futura';
+	src: url(../fonts/Futura-Normal.ttf) format('truetype');
+	font-weight: 400;
+}

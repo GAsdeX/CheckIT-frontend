@@ -1,112 +1,56 @@
 <template lang="pug">
     .site-content
-        .head-banners-section
+        .idea-page-section
             .container
-                .section-title
-                    h1 Top ideas
-                    .buttons-wrapper
-                        button.prev
-                            span.top
-                            span.bottom
-                        button.next
-                            span.top
-                            span.bottom
-                .row(id="top-ideas-slide")
-                    each val in [1,2,3,4,5,6,7,8,9,10]
-                        .idea-banner
-                            .evaluation-box
-                                .categories
-                                    .category photography
-                                .likes
-                                    span 242
-                            .content-box
-                                h2.title
-                                    |   Urban Decay &ndash; The St.Louis Story
-                                    br
-                                    |   limited photobook
-                                a(href="#").button-blue.to-idea View idea
-
-        .infographics-section
-            .container
-                .section-title.centered How it works
                 .row
-                    .col-md-4
-                        .infographics-item
-                            .top-bar
-                                .icon
-                            .bottom-bar
-                                .infographics-title Create an idea
-                                .infographics-description Lorem Ipsum is simply dummy text of the printing
-
-
-                    .col-md-4
-                        .infographics-item
-                            .top-bar
-                                .icon
-                            .bottom-bar
-                                .infographics-title Collect likes
-                                .infographics-description Lorem Ipsum is simply dummy text of the printing
-
-                    .col-md-4
-                        .infographics-item
-                            .top-bar
-                                .icon
-                            .bottom-bar
-                                .infographics-title Find investors
-                                .infographics-description Lorem Ipsum is simply dummy text of the printing
-
-
-        .new-ideas-section
-            .container
-                .section-title
-                    h1 New ideas
-                    router-link(:to="{name: 'catalog'}").sub-button.view-all View all
-                .row
-                    each val in [1,2,3,4,5,6,7,8]
-                        .col-md-3
-                            .idea-card
-                                .top-bar
-                                    .avatar(style="background-image: url(../img/blank-colors-desk-370474.jpg)")
-                                .bottom-bar
-                                    .evaluation-box
-                                        .categories
-                                            .category fasion
-                                        .likes
-                                            span 222
-                                    .content-box
-                                        .title Spelunk Jewelry: A New Collection Inspired by France
-                                        .description Attending La Porte Peinte artist residency will inspire a second line of timeless jewelry anchored by place and self-expression.
-
-        .categories-section
-            .container
-                .section-title Categories
-                .categories-box
-                    a.category Food
-                    a.category Craft
-                    a.category Arts
-                    a.category Publishing
-                    a.category Social
-                    a.category Business
-                    a.category Music
-                    a.category Technology
-                    a.category Film
-                    a.category Fashion
-                    a.category ecology
-                    a.category Health
-                    a.category Engineering
-                    a.category Photography
-                    a.category Education
-                    a.category Culture
-
-        .bring-an-idea-section
-            .container
-                .section-title Bring your idea to life
-                .row
-                    .col-md-7
-                        .bring-an-idea-box
-                            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut culpa minima mollitia nemo optio perspiciatis provident, sint vel vero. Aperiam eveniet id minus nisi quasi quia repellat sunt voluptates.
-                            router-link(:to="{name: 'create-idea'}").btn create idea
-                    .col-md-5.image
+                    .offset-1.col-10.idea-box
+                        h3.idea-page-category Culture
+                        h1.idea-page-title
+                            | The Travelling Art Gallery
+                            br
+                            | an artists project
+                        img(src="img/idea-image.jpg" alt="Idea Image").idea-page-banner
+                        .idea-page-sub-box
+                            .row
+                                .col-2.author-box-wrapper
+                                    .author-box
+                                        .author-box-likes-wrapper
+                                            .author-box-likes-logo
+                                            p.author-box-likes
+                                                span.author-box-likes-amount 287
+                                                | &nbsp;likes
+                                        .author-box-info-wrapper
+                                            img(src="img/profile-photo.jpg" alt="Author Photo").author-box-info-photo
+                                            p.author-box-info-first-name Helen
+                                            p.author-box-info-location Ukraine
+                                        .author-box-published-wrapper
+                                            p.author-box-published Published
+                                            p.author-box-published-datetime
+                                                span.author-box-published-date 21.04
+                                                | &nbsp;at&nbsp;
+                                                span.author-box-published-time 14:45
+                                .col-9.description-box
+                                    p.description Contemporary South African art is becoming increasingly popular internationally and art lovers and collectors are looking at this growing market.
+                                    p.description The Travelling Art Gallery is a collaborative initiative of South African artists, together with Barbara Lenhard and Florian Gast. Both of them born in Germany are living and working together for nearly ten years in Cape Town, South Africa.
+                                    p.description The initiative is all about showcasing and promoting a collection of established and emerging artists to audiences in various cities: Berlin, Frankfurt and either Munich or Hannover. Each pop-up exhibition will be 8-10 days long.
+                                    p.description This will happen in June/July 2018 - and we aim to travel for six weeks.
+                                    video(src='video/idea-video.mp4' controls="controls").description-video Video tag does not supported
+                                    p.description Contemporary South African art is becoming increasingly popular internationally and art lovers and collectors are looking at this growing market.
+                                    p.description The Travelling Art Gallery is a collaborative initiative of South African artists, together with Barbara Lenhard and Florian Gast. Both of them born in Germany are living and working together for nearly ten years in Cape Town, South Africa.
+                                    .description-slider-wrapper
+                                        .description-slider-buttons-wrapper
+                                            button.prev
+                                                span.top
+                                                span.bottom
+                                            button.next
+                                                span.top
+                                                span.bottom
+                                        .description-slider
+                                            each val in [1,2,3,4]
+                                                img(src="img/idea-image.jpg" alt="Idea Image")
+                                    .description-like-wrapper
+                                        button.description-like-icon
+                                        p.description-like-paragraph Like this idea? Press heart to support the author.
 </template>
 
 <script>
@@ -118,12 +62,12 @@
 
         },
         mounted: function() {
-            $('#top-ideas-slide').slick({
+            $('.description-slider').slick({
                 infinite: true,
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                prevArrow: $('.head-banners-section .prev'),
-                nextArrow: $('.head-banners-section .next')
+                prevArrow: $('.description-slider-buttons-wrapper .prev'),
+                nextArrow: $('.description-slider-buttons-wrapper .next')
             });
         },
 	    components: {
