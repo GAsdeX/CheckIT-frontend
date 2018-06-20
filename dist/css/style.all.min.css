@@ -4109,6 +4109,125 @@ input::-webkit-calendar-picker-indicator {
 .site-content .new-ideas-section .section-title .view-all:active {
   color: #028c9a;
 }
+.site-content .legal-page-section {
+  min-height: calc(100vh - 420px);
+}
+.site-content .legal-page-section h3,
+.site-content .legal-page-section h4 {
+  font-family: "Montserrat-bold";
+  color: #2e2e2e;
+}
+.site-content .legal-page-section h3 a,
+.site-content .legal-page-section h4 a {
+  font-family: "Montserrat-Medium";
+  color: #02bacd;
+  text-decoration: none;
+}
+.site-content .legal-page-section h3 a:hover,
+.site-content .legal-page-section h4 a:hover,
+.site-content .legal-page-section h3 a:focus,
+.site-content .legal-page-section h4 a:focus,
+.site-content .legal-page-section h3 a:active,
+.site-content .legal-page-section h4 a:active {
+  text-decoration: underline;
+}
+.site-content .legal-page-section h3 a:focus,
+.site-content .legal-page-section h4 a:focus,
+.site-content .legal-page-section h3 a:active,
+.site-content .legal-page-section h4 a:active {
+  text-shadow: 0 0 2px #b1bac8;
+}
+.site-content .legal-page-section h3 a:active,
+.site-content .legal-page-section h4 a:active {
+  color: #028c9a;
+}
+.site-content .legal-page-section li,
+.site-content .legal-page-section p {
+  color: #93a0b3;
+  font-size: 14px;
+  line-height: 1.57;
+  margin-bottom: 15px;
+  font-family: "Montserrat-Medium";
+}
+.site-content .legal-page-section li a,
+.site-content .legal-page-section p a {
+  font-family: "Montserrat-Medium";
+  color: #02bacd;
+  text-decoration: none;
+}
+.site-content .legal-page-section li a:hover,
+.site-content .legal-page-section p a:hover,
+.site-content .legal-page-section li a:focus,
+.site-content .legal-page-section p a:focus,
+.site-content .legal-page-section li a:active,
+.site-content .legal-page-section p a:active {
+  text-decoration: underline;
+}
+.site-content .legal-page-section li a:hover,
+.site-content .legal-page-section p a:hover,
+.site-content .legal-page-section li a:focus,
+.site-content .legal-page-section p a:focus,
+.site-content .legal-page-section li a:active,
+.site-content .legal-page-section p a:active {
+  text-decoration: underline;
+}
+.site-content .legal-page-section li a:focus,
+.site-content .legal-page-section p a:focus,
+.site-content .legal-page-section li a:active,
+.site-content .legal-page-section p a:active {
+  text-shadow: 0 0 2px #b1bac8;
+}
+.site-content .legal-page-section li a:active,
+.site-content .legal-page-section p a:active {
+  color: #028c9a;
+}
+.site-content .legal-page-section li {
+  color: #2e2e2e;
+}
+.site-content .legal-page-section a {
+  font-family: "Montserrat-Medium";
+  color: #02bacd;
+  text-decoration: none;
+}
+.site-content .legal-page-section a:hover,
+.site-content .legal-page-section a:focus,
+.site-content .legal-page-section a:active {
+  text-decoration: underline;
+}
+.site-content .legal-page-section a:hover,
+.site-content .legal-page-section a:focus,
+.site-content .legal-page-section a:active {
+  text-decoration: underline;
+}
+.site-content .legal-page-section a:focus,
+.site-content .legal-page-section a:active {
+  text-shadow: 0 0 2px #b1bac8;
+}
+.site-content .legal-page-section a:active {
+  color: #028c9a;
+}
+.site-content .legal-page-section h3 {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: normal;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+.site-content .legal-page-section h4 {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: normal;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+.site-content .legal-page-section ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+.site-content .legal-page-section li {
+  list-style: disc;
+}
 .site-content .idea-page-category {
   color: #93a0b3;
   font-family: "Montserrat-bold";

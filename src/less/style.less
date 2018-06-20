@@ -1503,6 +1503,95 @@ input {
 			}
 		}
 	}
+	.legal-page {
+		&-section {
+			min-height: calc(~'100vh - 420px');
+			h3, h4 {
+				.montserrat-bold();
+				color: @black;
+				a {
+					.montserrat-medium();
+					color: @blue;
+					text-decoration: none;
+					&:hover, &:focus, &:active {
+						text-decoration: underline;
+					}
+					&:focus, &:active {
+						text-shadow: 0 0 2px lighten(@grey, 10%);
+					}
+					&:active {
+						color: darken(@blue, 10%);
+					}
+				}
+			}
+			li, p {
+				color: @grey;
+				font-size: 14px;
+				line-height: 1.57;
+				margin-bottom: 15px;
+				.montserrat-medium();
+				a {
+					.montserrat-medium();
+					color: @blue;
+					text-decoration: none;
+					&:hover, &:focus, &:active {
+						text-decoration: underline;
+					}
+					&:hover, &:focus, &:active {
+						text-decoration: underline;
+					}
+					&:focus, &:active {
+						text-shadow: 0 0 2px lighten(@grey, 10%);
+					}
+					&:active {
+						color: darken(@blue, 10%);
+					}
+				}
+			}
+			li {
+				color: @black;
+			}
+			a {
+				.montserrat-medium();
+				color: @blue;
+				text-decoration: none;
+				&:hover, &:focus, &:active {
+					text-decoration: underline;
+				}
+				&:hover, &:focus, &:active {
+					text-decoration: underline;
+				}
+				&:focus, &:active {
+					text-shadow: 0 0 2px lighten(@grey, 10%);
+				}
+				&:active {
+					color: darken(@blue, 10%);
+				}
+			}
+			h3 {
+				text-transform: uppercase;
+				font-size: 18px;
+				font-weight: bold;
+				line-height: normal;
+				letter-spacing: 1px;
+				margin-bottom: 30px;
+			}
+			h4 {
+				font-size: 16px;
+				font-weight: bold;
+				line-height: normal;
+				letter-spacing: 1px;
+				margin-bottom: 20px;
+			}
+			ul {
+				list-style: disc;
+				padding-left: 20px;
+			}
+			li {
+				list-style: disc;
+			}
+		}
+	}
 	.idea-page {
 		&-category {
 			color: @grey;
