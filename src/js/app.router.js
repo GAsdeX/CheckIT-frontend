@@ -71,17 +71,24 @@ var routes = [
         path: '/404',
         component: require('../vue/pages/404.vue')
     },
-    {
-        name: 'legal-page',
-        path: '/legal-page',
-        component: require('../vue/pages/legal-page.vue')
-    },
+
     {
         name: 'notifications-page',
         path: '/notifications-page',
         component: require('../vue/pages/notifications-page.vue')
     },
-    {   path: '*',
+    {
+        name: 'terms',
+        path: '/terms',
+        component: require('../vue/pages/legal-page.vue')
+    },
+    {
+        name: 'policy',
+        path: '/policy',
+        component: require('../vue/pages/legal-page.vue')
+    },
+    {
+        path: '*',
         redirect: '/404'
     }
 ];
