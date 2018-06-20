@@ -3856,6 +3856,17 @@ input::-webkit-calendar-picker-indicator {
   line-height: 1.57;
   font-family: "Montserrat-SemiBold";
 }
+.site-content .search-result-item:focus .search-result-item-title,
+.site-content .search-result-item:active .search-result-item-title {
+  text-shadow: 0 0 2px #b1bac8;
+}
+.site-content .search-result-item:active .search-result-item-title {
+  color: #141414;
+  text-decoration: underline;
+}
+.site-content .search-result-item:hover .search-result-item-title {
+  text-decoration: underline;
+}
 .site-content .no-found-section {
   text-align: center;
   min-height: calc(100vh - 489px);

@@ -1,5 +1,5 @@
 <template lang="pug">
-    .row.search-result-item
+    router-link(:to="{name: 'idea-page'}").row.search-result-item
         .col-2.search-result-item-image
         .col-10.search-result-item-description
             h3.search-result-item-title SkinnyWolf's Streaming and Creative Arts PC

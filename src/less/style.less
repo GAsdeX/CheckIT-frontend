@@ -1255,6 +1255,22 @@ input {
 				line-height: 1.57;
 				.montserrat-semi-bold();
 			}
+			&:focus, &:active {
+				.search-result-item-title {
+					text-shadow: 0 0 2px lighten(@grey, 10%);
+				}
+			}
+			&:active {
+				.search-result-item-title {
+					color: darken(@black, 10%);
+					text-decoration: underline;
+				}
+			}
+			&:hover {
+				.search-result-item-title {
+					text-decoration: underline;
+				}
+			}
 		}
 	}
 	.no-found {
