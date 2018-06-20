@@ -72,6 +72,11 @@ var routes = [
         component: require('../vue/pages/404.vue')
     },
     {
+        name: 'legal-page',
+        path: '/legal-page',
+        component: require('../vue/pages/legal-page.vue')
+    },
+    {
         name: 'notifications-page',
         path: '/notifications-page',
         component: require('../vue/pages/notifications-page.vue')
