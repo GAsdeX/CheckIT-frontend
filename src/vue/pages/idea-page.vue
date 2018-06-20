@@ -20,13 +20,15 @@
                                                 span.author-box-likes-amount 287
                                                 | &nbsp;likes
                                         .author-box-info-wrapper
-                                            img(src="img/profile-photo.jpg" alt="Author Photo").author-box-info-photo
-                                            p.author-box-info-first-name Helen
-                                            p.author-box-info-location Ukraine
+                                            router-link(:to="{name: 'author'}").author-box-info-link
+                                                img(src="img/profile-photo.jpg" alt="Author Photo").author-box-info-photo
+                                                p.author-box-info-first-name Helen
+                                            p.author-box-info-location
+                                                router-link(:to="{name: 'search-result'}") Ukraine
                                         .author-box-published-wrapper
                                             p.author-box-published Published
                                             p.author-box-published-datetime
-                                                span.author-box-published-date 21.04
+                                                router-link(:to="{name: 'search-result'}").author-box-published-date 21.04
                                                 | &nbsp;at&nbsp;
                                                 span.author-box-published-time 14:45
                                 .col-9.description-box

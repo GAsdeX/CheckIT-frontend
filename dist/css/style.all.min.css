@@ -4307,11 +4307,35 @@ input::-webkit-calendar-picker-indicator {
   letter-spacing: 0.8px;
   margin-bottom: 6px;
 }
-.site-content .idea-page-sub-box .author-box-info-location {
+.site-content .idea-page-sub-box .author-box-info-link {
+  width: 100%;
+  display: block;
+}
+.site-content .idea-page-sub-box .author-box-info-link:hover p {
+  text-decoration: underline;
+}
+.site-content .idea-page-sub-box .author-box-info-link:focus p,
+.site-content .idea-page-sub-box .author-box-info-link:active p {
+  text-shadow: 0 0 2px #b1bac8;
+}
+.site-content .idea-page-sub-box .author-box-info-link:active p {
+  color: #141414;
+}
+.site-content .idea-page-sub-box .author-box-info-location a {
   font-family: "Montserrat-Medium";
   color: #93a0b3;
   text-transform: none;
   margin-bottom: 0px;
+}
+.site-content .idea-page-sub-box .author-box-info-location:hover a {
+  text-decoration: underline;
+}
+.site-content .idea-page-sub-box .author-box-info-location:focus a,
+.site-content .idea-page-sub-box .author-box-info-location:active a {
+  text-shadow: 0 0 2px #b1bac8;
+}
+.site-content .idea-page-sub-box .author-box-info-location:active a {
+  color: #75869e;
 }
 .site-content .idea-page-sub-box .author-box-published {
   font-family: "Montserrat-SemiBold";
@@ -4331,6 +4355,16 @@ input::-webkit-calendar-picker-indicator {
   font-size: 14px;
   line-height: 14px;
   letter-spacing: 0.8px;
+}
+.site-content .idea-page-sub-box .author-box-published-date:hover {
+  text-decoration: underline;
+}
+.site-content .idea-page-sub-box .author-box-published-date:focus,
+.site-content .idea-page-sub-box .author-box-published-date:active {
+  text-shadow: 0 0 2px #b1bac8;
+}
+.site-content .idea-page-sub-box .author-box-published-date:active {
+  color: #75869e;
 }
 .site-content .idea-page-sub-box .description {
   font-family: "Montserrat-Medium";

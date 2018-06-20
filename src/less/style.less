@@ -1669,11 +1669,47 @@ input {
 						letter-spacing: 0.8px;
 						margin-bottom: 6px;
 					}
+					&-link {
+						width: 100%;
+						display: block;
+						&:hover {
+							p {
+								text-decoration: underline;
+							}
+						}
+						&:focus, &:active {
+							p {
+								text-shadow: 0 0 2px lighten(@grey, 10%);
+							}
+						}
+						&:active {
+							p {
+								color: darken(@black, 10%);
+							}
+						}
+					}
 					&-location {
-						.montserrat-medium();
-						color: @grey;
-						text-transform: none;
-						margin-bottom: 0px;
+						a {
+							.montserrat-medium();
+							color: @grey;
+							text-transform: none;
+							margin-bottom: 0px;
+						}
+						&:hover {
+							a {
+								text-decoration: underline;
+							}
+						}
+						&:focus, &:active {
+							a {
+								text-shadow: 0 0 2px lighten(@grey, 10%);
+							}
+						}
+						&:active {
+							a {
+								color: darken(@grey, 10%);
+							}
+						}
 					}
 				}
 				&-published {
@@ -1691,6 +1727,17 @@ input {
 						font-size: 14px;
 						line-height: 14px;
 						letter-spacing: 0.8px;
+					}
+					&-date {
+						&:hover {
+							text-decoration: underline;
+						}
+						&:focus, &:active {
+							text-shadow: 0 0 2px lighten(@grey, 10%);
+						}
+						&:active {
+							color: darken(@grey, 10%);
+						}
 					}
 				}
 			}
